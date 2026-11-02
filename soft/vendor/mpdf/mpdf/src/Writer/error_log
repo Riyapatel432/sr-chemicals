@@ -1,0 +1,2 @@
+[01-Sep-2021 11:02:28 UTC] PHP Fatal error:  Trait 'Mpdf\Strict' not found in /home/techomax/aanandianalyticallaboratory.co.in/vendor/mpdf/mpdf/src/Writer/FormWriter.php on line 12
+[01-Sep-2021 11:02:38 UTC] PHP Fatal error:  Trait 'Mpdf\Strict' not found in /home/techomax/aanandianalyticallaboratory.co.in/vendor/mpdf/mpdf/src/Writer/FormWriter.php on line 12

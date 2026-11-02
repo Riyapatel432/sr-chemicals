@@ -1,0 +1,3 @@
+[01-Sep-2021 11:02:34 UTC] PHP Fatal error:  Trait 'Mpdf\Strict' not found in /home/techomax/aanandianalyticallaboratory.co.in/vendor/mpdf/mpdf/src/Form.php on line 15
+[01-Sep-2021 11:02:45 UTC] PHP Fatal error:  Trait 'Mpdf\Strict' not found in /home/techomax/aanandianalyticallaboratory.co.in/vendor/mpdf/mpdf/src/Form.php on line 15
+[01-Sep-2021 11:08:12 UTC] PHP Fatal error:  Trait 'Mpdf\Strict' not found in /home/techomax/aanandianalyticallaboratory.co.in/vendor/mpdf/mpdf/src/Form.php on line 15

@@ -1,0 +1,16 @@
+[01-Sep-2021 11:02:28 UTC] PHP Fatal error:  Uncaught Error: Class 'Mpdf\Tag\BlockTag' not found in /home/techomax/aanandianalyticallaboratory.co.in/vendor/mpdf/mpdf/src/Tag/Main.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/techomax/aanandianalyticallaboratory.co.in/vendor/mpdf/mpdf/src/Tag/Main.php on line 5
+[01-Sep-2021 11:02:28 UTC] PHP Fatal error:  Uncaught Error: Class 'Mpdf\Tag\BlockTag' not found in /home/techomax/aanandianalyticallaboratory.co.in/vendor/mpdf/mpdf/src/Tag/Article.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/techomax/aanandianalyticallaboratory.co.in/vendor/mpdf/mpdf/src/Tag/Article.php on line 5
+[01-Sep-2021 11:02:34 UTC] PHP Fatal error:  Uncaught Error: Class 'Mpdf\Tag\BlockTag' not found in /home/techomax/aanandianalyticallaboratory.co.in/vendor/mpdf/mpdf/src/Tag/Article.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/techomax/aanandianalyticallaboratory.co.in/vendor/mpdf/mpdf/src/Tag/Article.php on line 5
+[01-Sep-2021 11:02:34 UTC] PHP Fatal error:  Uncaught Error: Class 'Mpdf\Tag\BlockTag' not found in /home/techomax/aanandianalyticallaboratory.co.in/vendor/mpdf/mpdf/src/Tag/Main.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/techomax/aanandianalyticallaboratory.co.in/vendor/mpdf/mpdf/src/Tag/Main.php on line 5

@@ -1,0 +1,198 @@
+{
+    "/": {
+        "status": "DIFF",
+        "view": "index",
+        "diffs": {
+            "headings": {
+                "before": [
+                    "[h3] S R Chemicals Panoli GIDC \u2022 Bharuch",
+                    "[h5] S R Chemicals",
+                    "[h1] Sodium Phosphate",
+                    "[h1] Ammonium phosphate",
+                    "[h1] Potassium Phosphate",
+                    "[h6] Inorganic Salts Series",
+                    "[h6] ISO 9001:2008 Certified",
+                    "[h6] Established 2000",
+                    "[h6] In-House QC Department",
+                    "[h6] Custom Packaging & Fast Transit",
+                    "[h2] Core Chemical Classifications",
+                    "[h3] Sodium Phosphate",
+                    "[h3] Potassium Phosphate",
+                    "[h3] Ammonium Phosphate",
+                    "[h3] DEALS",
+                    "[h5] Di Sodium Phosphate Anhydrous - SR",
+                    "[h4] Di Sodium Phosphate Anhydrous-SR",
+                    "[h5] Di Ammonium Phosphate",
+                    "[h4] Di Ammonium Phosphate",
+                    "[h5] Mono Ammonium Phosphate",
+                    "[h4] Monoammonium Phosphate",
+                    "[h5] Tri Sodium Phosphate Crystals",
+                    "[h4] Tri Sodium Phosphate Crystals",
+                    "[h3] Inorganic Salts are indispensable chemicals that surrounds us everywhere, from what we eat to what we wear.",
+                    "[h4] FOR QUICK RESPONSE",
+                    "[h3] MOST POPULAR PRODUCTS",
+                    "[h4] Di Sodium Phosphate",
+                    "[h4] Mono Sodium Phosphate Crystal",
+                    "[h4] Di Sodium Phosphate Crystal",
+                    "[h4] Tetra Potassium Pyro Phosphate",
+                    "[h2] Company Profile & Infrastructure",
+                    "[h5] Our Strengths",
+                    "[h5] Infrastructure Facilities",
+                    "[h5] Our Certifications",
+                    "[h5] What Do We Offer?",
+                    "[h5] Our Clientele",
+                    "[h5] Our Mission",
+                    "[h6] Get in Touch",
+                    "[h6] Quick Links"
+                ],
+                "after": [
+                    "[h3] S R Chemicals Panoli GIDC \u2022 Bharuch",
+                    "[h5] S R Chemicals",
+                    "[h6] Inorganic Salts Series",
+                    "[h1] Sodium Phosphate",
+                    "[h1] Ammonium phosphate",
+                    "[h1] Potassium Phosphate",
+                    "[h6] \u2713 ISO 9001:2008 Certified",
+                    "[h6] \u2713 Established 2000",
+                    "[h6] \u2713 In-House QC Department",
+                    "[h6] \u2713 Custom Packaging & Fast Transit",
+                    "[h2] Core Chemical Classifications",
+                    "[h3] Sodium Phosphate",
+                    "[h3] Potassium Phosphate",
+                    "[h3] Ammonium Phosphate",
+                    "[h3] DEALS",
+                    "[h5] Di Sodium Phosphate Anhydrous - SR",
+                    "[h4] Di Sodium Phosphate Anhydrous-SR",
+                    "[h5] Di Ammonium Phosphate",
+                    "[h4] Di Ammonium Phosphate",
+                    "[h5] Mono Ammonium Phosphate",
+                    "[h4] Monoammonium Phosphate",
+                    "[h5] Tri Sodium Phosphate Crystals",
+                    "[h4] Tri Sodium Phosphate Crystals",
+                    "[h3] Inorganic Salts are indispensable chemicals that surrounds us everywhere, from what we eat to what we wear.",
+                    "[h4] FOR QUICK RESPONSE",
+                    "[h3] MOST POPULAR PRODUCTS",
+                    "[h4] Di Sodium Phosphate",
+                    "[h4] Mono Sodium Phosphate Crystal",
+                    "[h4] Di Sodium Phosphate Crystal",
+                    "[h4] Tetra Potassium Pyro Phosphate",
+                    "[h2] Company Profile & Infrastructure",
+                    "[h5] Our Strengths",
+                    "[h5] Infrastructure Facilities",
+                    "[h5] Our Certifications",
+                    "[h5] What Do We Offer?",
+                    "[h5] Our Clientele",
+                    "[h5] Our Mission",
+                    "[h6] Get in Touch",
+                    "[h6] Quick Links"
+                ],
+                "count_before": 39,
+                "count_after": 39
+            }
+        }
+    },
+    "/about": {
+        "status": "MATCH",
+        "view": "about"
+    },
+    "/our-products": {
+        "status": "MATCH",
+        "view": "our_products"
+    },
+    "/sodium-phosphate": {
+        "status": "MATCH",
+        "view": "sodium_phosphate"
+    },
+    "/di-sodium-phosphate-crystal": {
+        "status": "MATCH",
+        "view": "di_sodium_phosphate_crystal"
+    },
+    "/mono-sodium-phosphate-crystal": {
+        "status": "MATCH",
+        "view": "mono_sodium_phosphate_crystal"
+    },
+    "/di-sodium-phosphate": {
+        "status": "MATCH",
+        "view": "di_sodium_phosphate"
+    },
+    "/di-sodium-phosphate-anhydrous-sr": {
+        "status": "MATCH",
+        "view": "di_sodium_phosphate_anhydrous_sr"
+    },
+    "/sodium-acid-pyrophosphate": {
+        "status": "MATCH",
+        "view": "sodium_acid_pyrophosphate"
+    },
+    "/di-sodium-phosphate-anhydrous": {
+        "status": "MATCH",
+        "view": "di_sodium_phosphate_anhydrous"
+    },
+    "/tetra-sodium-pyro-phosphate": {
+        "status": "MATCH",
+        "view": "tetra_sodium_pyro_phosphate"
+    },
+    "/tri-sodium-phosphate-crystals": {
+        "status": "MATCH",
+        "view": "tri_sodium_phosphate_crystals"
+    },
+    "/sodium-hexameta-phosphate": {
+        "status": "MATCH",
+        "view": "sodium_hexameta_phosphate"
+    },
+    "/mono-sodium-phosphate-anhydrous-sr": {
+        "status": "MATCH",
+        "view": "mono_sodium_phosphate_anhydrous_sr"
+    },
+    "/trisodium-phosphate-anhydrous": {
+        "status": "MATCH",
+        "view": "trisodium_phosphate_anhydrous"
+    },
+    "/potassium-phosphate": {
+        "status": "MATCH",
+        "view": "potassium_phosphate"
+    },
+    "/tetra-potassium-pyro-phosphate": {
+        "status": "MATCH",
+        "view": "tetra_potassium_pyro_phosphate"
+    },
+    "/di-potassium-phosphate": {
+        "status": "MATCH",
+        "view": "di_potassium_phosphate"
+    },
+    "/mono-potassium-phosphate": {
+        "status": "MATCH",
+        "view": "mono_potassium_phosphate"
+    },
+    "/ammonium-phosphate": {
+        "status": "MATCH",
+        "view": "ammonium_phosphate"
+    },
+    "/monoammonium-phosphate": {
+        "status": "MATCH",
+        "view": "monoammonium_phosphate"
+    },
+    "/di-ammonium-phosphate": {
+        "status": "MATCH",
+        "view": "di_ammonium_phosphate"
+    },
+    "/blog": {
+        "status": "MATCH",
+        "view": "blog"
+    },
+    "/chemical-exporter-supplier-vietnam": {
+        "status": "MATCH",
+        "view": "chemical_exporter_supplier_vietnam"
+    },
+    "/srchems-chemical-exporter-supplier-thailand": {
+        "status": "MATCH",
+        "view": "chemical_exporter_supplier_thailand"
+    },
+    "/contact-us": {
+        "status": "MATCH",
+        "view": "contact_us"
+    },
+    "/sitemap": {
+        "status": "MATCH",
+        "view": "sitemap"
+    }
+}

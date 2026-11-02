@@ -1,0 +1,5 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^erp\.srchems\.com$
+RewriteRule ^/?$ "http\:\/\/159\.223\.171\.92\:8069\/" [R=301,L]
+
