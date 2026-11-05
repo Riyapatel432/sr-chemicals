@@ -11,6 +11,10 @@
     <!-- Dynamic Canonical Tag (non-www) -->
     <link rel="canonical" href="https://srchems.com{{ request()->getPathInfo() === '/' ? '/' : request()->getPathInfo() }}">
 
+    <!-- Open Graph Site Name & Twitter Card Integration -->
+    <meta property="og:site_name" content="S R Chemicals">
+    <meta name="twitter:card" content="summary_large_image">
+
     @hasSection('seo')
         @yield('seo')
     @else

@@ -7,7 +7,7 @@
                     <div class="d-flex justify-content-between">
                         <ul class="contact-list d-flex flex-wrap align-items-center list-unstyled mt-20">
                             <li>
-                                <i class="icon-phone"></i><a href="tel:+9913645555">Emergency Phone :9913645555</a>
+                                <i class="icon-phone"></i><a href="tel:+919913645555">Emergency Phone : 9913645555</a>
                             </li>
                             <li>
                                 <i class="icon-location"></i><a href="#">Location:Bharuch,Panoli - 394116, Gujarat, India </a>

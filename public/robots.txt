@@ -1,2 +1,5 @@
 User-agent: *
 Disallow:
+
+Sitemap: https://srchems.com/sitemap.xml
+

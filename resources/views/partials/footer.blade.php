@@ -88,6 +88,13 @@
     <i class="bi bi-arrow-up"></i>
 </button>
 
+<!-- Floating Desktop WhatsApp Button (Preserves Old Site Chat Feature) -->
+<aside class="src-floating-whatsapp d-none d-lg-flex position-fixed z-3" style="bottom: 24px; left: 24px;">
+    <a href="https://wa.me/919913645555?text=Hello%20SR%20Chemicals,%20I%20have%20an%20inquiry%20regarding%20phosphate%20chemicals." target="_blank" rel="noopener noreferrer" class="btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center text-white" style="width: 54px; height: 54px; font-size: 28px; background-color: #25D366; border-color: #25D366;" aria-label="Chat with S R Chemicals on WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+</aside>
+
 <!-- Mobile Sticky Bottom Bar -->
 @include('partials.mobile-bottom-bar')
 

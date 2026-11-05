@@ -16,7 +16,7 @@
                 </div>
                 <div class="src-phone-info">
                     <span>Contact our friendly staff or call us any time</span>
-                    <b><a href="tel:+9913645555" class="text-white text-decoration-none">9913645555</a></b>
+                    <b><a href="tel:+919913645555" class="text-white text-decoration-none">9913645555</a></b>
                 </div>
             </div>
             <a href="{{ route('contact_us') }}" class="src-btn-cta">

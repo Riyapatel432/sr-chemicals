@@ -4,8 +4,11 @@
 <title>Pharma &amp; Analytical Grade Phosphate Salts Manufacturer | S R Chemicals</title>
 <meta name="description" content="Scale your supply chain with ISO-certified AR, LR, BP, and IP grade phosphate salts from S R Chemicals. Contact us for bulk quotes and data sheets.">
 <meta name="keywords" content="pharma grade phosphate salts, analytical reagent grade, AR grade, LR grade, BP grade, IP grade, sodium phosphate manufacturer, potassium phosphate supplier, India">
+<meta name="robots" content="index, follow">
 <meta property="og:title" content="Pharma &amp; Analytical Grade Phosphate Salts Manufacturer | S R Chemicals">
 <meta property="og:description" content="Scale your supply chain with ISO-certified AR, LR, BP, and IP grade phosphate salts from S R Chemicals.">
+<meta property="og:url" content="https://www.srchems.com/blog/pharma-grade-phosphate-salts">
+<meta property="og:type" content="article">
 <meta property="og:image" content="{{ asset('assets/images/blog/pharma-grade-phosphate.png') }}">
 @endsection
 

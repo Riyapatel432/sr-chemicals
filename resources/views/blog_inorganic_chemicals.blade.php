@@ -4,8 +4,11 @@
 <title>High-Purity Inorganic Chemicals Manufacturer GIDC Panoli | S R Chemicals</title>
 <meta name="description" content="S R Chemicals delivers ISO-certified, high-solubility phosphate powders & crystals for global B2B supply chains. Contact us for bulk pricing and quotes.">
 <meta name="keywords" content="inorganic chemicals manufacturer India, GIDC Panoli chemical plant, sodium phosphate supplier, ammonium phosphate bulk, potassium phosphate exporter, ISO certified chemical manufacturer Gujarat">
+<meta name="robots" content="index, follow">
 <meta property="og:title" content="High-Purity Inorganic Chemicals Manufacturer GIDC Panoli | S R Chemicals">
 <meta property="og:description" content="S R Chemicals delivers ISO-certified, high-solubility phosphate powders & crystals for global B2B supply chains.">
+<meta property="og:url" content="https://www.srchems.com/blog/inorganic-chemicals-manufacturer-gidc-panoli">
+<meta property="og:type" content="article">
 <meta property="og:image" content="{{ asset('assets/images/blog/inorganic-chemicals-manufacturer.png') }}">
 @endsection
 

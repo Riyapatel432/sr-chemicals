@@ -1,8 +1,14 @@
 @extends('layouts.app')
 
 @section('seo')
-    <meta name="description" content="HTML Sitemap for S R Chemicals - Browse all pages including products, blog, and contact information.">
     <title>Sitemap | S R Chemicals</title>
+    <meta name="description" content="HTML Sitemap for S R Chemicals - Browse all pages including products, blog, and contact information.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Sitemap | S R Chemicals">
+    <meta property="og:description" content="HTML Sitemap for S R Chemicals - Browse all pages including products, blog, and contact information.">
+    <meta property="og:url" content="https://www.srchems.com/sitemap">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.srchems.com/assets/images/logo/logo.1.jpg">
 @endsection
 
 @section('content')
