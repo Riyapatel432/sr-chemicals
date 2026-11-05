@@ -313,92 +313,9 @@ textarea.src-input-control {
     background: #0c1e3d;
     overflow: hidden;
 }
-.src-map-frame {
-    width: 100%;
-    height: 520px;
-    border: none;
-    display: block;
-    filter: contrast(1.02);
-}
-.src-map-floating-panel {
-    position: absolute;
-    top: 40px;
-    right: 5%;
-    width: 380px;
-    max-width: 90%;
-    background: #ffffff;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 16px 40px rgba(12, 30, 61, 0.22);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    z-index: 10;
-}
-.src-map-floating-header {
-    background: linear-gradient(135deg, #07101e 0%, #0c1e3d 60%, #142a52 100%);
-    padding: 20px 24px;
-    border-bottom: 3px solid #e8792a;
-}
-.src-map-floating-header .panel-title {
-    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-    font-size: 17px;
-    font-weight: 700;
-    color: #ffffff;
-}
-.src-map-floating-body {
-    padding: 24px;
-}
-.src-office-row {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 16px;
-    font-size: 13.5px;
-}
-.src-office-icon {
-    width: 32px;
-    height: 32px;
-    background: #e8f0fd;
-    color: #1a4fa0;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    flex-shrink: 0;
-}
-.src-office-text {
-    color: #334155;
-    line-height: 1.55;
-}
-.src-office-text strong {
-    color: #0c1e3d;
-    display: block;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 2px;
-}
-.src-office-text a {
-    color: #1a4fa0;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.2s;
-}
-.src-office-text a:hover {
-    color: #e8792a;
-}
-
 @media (max-width: 991px) {
     .src-contact-hero { padding: 56px 0 42px; }
     .src-contact-main-section { padding: 42px 0 60px; }
-    .src-map-floating-panel {
-        position: static;
-        width: 100%;
-        max-width: 100%;
-        margin-top: 0;
-        border-radius: 0;
-        box-shadow: none;
-    }
-    .src-map-frame { height: 380px; }
 }
 @media (max-width: 575px) {
     .src-contact-hero { padding: 46px 0 36px; }
@@ -587,55 +504,7 @@ textarea.src-input-control {
     </div>
 </section>
 
-{{-- Google Map & Office Details Section (Headings SEO Lock: [h3] Office Details) --}}
-<section class="src-map-section map py-0">
-    <iframe class="src-map-frame"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.287634183214!2d72.98759537595065!3d21.574692768802812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0248329c77055%3A0x26bd51628f483af2!2sS.R.Chemicals!5e0!3m2!1sen!2sin!4v1684489446414!5m2!1sen!2sin"
-        title="S R Chemicals Panoli GIDC Location Map"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-    <div class="src-map-floating-panel">
-        <div class="src-map-floating-header">
-            {{-- SEO Headings Lock: [h3] Office Details --}}
-            <h3 class="panel-title color-white mb-0">Office Details</h3>
-        </div>
-        <div class="src-map-floating-body">
-            <div class="src-office-row">
-                <div class="src-office-icon"><i class="bi bi-geo-alt-fill"></i></div>
-                <div class="src-office-text">
-                    <strong>Registered Works &amp; Plant</strong>
-                    Plot No. 1917 &amp; C-1/1918, G.I.D.C., Panoli, Dist.: Bharuch, Panoli - 394116, Gujarat, India
-                </div>
-            </div>
-            <div class="src-office-row">
-                <div class="src-office-icon"><i class="bi bi-telephone-fill"></i></div>
-                <div class="src-office-text">
-                    <strong>Telephone / WhatsApp</strong>
-                    <a href="tel:+919913645555">+91 9913645555</a>
-                </div>
-            </div>
-            <div class="src-office-row">
-                <div class="src-office-icon"><i class="bi bi-envelope-fill"></i></div>
-                <div class="src-office-text">
-                    <strong>Direct Email</strong>
-                    <a href="mailto:info@srchems.com">info@srchems.com</a>
-                </div>
-            </div>
-            <div class="src-office-row">
-                <div class="src-office-icon"><i class="bi bi-printer-fill"></i></div>
-                <div class="src-office-text">
-                    <strong>Fax Number</strong>
-                    +91-2646-272366
-                </div>
-            </div>
-            <div class="pt-2">
-                <a href="https://maps.google.com/?q=S.R.+Chemicals+Panoli" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm w-100 rounded-pill fw-bold">
-                    <i class="bi bi-box-arrow-up-right me-1"></i> Open in Google Maps
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+{{-- Google Map & Office Details Section (Redesigned Reusable Blade Component) --}}
+<x-map />
 
 @endsection
