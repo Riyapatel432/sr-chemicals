@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('seo')
 <title>Food Grade vs Industrial Grade Phosphates: Technical Guide | S R Chemicals</title>

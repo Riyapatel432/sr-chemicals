@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('seo')
 <title>How SR Chems Sodium Phosphates Enhance Textile Dyeing &amp; Water Treatment in Vietnam | S R Chemicals</title>

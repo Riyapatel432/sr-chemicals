@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('seo')
 <title>Sourcing Bulk SR Chems Phosphates from India to Vietnam: Procurement Guide | S R Chemicals</title>

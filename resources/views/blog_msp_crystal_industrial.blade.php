@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('seo')
 <title>Optimizing Industrial Processes with High-Purity Mono Sodium Phosphate Crystals | S R Chemicals</title>

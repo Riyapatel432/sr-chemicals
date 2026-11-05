@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('seo')
 <title>Role of TSP &amp; DSP in Metal Phosphating &amp; Surface Treatment | S R Chemicals</title>

@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('seo')
 <title>Mono Sodium Phosphate Anhydrous vs. Crystal: Choosing the Right Form for Your Formulations | S.R. Chemicals</title>

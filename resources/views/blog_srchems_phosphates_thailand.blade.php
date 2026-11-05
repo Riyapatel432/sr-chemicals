@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('seo')
 <title>How SR Chems Phosphates Enhance Scale Control &amp; Metal Cleaning in Thailand | S R Chemicals</title>

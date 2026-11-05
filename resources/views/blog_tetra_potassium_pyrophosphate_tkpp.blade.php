@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('seo')
 <title>Tetra Potassium Pyrophosphate (TKPP) | Industrial Supplier | S R Chemicals</title>

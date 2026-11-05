@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('seo')
     <meta name="description" content="Thank you for contacting S R Chemicals. We have received your inquiry and will get back to you shortly.">

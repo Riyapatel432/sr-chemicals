@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('seo')
     <meta name="description" content="HTML Sitemap for S R Chemicals - Browse all pages including products, blog, and contact information.">

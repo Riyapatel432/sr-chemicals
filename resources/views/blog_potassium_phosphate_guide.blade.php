@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('seo')
 <title>Potassium Phosphate Manufacturer & Bulk Supplier | S R Chemicals</title>

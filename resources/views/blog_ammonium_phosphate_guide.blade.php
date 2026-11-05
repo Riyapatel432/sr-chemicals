@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('seo')
 <title>Bulk Ammonium Phosphate Supplier (MAP & DAP) | S R Chemicals</title>

@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('seo')
 <title>How to Prevent Caking in Bulk Phosphate Powder Storage | S R Chemicals</title>

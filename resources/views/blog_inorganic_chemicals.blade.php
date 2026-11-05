@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('seo')
 <title>High-Purity Inorganic Chemicals Manufacturer GIDC Panoli | S R Chemicals</title>

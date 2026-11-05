@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('seo')
 <title>Dipotassium Phosphate Powder for Industrial Water Treatment | S R Chemicals</title>

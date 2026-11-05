@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('seo')
 <title>Buy Industrial Sodium Acid Pyrophosphate Powder (Na2H2P2O7) | S R Chemicals</title>

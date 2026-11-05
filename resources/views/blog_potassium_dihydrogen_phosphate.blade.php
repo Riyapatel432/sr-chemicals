@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('seo')
 <title>Potassium Dihydrogen Phosphate (KH2PO4) | Technical Grade MKP | S R Chemicals</title>

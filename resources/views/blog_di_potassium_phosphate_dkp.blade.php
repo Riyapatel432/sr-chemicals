@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('seo')
 <title>Di Potassium Phosphate (DKP) 99% Pure | Food & Industrial Grade | S R Chemicals</title>

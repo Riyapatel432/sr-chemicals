@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('seo')
 <title>Pharma &amp; Analytical Grade Phosphate Salts Manufacturer | S R Chemicals</title>

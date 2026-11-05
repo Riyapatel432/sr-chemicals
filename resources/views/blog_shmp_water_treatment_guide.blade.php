@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('seo')
 <title>Guide to Sodium Hexametaphosphate (SHMP) in Water Treatment &amp; Cleaning | S R Chemicals</title>

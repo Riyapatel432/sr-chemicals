@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('seo')
 <title>Potassium Phosphate Manufacturer & Supplier | Di, Mono & Tetra Forms | S R Chemicals</title>
