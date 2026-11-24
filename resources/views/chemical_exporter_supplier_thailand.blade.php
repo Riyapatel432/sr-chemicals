@@ -140,61 +140,84 @@
                 <hr class="my-5 opacity-25">
 
                 <!-- Strategic Industries Section -->
-                <h2 class="fs-2 fw-bold text-dark mb-3">Key Industries We Serve in Thailand</h2>
-                <p class="text-muted mb-4" style="line-height: 1.85;">
-                    Thailand's thriving industrial sector relies on consistent, high-specification chemical raw materials. Our export portfolio supports key Thai manufacturing sectors:
-                </p>
-
-                <!-- Industry 1 -->
-                <div class="src-export-industry-card">
-                    <h3>1. Industrial Processing, Formulations &amp; Speciality Chemicals</h3>
-                    <p class="text-muted mb-3" style="line-height: 1.75;">
-                        Thailand's manufacturing and chemical blending sector demands strict chemical purity and active assay compliance:
-                    </p>
-                    <ul class="text-muted ps-3 mb-3" style="line-height: 1.9;">
-                        <li><strong>High-Purity Moisture &amp; Texture Control:</strong> SR Chems <a href="{{ route('di_potassium_phosphate') }}" class="text-primary fw-semibold">Dipotassium Phosphate (DKP)</a> and Sodium Tripolyphosphate (STPP) for specialized industrial formulations, viscosity control, and processing stability.</li>
-                        <li><strong>Precision Buffering Solutions:</strong> SR Chems <a href="{{ route('mono_sodium_phosphate_anhydrous_sr') }}" class="text-primary fw-semibold">Monosodium Phosphate (MSP)</a> and <a href="{{ route('sodium_acid_pyrophosphate') }}" class="text-primary fw-semibold">Sodium Acid Pyrophosphate (SAPP)</a> for accurate pH regulation, reaction buffering, and process control.</li>
-                    </ul>
-                    <div class="d-flex flex-wrap align-items-center gap-2 pt-2 border-top">
-                        <span class="small fw-bold text-dark">Featured Compounds:</span>
-                        <a href="{{ route('di_potassium_phosphate') }}" class="src-export-chip">DKP SR Chems</a>
-                        <a href="{{ route('mono_sodium_phosphate_anhydrous_sr') }}" class="src-export-chip">MSP Anhydrous</a>
-                        <a href="{{ route('sodium_acid_pyrophosphate') }}" class="src-export-chip">SAPP Pure</a>
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 gap-3">
+                    <div>
+                        <h2 class="fs-2 fw-bold text-dark mb-1">Key Industries We Serve in Thailand</h2>
+                        <p class="text-muted mb-0" style="line-height: 1.85;">
+                            Thailand's thriving industrial sector relies on consistent, high-specification chemical raw materials. Our export portfolio supports key Thai manufacturing sectors:
+                        </p>
                     </div>
                 </div>
 
-                <!-- Industry 2 -->
-                <div class="src-export-industry-card">
-                    <h3>2. Water Treatment &amp; Municipal Infrastructure</h3>
-                    <p class="text-muted mb-3" style="line-height: 1.75;">
-                        Supporting industrial wastewater management and cooling systems across Thailand's heavy industrial zones:
-                    </p>
-                    <ul class="text-muted ps-3 mb-3" style="line-height: 1.9;">
-                        <li><strong>Boiler &amp; Cooling Tower Scale Control:</strong> High-solubility <a href="{{ route('sodium_hexameta_phosphate') }}" class="text-primary fw-semibold">Sodium Hexametaphosphate (SHMP)</a> for sequestering calcium and magnesium hard ions.</li>
-                        <li><strong>Corrosion Inhibition:</strong> Inorganic polyphosphates engineered for high-temperature thermal stability.</li>
-                    </ul>
-                    <div class="d-flex flex-wrap align-items-center gap-2 pt-2 border-top">
-                        <span class="small fw-bold text-dark">Featured Compounds:</span>
-                        <a href="{{ route('sodium_hexameta_phosphate') }}" class="src-export-chip">SHMP 68% Pure</a>
-                        <a href="{{ route('tetra_sodium_pyro_phosphate') }}" class="src-export-chip">TSPP Industrial</a>
-                    </div>
-                </div>
+                <div class="swiper src-export-industry-swiper pb-4 mb-4">
+                    <div class="swiper-wrapper align-items-stretch">
+                        <!-- Industry 1 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="src-export-industry-card h-100 d-flex flex-column mb-0">
+                                <h3>1. Industrial Processing, Formulations &amp; Speciality Chemicals</h3>
+                                <p class="text-muted mb-3" style="line-height: 1.75;">
+                                    Thailand's manufacturing and chemical blending sector demands strict chemical purity and active assay compliance:
+                                </p>
+                                <ul class="text-muted ps-3 mb-3" style="line-height: 1.9;">
+                                    <li><strong>High-Purity Moisture &amp; Texture Control:</strong> SR Chems <a href="{{ route('di_potassium_phosphate') }}" class="text-primary fw-semibold">Dipotassium Phosphate (DKP)</a> and Sodium Tripolyphosphate (STPP) for specialized industrial formulations, viscosity control, and processing stability.</li>
+                                    <li><strong>Precision Buffering Solutions:</strong> SR Chems <a href="{{ route('mono_sodium_phosphate_anhydrous_sr') }}" class="text-primary fw-semibold">Monosodium Phosphate (MSP)</a> and <a href="{{ route('sodium_acid_pyrophosphate') }}" class="text-primary fw-semibold">Sodium Acid Pyrophosphate (SAPP)</a> for accurate pH regulation, reaction buffering, and process control.</li>
+                                </ul>
+                                <div class="d-flex flex-wrap align-items-center gap-2 pt-2 border-top mt-auto">
+                                    <span class="small fw-bold text-dark">Featured Compounds:</span>
+                                    <a href="{{ route('di_potassium_phosphate') }}" class="src-export-chip">DKP SR Chems</a>
+                                    <a href="{{ route('mono_sodium_phosphate_anhydrous_sr') }}" class="src-export-chip">MSP Anhydrous</a>
+                                    <a href="{{ route('sodium_acid_pyrophosphate') }}" class="src-export-chip">SAPP Pure</a>
+                                </div>
+                            </div>
+                        </div>
 
-                <!-- Industry 3 -->
-                <div class="src-export-industry-card">
-                    <h3>3. Metal Surface Treatment &amp; Automotive Manufacturing</h3>
-                    <p class="text-muted mb-3" style="line-height: 1.75;">
-                        Serving the "Detroit of Asia"—Thailand's automotive assembly, steel fabrication, and electroplating plants:
-                    </p>
-                    <ul class="text-muted ps-3 mb-3" style="line-height: 1.9;">
-                        <li><strong>Metal Degreasing &amp; Cleaning:</strong> Heavy-duty <a href="{{ route('trisodium_phosphate_anhydrous') }}" class="text-primary fw-semibold">Trisodium Phosphate (TSP Anhydrous &amp; Crystalline)</a>.</li>
-                        <li><strong>Iron Phosphating:</strong> <a href="{{ route('di_sodium_phosphate_anhydrous_sr') }}" class="text-primary fw-semibold">Disodium Phosphate (DSP)</a> for rust prevention and conversion coating prep.</li>
-                    </ul>
-                    <div class="d-flex flex-wrap align-items-center gap-2 pt-2 border-top">
-                        <span class="small fw-bold text-dark">Featured Compounds:</span>
-                        <a href="{{ route('trisodium_phosphate_anhydrous') }}" class="src-export-chip">TSP Anhydrous</a>
-                        <a href="{{ route('tri_sodium_phosphate_crystals') }}" class="src-export-chip">TSP Crystals</a>
-                        <a href="{{ route('di_sodium_phosphate_anhydrous_sr') }}" class="src-export-chip">DSP SR Chems</a>
+                        <!-- Industry 2 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="src-export-industry-card h-100 d-flex flex-column mb-0">
+                                <h3>2. Water Treatment &amp; Municipal Infrastructure</h3>
+                                <p class="text-muted mb-3" style="line-height: 1.75;">
+                                    Supporting industrial wastewater management and cooling systems across Thailand's heavy industrial zones:
+                                </p>
+                                <ul class="text-muted ps-3 mb-3" style="line-height: 1.9;">
+                                    <li><strong>Boiler &amp; Cooling Tower Scale Control:</strong> High-solubility <a href="{{ route('sodium_hexameta_phosphate') }}" class="text-primary fw-semibold">Sodium Hexametaphosphate (SHMP)</a> for sequestering calcium and magnesium hard ions.</li>
+                                    <li><strong>Corrosion Inhibition:</strong> Inorganic polyphosphates engineered for high-temperature thermal stability.</li>
+                                </ul>
+                                <div class="d-flex flex-wrap align-items-center gap-2 pt-2 border-top mt-auto">
+                                    <span class="small fw-bold text-dark">Featured Compounds:</span>
+                                    <a href="{{ route('sodium_hexameta_phosphate') }}" class="src-export-chip">SHMP 68% Pure</a>
+                                    <a href="{{ route('tetra_sodium_pyro_phosphate') }}" class="src-export-chip">TSPP Industrial</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Industry 3 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="src-export-industry-card h-100 d-flex flex-column mb-0">
+                                <h3>3. Metal Surface Treatment &amp; Automotive Manufacturing</h3>
+                                <p class="text-muted mb-3" style="line-height: 1.75;">
+                                    Serving the "Detroit of Asia"—Thailand's automotive assembly, steel fabrication, and electroplating plants:
+                                </p>
+                                <ul class="text-muted ps-3 mb-3" style="line-height: 1.9;">
+                                    <li><strong>Metal Degreasing &amp; Cleaning:</strong> Heavy-duty <a href="{{ route('trisodium_phosphate_anhydrous') }}" class="text-primary fw-semibold">Trisodium Phosphate (TSP Anhydrous &amp; Crystalline)</a>.</li>
+                                    <li><strong>Iron Phosphating:</strong> <a href="{{ route('di_sodium_phosphate_anhydrous_sr') }}" class="text-primary fw-semibold">Disodium Phosphate (DSP)</a> for rust prevention and conversion coating prep.</li>
+                                </ul>
+                                <div class="d-flex flex-wrap align-items-center gap-2 pt-2 border-top mt-auto">
+                                    <span class="small fw-bold text-dark">Featured Compounds:</span>
+                                    <a href="{{ route('trisodium_phosphate_anhydrous') }}" class="src-export-chip">TSP Anhydrous</a>
+                                    <a href="{{ route('tri_sodium_phosphate_crystals') }}" class="src-export-chip">TSP Crystals</a>
+                                    <a href="{{ route('di_sodium_phosphate_anhydrous_sr') }}" class="src-export-chip">DSP SR Chems</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider Controls -->
+                    <div class="d-flex justify-content-between align-items-center mt-3 src-slider-controls src-export-industry-controls">
+                        <div class="swiper-pagination src-export-ind-pagination position-static w-auto"></div>
+                        <div class="src-slider-arrows d-flex gap-2">
+                            <button class="src-slider-btn src-export-ind-prev" type="button" aria-label="Previous Industry"><i class="bi bi-chevron-left"></i></button>
+                            <button class="src-slider-btn src-export-ind-next" type="button" aria-label="Next Industry"><i class="bi bi-chevron-right"></i></button>
+                        </div>
                     </div>
                 </div>
 
@@ -264,42 +287,62 @@
                 <hr class="my-5 opacity-25">
 
                 <!-- Why Partner Section -->
-                <h2 class="fs-2 fw-bold text-dark mb-3">Why Thai Importers Partner with S R Chemicals</h2>
-                <p class="text-muted mb-4" style="line-height: 1.85;">
-                    End-to-end manufacturing integrity, moisture-barrier packaging engineered for tropical transit, and dependable port logistics:
-                </p>
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 gap-3">
+                    <div>
+                        <h2 class="fs-2 fw-bold text-dark mb-1">Why Thai Importers Partner with S R Chemicals</h2>
+                        <p class="text-muted mb-0" style="line-height: 1.85;">
+                            End-to-end manufacturing integrity, moisture-barrier packaging engineered for tropical transit, and dependable port logistics:
+                        </p>
+                    </div>
+                </div>
 
-                <div class="row g-4 mb-4">
-                    <div class="col-md-12">
-                        <div class="src-export-usp-card">
-                            <h4>📦 1. Export-Grade Moisture-Proof Packaging</h4>
-                            <p class="text-muted mb-2">Thailand’s tropical monsoon climate requires robust packaging to prevent chemical caking and degradation during transit:</p>
-                            <ul class="text-muted ps-3 mb-0" style="line-height: 1.8;">
-                                <li>Heavy-duty 25 kg / 50 kg HDPE outer woven bags.</li>
-                                <li>Sealed 80–100 micron LDPE inner liners to block humidity and avoid moisture pickup.</li>
-                                <li>Customized Jumbo / FIBC bag options available for automated plant hoppers.</li>
-                            </ul>
+                <div class="swiper src-export-usp-swiper pb-4 mb-4">
+                    <div class="swiper-wrapper align-items-stretch">
+                        <!-- USP 1 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="src-export-usp-card h-100">
+                                <h4>📦 1. Export-Grade Moisture-Proof Packaging</h4>
+                                <p class="text-muted mb-2">Thailand’s tropical monsoon climate requires robust packaging to prevent chemical caking and degradation during transit:</p>
+                                <ul class="text-muted ps-3 mb-0" style="line-height: 1.8;">
+                                    <li>Heavy-duty 25 kg / 50 kg HDPE outer woven bags.</li>
+                                    <li>Sealed 80–100 micron LDPE inner liners to block humidity and avoid moisture pickup.</li>
+                                    <li>Customized Jumbo / FIBC bag options available for automated plant hoppers.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- USP 2 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="src-export-usp-card h-100">
+                                <h4>🚢 2. Seamless Logistics from India to Thai Ports</h4>
+                                <p class="text-muted mb-2">Fast shipping connectivity ensuring swift delivery from factory to Thai industrial hubs:</p>
+                                <ul class="text-muted ps-3 mb-0" style="line-height: 1.8;">
+                                    <li><strong>Strategic Factory Location:</strong> Proximity to major Western Indian container ports (Nhava Sheva / Mundra) offers short transit times to Port of Laem Chabang and Bangkok Port (Klong Toey).</li>
+                                    <li><strong>Full Export Documentation:</strong> Every shipment includes comprehensive Certificate of Analysis (COA), Safety Data Sheet (SDS / MSDS), Certificate of Origin, and Packing Lists.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- USP 3 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="src-export-usp-card h-100">
+                                <h4>🔬 3. International Quality Compliance</h4>
+                                <p class="text-muted mb-2">Stringent testing and verification at our on-site testing facility:</p>
+                                <ul class="text-muted ps-3 mb-0" style="line-height: 1.8;">
+                                    <li>Our manufacturing protocols adhere to rigorous international testing standards.</li>
+                                    <li>Ensuring trace heavy metal limits (Pb, As, F) and active assays (P2O5) strictly comply with international quality benchmarks and raw material import regulations in Thailand.</li>
+                                    <li>Batch-level testing and certified COA accompany every container.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-12">
-                        <div class="src-export-usp-card">
-                            <h4>🚢 2. Seamless Logistics from India to Thai Ports</h4>
-                            <p class="text-muted mb-2">Fast shipping connectivity ensuring swift delivery from factory to Thai industrial hubs:</p>
-                            <ul class="text-muted ps-3 mb-0" style="line-height: 1.8;">
-                                <li><strong>Strategic Factory Location:</strong> Proximity to major Western Indian container ports (Nhava Sheva / Mundra) offers short transit times to Port of Laem Chabang and Bangkok Port (Klong Toey).</li>
-                                <li><strong>Full Export Documentation:</strong> Every shipment includes comprehensive Certificate of Analysis (COA), Safety Data Sheet (SDS / MSDS), Certificate of Origin, and Packing Lists.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="src-export-usp-card">
-                            <h4>🔬 3. International Quality Compliance</h4>
-                            <p class="text-muted mb-2">Stringent testing and verification at our on-site testing facility:</p>
-                            <ul class="text-muted ps-3 mb-0" style="line-height: 1.8;">
-                                <li>Our manufacturing protocols adhere to rigorous international testing standards.</li>
-                                <li>Ensuring trace heavy metal limits (Pb, As, F) and active assays (P2O5) strictly comply with international quality benchmarks and raw material import regulations in Thailand.</li>
-                                <li>Batch-level testing and certified COA accompany every container.</li>
-                            </ul>
+
+                    <!-- Slider Controls -->
+                    <div class="d-flex justify-content-between align-items-center mt-3 src-slider-controls src-export-usp-controls">
+                        <div class="swiper-pagination src-export-usp-pagination position-static w-auto"></div>
+                        <div class="src-slider-arrows d-flex gap-2">
+                            <button class="src-slider-btn src-export-usp-prev" type="button" aria-label="Previous Advantage"><i class="bi bi-chevron-left"></i></button>
+                            <button class="src-slider-btn src-export-usp-next" type="button" aria-label="Next Advantage"><i class="bi bi-chevron-right"></i></button>
                         </div>
                     </div>
                 </div>

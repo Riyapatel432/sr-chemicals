@@ -108,75 +108,190 @@
 </section>
 
 <!-- ======================
-    Ammonium Phosphate Derivatives Showcase Grid
+    Ammonium Phosphate Derivatives Showcase Grid (Touch Swiper on Mobile & Tablet)
 ========================= -->
 <section class="src-showroom-section py-5">
     <div class="container-fluid px-lg-5">
-        <div class="text-center mb-5">
-            <span class="src-section-badge mb-2">Portfolio</span>
-            <div class="fs-2 fw-bold text-navy-900 mb-2">Available Ammonium Phosphate Formulations</div>
-            <p class="text-muted mx-auto" style="max-width: 650px;">
-                Supplied in 25kg / 50kg HDPE moisture-barrier bags with COA from Panoli GIDC.
-            </p>
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 gap-3">
+            <div class="text-center text-md-start">
+                <span class="src-section-badge mb-2">Portfolio</span>
+                <div class="fs-2 fw-bold text-navy-900 mb-2">Available Ammonium Phosphate Formulations</div>
+                <p class="text-muted mb-0" style="max-width: 650px;">
+                    Supplied in 25kg / 50kg HDPE moisture-barrier bags with COA from Panoli GIDC.
+                </p>
+            </div>
         </div>
 
-        <div class="row g-4 justify-content-center">
-            <!-- Product Item #1: Di Ammonium Phosphate -->
-            <div class="col-12 col-md-6 col-lg-5">
-                <div class="src-showroom-card">
-                    <div class="src-showroom-img-wrap">
-                        <span class="src-showroom-badge">DAP (NH4)2HPO4</span>
-                        <a href="{{ route('di_ammonium_phosphate') }}">
-                            <img src="{{ asset('assets/images/product/di_ammonium_phosphate.png') }}" alt="post image" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="src-showroom-body">
-                        <span class="src-showroom-cat-tag">Industrial &amp; Yeast Grade</span>
-                        <h4 class="post-title src-showroom-title">
-                            <a href="{{ route('di_ammonium_phosphate') }}">Di Ammonium Phosphate</a>
-                        </h4>
-                        <p class="src-showroom-desc">
-                            Supply Ability:50 Per Month Delivery Time:3 Days
-                        </p>
-                        <div class="src-showroom-actions">
-                            <a href="{{ route('di_ammonium_phosphate') }}" class="btn-read-more">
-                                <i class="bi bi-info-circle"></i> View Details
-                            </a>
-                            <a href="{{ route('contact_us') }}" class="btn-inquire">
-                                <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
+        <div class="swiper src-ammonium-swiper pb-4 mb-4">
+            <div class="swiper-wrapper align-items-stretch">
+                <!-- Product Item #1: Di Ammonium Phosphate -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-showroom-card h-100">
+                        <div class="src-showroom-img-wrap">
+                            <span class="src-showroom-badge">DAP (NH4)2HPO4</span>
+                            <a href="{{ route('di_ammonium_phosphate') }}">
+                                <img src="{{ asset('assets/images/product/di_ammonium_phosphate.png') }}" alt="post image" loading="lazy">
                             </a>
                         </div>
+                        <div class="src-showroom-body">
+                            <span class="src-showroom-cat-tag">Industrial &amp; Yeast Grade</span>
+                            <h4 class="post-title src-showroom-title">
+                                <a href="{{ route('di_ammonium_phosphate') }}">Di Ammonium Phosphate</a>
+                            </h4>
+                            <p class="src-showroom-desc">
+                                Supply Ability:50 Per Month Delivery Time:3 Days
+                            </p>
+                            <div class="src-showroom-actions">
+                                <a href="{{ route('di_ammonium_phosphate') }}" class="btn-read-more">
+                                    <i class="bi bi-info-circle"></i> View Details
+                                </a>
+                                <a href="{{ route('contact_us') }}" class="btn-inquire">
+                                    <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Item #2: Monoammonium Phosphate -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-showroom-card h-100">
+                        <div class="src-showroom-img-wrap">
+                            <span class="src-showroom-badge">MAP (NH4)H2PO4</span>
+                            <a href="{{ route('monoammonium_phosphate') }}">
+                                <img src="{{ asset('assets/images/product/mono_ammonium_phosphate.png') }}" alt="post image" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="src-showroom-body">
+                            <span class="src-showroom-cat-tag">ABC Fire Retardant &amp; Tech</span>
+                            <h4 class="post-title src-showroom-title">
+                                <a href="{{ route('monoammonium_phosphate') }}">Monoammonium Phosphate</a>
+                            </h4>
+                            <p class="src-showroom-desc">
+                                Supply Ability:50 Per Month Delivery Time:3 Days
+                            </p>
+                            <div class="src-showroom-actions">
+                                <a href="{{ route('monoammonium_phosphate') }}" class="btn-read-more">
+                                    <i class="bi bi-info-circle"></i> View Details
+                                </a>
+                                <a href="{{ route('contact_us') }}" class="btn-inquire">
+                                    <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @php
+                    $extraAmmoniumShowcase = \App\Models\Product::where('category', 'Ammonium Phosphate')->where('is_category', false)->whereNull('blade_view')->where('status', 'published')->get();
+                @endphp
+                @foreach($extraAmmoniumShowcase as $eap)
+                <div class="swiper-slide h-auto">
+                    <div class="src-showroom-card h-100">
+                        <div class="src-showroom-img-wrap">
+                            <span class="src-showroom-badge">{{ $eap->chemical_formula ?: 'Pure' }}</span>
+                            <a href="{{ url('/' . $eap->slug) }}">
+                                <img src="{{ $eap->featured_image_url }}" alt="{{ $eap->image_alt ?: $eap->name }}" loading="lazy" onerror="this.onerror=null;this.src='{{ asset('assets/images/logo/logo.1.jpg') }}'">
+                            </a>
+                        </div>
+                        <div class="src-showroom-body">
+                            <span class="src-showroom-cat-tag">{{ $eap->grade ?: 'Industrial Grade' }}</span>
+                            <div class="post-title src-showroom-title fs-5 fw-bold mb-2">
+                                <a href="{{ url('/' . $eap->slug) }}">{{ $eap->name }}</a>
+                            </div>
+                            <p class="src-showroom-desc">
+                                {{ $eap->excerpt ?: 'High purity compound manufactured at S R Chemicals Panoli GIDC for industrial applications.' }}
+                            </p>
+                            <div class="src-showroom-actions">
+                                <a href="{{ url('/' . $eap->slug) }}" class="btn-read-more">
+                                    <i class="bi bi-info-circle"></i> View Details
+                                </a>
+                                <a href="{{ route('contact_us') }}" class="btn-inquire">
+                                    <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+
+            <!-- Slider Controls -->
+            <div class="d-flex justify-content-between align-items-center mt-3 src-slider-controls src-ammonium-controls">
+                <div class="swiper-pagination src-ammonium-pagination position-static w-auto"></div>
+                <div class="src-slider-arrows d-flex gap-2">
+                    <button class="src-slider-btn src-ammonium-prev" type="button" aria-label="Previous Formulation"><i class="bi bi-chevron-left"></i></button>
+                    <button class="src-slider-btn src-ammonium-next" type="button" aria-label="Next Formulation"><i class="bi bi-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======================
+    Ammonium Phosphate Applications & Technical Highlights (Touch Swiper on Mobile & Tablet)
+========================= -->
+<section class="py-5 bg-light border-top border-bottom">
+    <div class="container-fluid px-lg-5">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 gap-3">
+            <div>
+                <span class="src-subheading">Versatile Industrial Utility</span>
+                <div class="src-title fs-2 fw-bold text-navy-900">Key Applications of Ammonium Phosphate</div>
+                <p class="src-desc mb-0">Essential high-nitrogen and high-phosphorus inorganic compounds for industrial fire safety, specialized fertilizers, and yeast fermentation.</p>
+            </div>
+        </div>
+
+        <div class="swiper src-ammonium-apps-swiper pb-4">
+            <div class="swiper-wrapper align-items-stretch">
+                <div class="swiper-slide h-auto">
+                    <div class="p-4 rounded-4 border bg-white h-100 shadow-sm">
+                        <div class="d-flex align-items-center gap-2 mb-2 text-danger fw-bold fs-5">
+                            <i class="bi bi-fire"></i>
+                            <span>ABC Dry Chemical Fire Extinguishers</span>
+                        </div>
+                        <p class="small text-muted mb-0">Monoammonium Phosphate (MAP) is the active fire-suppression agent in dry powder fire extinguishers, melting at 350&deg;F to smother Class A, B, and C blazes.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                    <div class="p-4 rounded-4 border bg-white h-100 shadow-sm">
+                        <div class="d-flex align-items-center gap-2 mb-2 text-success fw-bold fs-5">
+                            <i class="bi bi-flower1"></i>
+                            <span>Specialty Plant Nutrients (12-61-0)</span>
+                        </div>
+                        <p class="small text-muted mb-0">MAP and DAP deliver rapidly assimilable nitrogen and orthophosphate for greenhouse root establishment and high-yield drip fertigation.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                    <div class="p-4 rounded-4 border bg-white h-100 shadow-sm">
+                        <div class="d-flex align-items-center gap-2 mb-2 text-warning fw-bold fs-5">
+                            <i class="bi bi-shield-fill-check"></i>
+                            <span>Textile &amp; Timber Flame Retardancy</span>
+                        </div>
+                        <p class="small text-muted mb-0">DAP impregnates cellulosic fibers, plywood, and commercial fabrics to retard combustion and minimize smoke development.</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Product Item #2: Monoammonium Phosphate -->
-            <div class="col-12 col-md-6 col-lg-5">
-                <div class="src-showroom-card">
-                    <div class="src-showroom-img-wrap">
-                        <span class="src-showroom-badge">MAP (NH4)H2PO4</span>
-                        <a href="{{ route('monoammonium_phosphate') }}">
-                            <img src="{{ asset('assets/images/product/mono_ammonium_phosphate.png') }}" alt="post image" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="src-showroom-body">
-                        <span class="src-showroom-cat-tag">ABC Fire Retardant &amp; Tech</span>
-                        <h4 class="post-title src-showroom-title">
-                            <a href="{{ route('monoammonium_phosphate') }}">Monoammonium Phosphate</a>
-                        </h4>
-                        <p class="src-showroom-desc">
-                            Supply Ability:50 Per Month Delivery Time:3 Days
-                        </p>
-                        <div class="src-showroom-actions">
-                            <a href="{{ route('monoammonium_phosphate') }}" class="btn-read-more">
-                                <i class="bi bi-info-circle"></i> View Details
-                            </a>
-                            <a href="{{ route('contact_us') }}" class="btn-inquire">
-                                <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
+            <!-- Slider Controls -->
+            <div class="d-flex justify-content-between align-items-center mt-3 src-slider-controls src-ammonium-apps-controls">
+                <div class="swiper-pagination src-ammonium-apps-pagination position-static w-auto"></div>
+                <div class="src-slider-arrows d-flex gap-2">
+                    <button class="src-slider-btn src-ammonium-apps-prev" type="button" aria-label="Previous Application"><i class="bi bi-chevron-left"></i></button>
+                    <button class="src-slider-btn src-ammonium-apps-next" type="button" aria-label="Next Application"><i class="bi bi-chevron-right"></i></button>
                 </div>
+            </div>
+        </div>
+
+        <!-- Inquiry Band -->
+        <div class="p-4 rounded-4 bg-white border shadow-sm mt-5 d-flex flex-wrap align-items-center justify-content-between gap-3">
+            <div>
+                <div class="fs-4 fw-bold text-navy-900">Ordering Bulk MAP or DAP from India?</div>
+                <div class="text-muted small">We supply certified technical-grade Ammonium Phosphates in 25kg / 50kg HDPE bags and export container loads.</div>
+            </div>
+            <div>
+                <a href="{{ route('contact_us') }}" class="src-btn-cta">
+                    <span>Request Bulk Quote</span>
+                    <i class="bi bi-arrow-right"></i>
+                </a>
             </div>
         </div>
     </div>

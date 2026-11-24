@@ -14,6 +14,33 @@
     'height' => '500px'
 ])
 
+<style>
+@media (max-width: 767.98px) {
+    .src-map-component-section {
+        padding: 36px 0 !important;
+    }
+    .src-map-frame-box {
+        min-height: 280px !important;
+        height: 280px !important;
+    }
+    .src-map-badge {
+        margin: 8px !important;
+        font-size: 11px !important;
+        padding: 3px 8px !important;
+    }
+    .src-map-btn {
+        margin: 8px !important;
+        font-size: 11px !important;
+        padding: 4px 10px !important;
+    }
+    .src-office-card {
+        padding: 22px 18px !important;
+        border-radius: 16px !important;
+        margin-top: 10px;
+    }
+}
+</style>
+
 <section class="src-map-component-section py-5 py-lg-6 bg-light border-top">
     <div class="container-fluid px-lg-5">
         <!-- Section Header -->
@@ -21,7 +48,7 @@
             <span class="d-inline-flex align-items-center gap-2 px-3 py-1 bg-primary-subtle text-primary border border-primary-subtle rounded-pill fw-bold small mb-2">
                 <i class="bi bi-geo-alt-fill text-primary"></i> {{ $badge }}
             </span>
-            <h2 class="fs-2 fw-bold text-dark mb-2">{{ $heading }}</h2>
+            <div class="h2 fw-bold text-dark mb-2">{{ $heading }}</div>
             <p class="text-muted mb-0" style="font-size: 0.98rem; line-height: 1.7;">
                 {{ $lead }}
             </p>
@@ -31,7 +58,7 @@
         <div class="row g-4 align-items-stretch">
             <!-- Left: Google Maps Interactive Frame -->
             <div class="col-lg-7 col-xl-8">
-                <div class="position-relative h-100 rounded-4 overflow-hidden shadow-sm border bg-white" style="min-height: {{ $height }};">
+                <div class="position-relative h-100 rounded-4 overflow-hidden shadow-sm border bg-white src-map-frame-box" style="min-height: {{ $height }};">
                     <iframe
                         class="w-100 h-100 position-absolute top-0 start-0 border-0"
                         src="{{ $mapEmbedUrl }}"
@@ -41,13 +68,13 @@
                         style="min-height: 100%; filter: contrast(1.02);"></iframe>
 
                     <!-- Top-Left Location Badge -->
-                    <div class="position-absolute top-0 start-0 m-3 px-3 py-1 bg-white bg-opacity-95 rounded-pill shadow-sm small fw-semibold text-dark d-flex align-items-center gap-2" style="backdrop-filter: blur(8px); z-index: 2;">
+                    <div class="position-absolute top-0 start-0 m-3 px-3 py-1 bg-white bg-opacity-95 rounded-pill shadow-sm small fw-semibold text-dark d-flex align-items-center gap-2 src-map-badge" style="backdrop-filter: blur(8px); z-index: 2;">
                         <span class="spinner-grow spinner-grow-sm text-success" style="width: 8px; height: 8px;"></span>
                         <span>S.R. Chemicals &bull; Panoli Works</span>
                     </div>
 
                     <!-- Bottom-Right Quick Action Button -->
-                    <div class="position-absolute bottom-0 end-0 m-3" style="z-index: 2;">
+                    <div class="position-absolute bottom-0 end-0 m-3 src-map-btn" style="z-index: 2;">
                         <a href="{{ $directionsUrl }}" target="_blank" rel="noopener" class="btn btn-light btn-sm rounded-pill shadow-sm fw-bold text-primary px-3 py-2 d-inline-flex align-items-center gap-2" style="backdrop-filter: blur(8px);">
                             <i class="bi bi-box-arrow-up-right"></i>
                             <span>Open in Google Maps</span>
@@ -58,7 +85,7 @@
 
             <!-- Right: Office Details Card -->
             <div class="col-lg-5 col-xl-4">
-                <div class="h-100 rounded-4 shadow-sm p-4 p-xl-5 text-white d-flex flex-column justify-content-between" style="background: linear-gradient(145deg, #07101e 0%, #0c1e3d 60%, #102a54 100%); border: 1px solid rgba(255, 255, 255, 0.1);">
+                <div class="h-100 rounded-4 shadow-sm p-4 p-xl-5 text-white d-flex flex-column justify-content-between src-office-card" style="background: linear-gradient(145deg, #07101e 0%, #0c1e3d 60%, #102a54 100%); border: 1px solid rgba(255, 255, 255, 0.1);">
                     <div>
                         <!-- Card Header -->
                         <div class="d-flex align-items-start justify-content-between border-bottom border-light border-opacity-10 pb-3 mb-4">

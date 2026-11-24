@@ -103,7 +103,8 @@ class UserController extends Controller
 
     public function blog(Request $request)
     {
-        return view('blog');
+        $posts = \App\Models\Post::published()->orderBy('published_date', 'desc')->get();
+        return view('blog', compact('posts'));
     }
 
     public function blog_pharma_grade_phosphate(Request $request)

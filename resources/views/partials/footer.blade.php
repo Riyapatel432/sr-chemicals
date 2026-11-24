@@ -75,9 +75,6 @@
                     <span>©S R Chemicals. All rights reserved. Designed &amp; Developed By</span>
                     <a href="https://techomaxsolution.com/" target="_blank" rel="noopener noreferrer" class="footer-credit-link">Techomax Solution</a>
                 </div>
-                <div class="src-footer-tagline">
-                    High Purity Industrial &amp; Technical Grade Inorganic Salts
-                </div>
             </div>
         </div>
     </div>

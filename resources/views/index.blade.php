@@ -74,134 +74,110 @@
             <p class="src-desc">Direct factory pricing on our highest-demand industrial phosphate compounds with certified batch consistency.</p>
         </div>
 
-        <div class="row g-4">
-            <!-- Deal 1 -->
-            <div class="col-sm-6 col-lg-3">
-                <div class="src-product-card">
-                    <span class="src-product-badge">Anhydrous Form</span>
-                    <div class="src-product-img-wrap">
-                        <a href="{{ route('di_sodium_phosphate_anhydrous_sr') }}">
-                            <img src="{{ asset('assets/images/product/di_ sodium_phosphate_anhydrous.png') }}" alt="service" loading="lazy" width="220" height="180">
-                        </a>
+        <!-- Swiper Deals Carousel with Touch/Swipe Support for Mobile, Tablet & Desktop -->
+        <div class="swiper src-deals-swiper position-relative pb-4">
+            <div class="swiper-wrapper align-items-stretch">
+                <!-- Deal 1 -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-product-card h-100">
+                        <span class="src-product-badge">Anhydrous Form</span>
+                        <div class="src-product-img-wrap">
+                            <a href="{{ route('di_sodium_phosphate_anhydrous_sr') }}">
+                                <img src="{{ asset('assets/images/product/di_ sodium_phosphate_anhydrous.png') }}" alt="service" loading="lazy" width="220" height="180">
+                            </a>
+                        </div>
+                        <h5> Di Sodium Phosphate Anhydrous - SR </h5>
+                        <h4 class="service-title">
+                            <a href="{{ route('di_sodium_phosphate_anhydrous_sr') }}">Di Sodium Phosphate <br>Anhydrous-SR</a>
+                        </h4>
+                        <div class="src-product-footer">
+                            <span class="text-muted small"><i class="bi bi-patch-check text-primary me-1"></i> 98% Min.</span>
+                            <a href="{{ route('di_sodium_phosphate_anhydrous_sr') }}" class="src-view-link">
+                                <span>View</span> <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
-                    <h5> Di Sodium Phosphate Anhydrous - SR </h5>
-                    <h4 class="service-title">
-                        <a href="{{ route('di_sodium_phosphate_anhydrous_sr') }}">Di Sodium Phosphate <br>Anhydrous-SR</a>
-                    </h4>
-                    <div class="src-product-footer">
-                        <span class="text-muted small"><i class="bi bi-patch-check text-primary me-1"></i> 98% Min.</span>
-                        <a href="{{ route('di_sodium_phosphate_anhydrous_sr') }}" class="src-view-link">
-                            <span>View</span> <i class="bi bi-arrow-right"></i>
-                        </a>
+                </div>
+
+                <!-- Deal 2 -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-product-card h-100">
+                        <span class="src-product-badge">Technical Grade</span>
+                        <div class="src-product-img-wrap">
+                            <a href="{{ route('di_ammonium_phosphate') }}">
+                                <img src="{{ asset('assets/images/product/di_ammonium_phosphate.png') }}" alt="service" loading="lazy" width="220" height="180">
+                            </a>
+                        </div>
+                        <h5>Di Ammonium <br>Phosphate</h5>
+                        <h4 class="service-title">
+                            <a href="{{ route('di_ammonium_phosphate') }}">Di Ammonium <br> Phosphate</a>
+                        </h4>
+                        <div class="src-product-footer">
+                            <span class="text-muted small"><i class="bi bi-patch-check text-primary me-1"></i> High Purity</span>
+                            <a href="{{ route('di_ammonium_phosphate') }}" class="src-view-link">
+                                <span>View</span> <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deal 3 -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-product-card h-100">
+                        <span class="src-product-badge">Crystalline</span>
+                        <div class="src-product-img-wrap">
+                            <a href="{{ route('monoammonium_phosphate') }}">
+                                <img src="{{ asset('assets/images/product/mono_ammonium_phosphate.png') }}" alt="service" loading="lazy" width="220" height="180">
+                            </a>
+                        </div>
+                        <h5>Mono Ammonium Phosphate</h5>
+                        <h4 class="service-title">
+                            <a href="{{ route('monoammonium_phosphate') }}">Monoammonium <br> Phosphate</a>
+                        </h4>
+                        <div class="src-product-footer">
+                            <span class="text-muted small"><i class="bi bi-patch-check text-primary me-1"></i> Water Soluble</span>
+                            <a href="{{ route('monoammonium_phosphate') }}" class="src-view-link">
+                                <span>View</span> <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deal 4 -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-product-card h-100">
+                        <span class="src-product-badge">Crystal Pure</span>
+                        <div class="src-product-img-wrap">
+                            <a href="{{ route('tri_sodium_phosphate_crystals') }}">
+                                <img src="{{ asset('assets/images/product/tri_sodium_phosphate_crystal.png') }}" alt="service" loading="lazy" width="220" height="180">
+                            </a>
+                        </div>
+                        <h5>Tri Sodium Phosphate Crystals</h5>
+                        <h4 class="service-title">
+                            <a href="{{ route('tri_sodium_phosphate_crystals') }}">Tri Sodium <br>Phosphate Crystals</a>
+                        </h4>
+                        <div class="src-product-footer">
+                            <span class="text-muted small"><i class="bi bi-patch-check text-primary me-1"></i> Dodeca Pure</span>
+                            <a href="{{ route('tri_sodium_phosphate_crystals') }}" class="src-view-link">
+                                <span>View</span> <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Deal 2 -->
-            <div class="col-sm-6 col-lg-3">
-                <div class="src-product-card">
-                    <span class="src-product-badge">Technical Grade</span>
-                    <div class="src-product-img-wrap">
-                        <a href="{{ route('di_ammonium_phosphate') }}">
-                            <img src="{{ asset('assets/images/product/di_ammonium_phosphate.png') }}" alt="service" loading="lazy" width="220" height="180">
-                        </a>
-                    </div>
-                    <h5>Di Ammonium <br>Phosphate</h5>
-                    <h4 class="service-title">
-                        <a href="{{ route('di_ammonium_phosphate') }}">Di Ammonium <br> Phosphate</a>
-                    </h4>
-                    <div class="src-product-footer">
-                        <span class="text-muted small"><i class="bi bi-patch-check text-primary me-1"></i> High Purity</span>
-                        <a href="{{ route('di_ammonium_phosphate') }}" class="src-view-link">
-                            <span>View</span> <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Deal 3 -->
-            <div class="col-sm-6 col-lg-3">
-                <div class="src-product-card">
-                    <span class="src-product-badge">Crystalline</span>
-                    <div class="src-product-img-wrap">
-                        <a href="{{ route('monoammonium_phosphate') }}">
-                            <img src="{{ asset('assets/images/product/mono_ammonium_phosphate.png') }}" alt="service" loading="lazy" width="220" height="180">
-                        </a>
-                    </div>
-                    <h5>Mono Ammonium Phosphate</h5>
-                    <h4 class="service-title">
-                        <a href="{{ route('monoammonium_phosphate') }}">Monoammonium <br> Phosphate</a>
-                    </h4>
-                    <div class="src-product-footer">
-                        <span class="text-muted small"><i class="bi bi-patch-check text-primary me-1"></i> Water Soluble</span>
-                        <a href="{{ route('monoammonium_phosphate') }}" class="src-view-link">
-                            <span>View</span> <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Deal 4 -->
-            <div class="col-sm-6 col-lg-3">
-                <div class="src-product-card">
-                    <span class="src-product-badge">Crystal Pure</span>
-                    <div class="src-product-img-wrap">
-                        <a href="{{ route('tri_sodium_phosphate_crystals') }}">
-                            <img src="{{ asset('assets/images/product/tri_sodium_phosphate_crystal.png') }}" alt="service" loading="lazy" width="220" height="180">
-                        </a>
-                    </div>
-                    <h5>Tri Sodium Phosphate Crystals</h5>
-                    <h4 class="service-title">
-                        <a href="{{ route('tri_sodium_phosphate_crystals') }}">Tri Sodium <br>Phosphate Crystals</a>
-                    </h4>
-                    <div class="src-product-footer">
-                        <span class="text-muted small"><i class="bi bi-patch-check text-primary me-1"></i> Dodeca Pure</span>
-                        <a href="{{ route('tri_sodium_phosphate_crystals') }}" class="src-view-link">
-                            <span>View</span> <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
+            <!-- Carousel Controls -->
+            <div class="d-flex justify-content-between align-items-center mt-4 src-slider-controls src-deals-controls">
+                <div class="swiper-pagination src-deals-pagination position-static w-auto"></div>
+                <div class="src-slider-arrows d-flex gap-2">
+                    <button class="src-slider-btn src-deals-prev" type="button" aria-label="Previous Deals"><i class="bi bi-chevron-left"></i></button>
+                    <button class="src-slider-btn src-deals-next" type="button" aria-label="Next Deals"><i class="bi bi-chevron-right"></i></button>
                 </div>
             </div>
         </div>
 
         <!-- 4. CTA Band -->
         @include('partials.cta-band')
-    </div>
-</section>
-
-<!-- 5. About Intro Block + Quick Response Inquiry Form -->
-<section class="py-5 py-lg-6">
-    <div class="container-fluid px-lg-5">
-        <div class="row g-5 align-items-center">
-            <!-- Left: About Intro Text & Image -->
-            <div class="col-lg-6">
-                <div class="pe-lg-4">
-                    <div class="d-inline-flex align-items-center gap-2 px-3 py-1 bg-light rounded-pill text-primary fw-bold small mb-3 border">
-                        <i class="bi bi-flask"></i> Scientific Formulation Since 2000
-                    </div>
-
-                    <h3 class="heading-title pt-0 fs-2 fw-bold text-dark mb-4" style="line-height: 1.3;">
-                        Inorganic Salts are indispensable chemicals that surrounds us everywhere, from what we eat to what we wear.
-                    </h3>
-
-                    <div class="card border-0 rounded-4 overflow-hidden shadow-sm mb-4">
-                        <img src="{{ asset('assets/images/about/t_1.jpg') }}" height="380" width="580" alt="about" class="w-100 object-fit-cover" loading="lazy">
-                    </div>
-
-                    <p class="mb-30 text-muted" style="line-height: 1.8;">
-                        <b style="color:#0c1e3d;">Offering precisely formulated and highly soluble Inorganic Chemicals like Sodium Phosphate, Ammonium Phosphate, and Potassium Phosphate series like Mono / Di / Tri / Pyro,  that are accessible in crystalline as well as Powder form.</b>
-                    </p>
-                    <p class="mb-30 text-muted" style="line-height: 1.8;">
-                        <b style="color:#0c1e3d;">Their existence is just not negligible because of their wide benefits and usage in Fertilizers, Pharmaceuticals, Petrochemicals, Dyes Industry & Construction chemical industry. These chemicals have become a great necessity that sustains the effective functioning of industrial goods, making it more certain to use.</b>
-                    </p>
-                </div>
-            </div>
-
-            <!-- Right: Quick Response Inquiry Form -->
-            <div class="col-lg-6">
-                @include('partials.inquiry-form')
-            </div>
-        </div>
     </div>
 </section>
 
@@ -214,100 +190,112 @@
             <p class="src-desc">Consistently supplied to India's major power plants, petrochemical complexes, and global importers.</p>
         </div>
 
-        <div class="row g-4">
-            <!-- Product 1: Di Sodium Phosphate -->
-            <div class="col-sm-6 col-lg-3">
-                <div class="src-product-card">
-                    <span class="src-product-badge">Sodium Line</span>
-                    <div class="src-product-img-wrap">
-                        <a href="{{ route('di_sodium_phosphate') }}">
-                            <img src="{{ asset('assets/images/product/di_ sodium_phosphate.png') }}" height="180" width="220" alt="post image" loading="lazy">
-                        </a>
+        <!-- Swiper Popular Products Carousel with Touch/Swipe Support -->
+        <div class="swiper src-popular-swiper position-relative pb-4">
+            <div class="swiper-wrapper align-items-stretch">
+                <!-- Product 1: Di Sodium Phosphate -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-product-card h-100">
+                        <span class="src-product-badge">Sodium Line</span>
+                        <div class="src-product-img-wrap">
+                            <a href="{{ route('di_sodium_phosphate') }}">
+                                <img src="{{ asset('assets/images/product/di_ sodium_phosphate.png') }}" height="180" width="220" alt="post image" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="post-meta-cat small text-muted mb-1">
+                            <a href="{{ route('di_sodium_phosphate') }}" class="text-primary fw-bold text-decoration-none">Di Sodium Phosphate</a>
+                        </div>
+                        <h4 class="src-product-title fs-6">
+                            <a href="{{ route('di_sodium_phosphate') }}">Di Sodium Phosphate</a>
+                        </h4>
+                        <div class="src-product-footer">
+                            <span class="text-muted small">Powder / Crystal</span>
+                            <a href="{{ route('di_sodium_phosphate') }}" class="src-view-link">
+                                <span>Read More</span> <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="post-meta-cat small text-muted mb-1">
-                        <a href="{{ route('di_sodium_phosphate') }}" class="text-primary fw-bold text-decoration-none">Di Sodium Phosphate</a>
+                </div>
+
+                <!-- Product 2: Mono Sodium Phosphate Crystal -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-product-card h-100">
+                        <span class="src-product-badge">Crystalline</span>
+                        <div class="src-product-img-wrap">
+                            <a href="{{ route('mono_sodium_phosphate_crystal') }}">
+                                <img src="{{ asset('assets/images/product/mono_sodium_phosphate_crystal.png') }}" height="180" width="220" alt="post image" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="post-meta-cat small text-muted mb-1">
+                            <a href="{{ route('mono_sodium_phosphate_crystal') }}" class="text-primary fw-bold text-decoration-none">Mono Sodium Phosphate Crystal</a>
+                        </div>
+                        <h4 class="src-product-title fs-6">
+                            <a href="{{ route('mono_sodium_phosphate_crystal') }}">Mono Sodium Phosphate Crystal</a>
+                        </h4>
+                        <div class="src-product-footer">
+                            <span class="text-muted small">Clear Solubility</span>
+                            <a href="{{ route('mono_sodium_phosphate_crystal') }}" class="src-view-link">
+                                <span>Read More</span> <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
-                    <h4 class="src-product-title fs-6">
-                        <a href="{{ route('di_sodium_phosphate') }}">Di Sodium Phosphate</a>
-                    </h4>
-                    <div class="src-product-footer">
-                        <span class="text-muted small">Powder / Crystal</span>
-                        <a href="{{ route('di_sodium_phosphate') }}" class="src-view-link">
-                            <span>Read More</span> <i class="bi bi-arrow-right"></i>
-                        </a>
+                </div>
+
+                <!-- Product 3: Di Sodium Phosphate Crystal -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-product-card h-100">
+                        <span class="src-product-badge">High Clarity</span>
+                        <div class="src-product-img-wrap">
+                            <a href="{{ route('di_sodium_phosphate_crystal') }}">
+                                <img src="{{ asset('assets/images/product/di_sodium_ phosphate_crystal.png') }}" height="180" width="220" alt="post image" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="post-meta-cat small text-muted mb-1">
+                            <a href="{{ route('di_sodium_phosphate_crystal') }}" class="text-primary fw-bold text-decoration-none">Di Sodium Phosphate Crystal</a>
+                        </div>
+                        <h4 class="src-product-title fs-6">
+                            <a href="{{ route('di_sodium_phosphate_crystal') }}">Di Sodium Phosphate Crystal</a>
+                        </h4>
+                        <div class="src-product-footer">
+                            <span class="text-muted small">Buffering Agent</span>
+                            <a href="{{ route('di_sodium_phosphate_crystal') }}" class="src-view-link">
+                                <span>Read More</span> <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4: Tetra Potassium Pyro Phosphate -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-product-card h-100">
+                        <span class="src-product-badge">Pyrophosphate</span>
+                        <div class="src-product-img-wrap">
+                            <a href="{{ route('tetra_potassium_pyro_phosphate') }}">
+                                <img src="{{ asset('assets/images/product/tetra_sodium_pyro_phoshpate.png') }}" height="180" width="220" alt="post image" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="post-meta-cat small text-muted mb-1">
+                            <a href="{{ route('tetra_potassium_pyro_phosphate') }}" class="text-primary fw-bold text-decoration-none">Tetra Potassium Pyro Phosphate</a>
+                        </div>
+                        <h4 class="src-product-title fs-6">
+                            <a href="{{ route('tetra_potassium_pyro_phosphate') }}">Tetra Potassium Pyro Phosphate</a>
+                        </h4>
+                        <div class="src-product-footer">
+                            <span class="text-muted small">Technical Grade</span>
+                            <a href="{{ route('tetra_potassium_pyro_phosphate') }}" class="src-view-link">
+                                <span>Read More</span> <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Product 2: Mono Sodium Phosphate Crystal -->
-            <div class="col-sm-6 col-lg-3">
-                <div class="src-product-card">
-                    <span class="src-product-badge">Crystalline</span>
-                    <div class="src-product-img-wrap">
-                        <a href="{{ route('mono_sodium_phosphate_crystal') }}">
-                            <img src="{{ asset('assets/images/product/mono_sodium_phosphate_crystal.png') }}" height="180" width="220" alt="post image" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="post-meta-cat small text-muted mb-1">
-                        <a href="{{ route('mono_sodium_phosphate_crystal') }}" class="text-primary fw-bold text-decoration-none">Mono Sodium Phosphate Crystal</a>
-                    </div>
-                    <h4 class="src-product-title fs-6">
-                        <a href="{{ route('mono_sodium_phosphate_crystal') }}">Mono Sodium Phosphate Crystal</a>
-                    </h4>
-                    <div class="src-product-footer">
-                        <span class="text-muted small">Clear Solubility</span>
-                        <a href="{{ route('mono_sodium_phosphate_crystal') }}" class="src-view-link">
-                            <span>Read More</span> <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 3: Di Sodium Phosphate Crystal -->
-            <div class="col-sm-6 col-lg-3">
-                <div class="src-product-card">
-                    <span class="src-product-badge">High Clarity</span>
-                    <div class="src-product-img-wrap">
-                        <a href="{{ route('di_sodium_phosphate_crystal') }}">
-                            <img src="{{ asset('assets/images/product/di_sodium_ phosphate_crystal.png') }}" height="180" width="220" alt="post image" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="post-meta-cat small text-muted mb-1">
-                        <a href="{{ route('di_sodium_phosphate_crystal') }}" class="text-primary fw-bold text-decoration-none">Di Sodium Phosphate Crystal</a>
-                    </div>
-                    <h4 class="src-product-title fs-6">
-                        <a href="{{ route('di_sodium_phosphate_crystal') }}">Di Sodium Phosphate Crystal</a>
-                    </h4>
-                    <div class="src-product-footer">
-                        <span class="text-muted small">Buffering Agent</span>
-                        <a href="{{ route('di_sodium_phosphate_crystal') }}" class="src-view-link">
-                            <span>Read More</span> <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 4: Tetra Potassium Pyro Phosphate -->
-            <div class="col-sm-6 col-lg-3">
-                <div class="src-product-card">
-                    <span class="src-product-badge">Pyrophosphate</span>
-                    <div class="src-product-img-wrap">
-                        <a href="{{ route('tetra_potassium_pyro_phosphate') }}">
-                            <img src="{{ asset('assets/images/product/tetra_sodium_pyro_phoshpate.png') }}" height="180" width="220" alt="post image" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="post-meta-cat small text-muted mb-1">
-                        <a href="{{ route('tetra_potassium_pyro_phosphate') }}" class="text-primary fw-bold text-decoration-none">Tetra Potassium Pyro Phosphate</a>
-                    </div>
-                    <h4 class="src-product-title fs-6">
-                        <a href="{{ route('tetra_potassium_pyro_phosphate') }}">Tetra Potassium Pyro Phosphate</a>
-                    </h4>
-                    <div class="src-product-footer">
-                        <span class="text-muted small">Technical Grade</span>
-                        <a href="{{ route('tetra_potassium_pyro_phosphate') }}" class="src-view-link">
-                            <span>Read More</span> <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
+            <!-- Controls: Pagination & Navigation Arrows -->
+            <div class="d-flex justify-content-between align-items-center mt-4 src-slider-controls src-popular-controls">
+                <div class="swiper-pagination src-popular-pagination position-static w-auto"></div>
+                <div class="src-slider-arrows d-flex gap-2">
+                    <button class="src-slider-btn src-popular-prev" type="button" aria-label="Previous Products"><i class="bi bi-chevron-left"></i></button>
+                    <button class="src-slider-btn src-popular-next" type="button" aria-label="Next Products"><i class="bi bi-chevron-right"></i></button>
                 </div>
             </div>
         </div>

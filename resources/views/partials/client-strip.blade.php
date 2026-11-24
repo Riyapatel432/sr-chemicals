@@ -1,6 +1,6 @@
-<!-- Our Clientele Grid & Showcase -->
+<!-- Our Clientele Grid & Touch-Swipeable Showcase -->
 <div class="src-client-section py-5">
-    <div class="container-fluid px-lg-5">
+    <div class="container-fluid px-3 px-sm-4 px-lg-5">
         <div class="text-center max-w-700 mx-auto mb-4">
             <h5 class="heading-title fs-3 fw-bold text-primary mb-3">Our Clientele</h5>
             <p class="heading-desc text-muted mb-4 justify-content-end" style="line-height: 1.8;">
@@ -8,50 +8,60 @@
             </p>
         </div>
 
-        <!-- Semantic Client List for SEO + Modern Badges -->
-        <ul class="heading-desc list-unstyled row g-3 justify-content-center">
-            <li class="col-6 col-sm-4 col-md-3">
-                <div class="src-client-badge">
-                    <span>Atul Limited</span>
-                </div>
-            </li>
-            <li class="col-6 col-sm-4 col-md-3">
-                <div class="src-client-badge">
-                    <span>Essar Oil Limited</span>
-                </div>
-            </li>
-            <li class="col-6 col-sm-4 col-md-3">
-                <div class="src-client-badge">
-                    <span>Gujarat Narmada Valley Fertilizers &amp; Chemicals Limited.</span>
-                </div>
-            </li>
-            <li class="col-6 col-sm-4 col-md-3">
-                <div class="src-client-badge">
-                    <span>Gujarat State Electricity Corporation Limited</span>
-                </div>
-            </li>
-            <li class="col-6 col-sm-4 col-md-3">
-                <div class="src-client-badge">
-                    <span>Oil and Natural Gas Corporation Limited</span>
-                </div>
-            </li>
-            <li class="col-6 col-sm-4 col-md-3">
-                <div class="src-client-badge">
-                    <span>Rajasthan Rajya Vidyut Utpadan Nigam Limited</span>
-                </div>
-            </li>
-            <li class="col-6 col-sm-4 col-md-3">
-                <div class="src-client-badge">
-                    <span>Rashtriya Chemicals &amp; Fertilizers Limited</span>
-                </div>
-            </li>
-            <li class="col-6 col-sm-4 col-md-3">
-                <div class="src-client-badge">
-                    <span>Steel Authority of India Limited</span>
-                </div>
-            </li>
-        </ul>
+        <!-- Semantic Client List for SEO + Touch/Swipe Carousel for Mobile & Tablet -->
+        <div class="swiper src-client-swiper position-relative pb-4">
+            <ul class="swiper-wrapper heading-desc list-unstyled mb-0 align-items-stretch">
+                <li class="swiper-slide h-auto">
+                    <div class="src-client-badge h-100">
+                        <i class="bi bi-shield-check text-warning me-2 fs-5"></i>
+                        <span>Atul Limited</span>
+                    </div>
+                </li>
+                <li class="swiper-slide h-auto">
+                    <div class="src-client-badge h-100">
+                        <i class="bi bi-shield-check text-warning me-2 fs-5"></i>
+                        <span>Essar Oil Limited</span>
+                    </div>
+                </li>
+                <li class="swiper-slide h-auto">
+                    <div class="src-client-badge h-100">
+                        <i class="bi bi-shield-check text-warning me-2 fs-5"></i>
+                        <span>Gujarat Narmada Valley Fertilizers &amp; Chemicals Limited.</span>
+                    </div>
+                </li>
+                <li class="swiper-slide h-auto">
+                    <div class="src-client-badge h-100">
+                        <i class="bi bi-shield-check text-warning me-2 fs-5"></i>
+                        <span>Gujarat State Electricity Corporation Limited</span>
+                    </div>
+                </li>
+                <li class="swiper-slide h-auto">
+                    <div class="src-client-badge h-100">
+                        <i class="bi bi-shield-check text-warning me-2 fs-5"></i>
+                        <span>Oil and Natural Gas Corporation Limited</span>
+                    </div>
+                </li>
+                <li class="swiper-slide h-auto">
+                    <div class="src-client-badge h-100">
+                        <i class="bi bi-shield-check text-warning me-2 fs-5"></i>
+                        <span>Rajasthan Rajya Vidyut Utpadan Nigam Limited</span>
+                    </div>
+                </li>
+                <li class="swiper-slide h-auto">
+                    <div class="src-client-badge h-100">
+                        <i class="bi bi-shield-check text-warning me-2 fs-5"></i>
+                        <span>Rashtriya Chemicals &amp; Fertilizers Limited</span>
+                    </div>
+                </li>
+                <li class="swiper-slide h-auto">
+                    <div class="src-client-badge h-100">
+                        <i class="bi bi-shield-check text-warning me-2 fs-5"></i>
+                        <span>Steel Authority of India Limited</span>
+                    </div>
+                </li>
+            </ul>
+            <div class="swiper-pagination src-client-pagination mt-3 position-static"></div>
+        </div>
     </div>
 </div>
 <!-- /.Our Clientele -->
-

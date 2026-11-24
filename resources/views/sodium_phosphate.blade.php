@@ -112,307 +112,424 @@
 </section>
 
 <!-- ======================
-    Sodium Phosphate Derivatives Showcase Grid
+    Sodium Phosphate Derivatives Showcase Grid (Touch Swiper on Mobile & Tablet)
 ========================= -->
 <section class="src-showroom-section py-5">
     <div class="container-fluid px-lg-5">
-        <div class="text-center mb-5">
-            <span class="src-section-badge mb-2">Portfolio</span>
-            <div class="fs-2 fw-bold text-navy-900 mb-2">Available Sodium Phosphate Formulations</div>
-            <p class="text-muted mx-auto" style="max-width: 650px;">
-                Direct factory supply with complete batch Certificate of Analysis (COA), export packaging, and reliable logistics.
-            </p>
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 gap-3">
+            <div class="text-center text-md-start">
+                <span class="src-section-badge mb-2">Portfolio</span>
+                <div class="fs-2 fw-bold text-navy-900 mb-2">Available Sodium Phosphate Formulations</div>
+                <p class="text-muted mb-0" style="max-width: 650px;">
+                    Direct factory supply with complete batch Certificate of Analysis (COA), export packaging, and reliable logistics.
+                </p>
+            </div>
         </div>
 
-        <div class="row g-4">
-            <!-- Product Item #1 -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="src-showroom-card">
-                    <div class="src-showroom-img-wrap">
-                        <span class="src-showroom-badge">Na2HPO4</span>
-                        <a href="{{ route('di_sodium_phosphate_anhydrous') }}">
-                            <img src="{{ asset('assets/images/product/di_ sodium_phosphate_anhydrous.png') }}" alt="post image" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="src-showroom-body">
-                        <span class="src-showroom-cat-tag">Technical Grade</span>
-                        <h4 class="post-title src-showroom-title">
-                            <a href="{{ route('di_sodium_phosphate_anhydrous') }}">Di Sodium Phosphate Anhydrous - SR</a>
-                        </h4>
-                        <p class="src-showroom-desc">
-                            Di Sodium Phosphate - Anhydrous Grade:Technical Chemical Formula:Na2HPO4 Make:S.R.Chemicals pH:9.1 - 9.5 P2O5:48% Min.Assay:98.00% Min.
-                        </p>
-                        <div class="src-showroom-actions">
-                            <a href="{{ route('di_sodium_phosphate_anhydrous') }}" class="btn-read-more">
-                                <i class="bi bi-info-circle"></i> View Details
-                            </a>
-                            <a href="{{ route('contact_us') }}" class="btn-inquire">
-                                <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
+        <div class="swiper src-sodium-swiper pb-4 mb-4">
+            <div class="swiper-wrapper align-items-stretch">
+                <!-- Product Item #1 -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-showroom-card h-100">
+                        <div class="src-showroom-img-wrap">
+                            <span class="src-showroom-badge">Na2HPO4</span>
+                            <a href="{{ route('di_sodium_phosphate_anhydrous') }}">
+                                <img src="{{ asset('assets/images/product/di_ sodium_phosphate_anhydrous.png') }}" alt="post image" loading="lazy">
                             </a>
                         </div>
+                        <div class="src-showroom-body">
+                            <span class="src-showroom-cat-tag">Technical Grade</span>
+                            <h4 class="post-title src-showroom-title">
+                                <a href="{{ route('di_sodium_phosphate_anhydrous') }}">Di Sodium Phosphate Anhydrous - SR</a>
+                            </h4>
+                            <p class="src-showroom-desc">
+                                Di Sodium Phosphate - Anhydrous Grade:Technical Chemical Formula:Na2HPO4 Make:S.R.Chemicals pH:9.1 - 9.5 P2O5:48% Min.Assay:98.00% Min.
+                            </p>
+                            <div class="src-showroom-actions">
+                                <a href="{{ route('di_sodium_phosphate_anhydrous') }}" class="btn-read-more">
+                                    <i class="bi bi-info-circle"></i> View Details
+                                </a>
+                                <a href="{{ route('contact_us') }}" class="btn-inquire">
+                                    <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Item #2 -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-showroom-card h-100">
+                        <div class="src-showroom-img-wrap">
+                            <span class="src-showroom-badge">Crystalline</span>
+                            <a href="{{ route('di_sodium_phosphate_crystal') }}">
+                                <img src="{{ asset('assets/images/product/di_sodium_ phosphate_crystal.png') }}" alt="post image" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="src-showroom-body">
+                            <span class="src-showroom-cat-tag">Crystal Grade</span>
+                            <h4 class="post-title src-showroom-title">
+                                <a href="{{ route('di_sodium_phosphate_crystal') }}">Di Sodium Phosphate Crystal</a>
+                            </h4>
+                            <p class="src-showroom-desc">
+                                1. Description White Fine crystals 2. Loss on drying, percent by mass 57-61 3. Matter insoluble in water 0.25% Max. 4. pH of 2 % Sol. 9.0 9.2 5. Iron as Fe 0.01% Max. 6. P2O5 49 % Min. 7. Assay 98% (Min.)
+                            </p>
+                            <div class="src-showroom-actions">
+                                <a href="{{ route('di_sodium_phosphate_crystal') }}" class="btn-read-more">
+                                    <i class="bi bi-info-circle"></i> View Details
+                                </a>
+                                <a href="{{ route('contact_us') }}" class="btn-inquire">
+                                    <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Item #3 -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-showroom-card h-100">
+                        <div class="src-showroom-img-wrap">
+                            <span class="src-showroom-badge">Fine Powder</span>
+                            <a href="{{ route('mono_sodium_phosphate_crystal') }}">
+                                <img src="{{ asset('assets/images/product/mono_sodium_phosphate_crystal.png') }}" alt="post image" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="src-showroom-body">
+                            <span class="src-showroom-cat-tag">Pure Grade</span>
+                            <h4 class="post-title src-showroom-title">
+                                <a href="{{ route('mono_sodium_phosphate_crystal') }}">Mono Sodium Phosphate Anhydrous - SR</a>
+                            </h4>
+                            <p class="src-showroom-desc">
+                                1. Description White fine Powder 2. pH of 2% Sol. 4.3 to 4.7 3. Clarity of 10% Sol. Clear. 4. Loss on drying 0.5% max. 5. P2O5 58.0% Max. 6. Assay 98.5% Max.
+                            </p>
+                            <div class="src-showroom-actions">
+                                <a href="{{ route('mono_sodium_phosphate_crystal') }}" class="btn-read-more">
+                                    <i class="bi bi-info-circle"></i> View Details
+                                </a>
+                                <a href="{{ route('contact_us') }}" class="btn-inquire">
+                                    <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Item #4 -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-showroom-card h-100">
+                        <div class="src-showroom-img-wrap">
+                            <span class="src-showroom-badge">DSP</span>
+                            <a href="{{ route('di_sodium_phosphate') }}">
+                                <img src="{{ asset('assets/images/product/di_ sodium_phosphate.png') }}" alt="post image" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="src-showroom-body">
+                            <span class="src-showroom-cat-tag">Industrial Grade</span>
+                            <h4 class="post-title src-showroom-title">
+                                <a href="{{ route('di_sodium_phosphate') }}">Di sodium Phosphate </a>
+                            </h4>
+                            <p class="src-showroom-desc">
+                                1.Description White Powder 2.Loss on drying, percent by mass 2.0 Max. 3.Matter insoluble in water 0.50 Max. 4.pH of 2 % Sol. 9.1 - 9.3 5.Iron as Fe percent by mass 0.01% Max. 6.P2O5 48.00% Min. 7.Assay 98.00 % Min.
+                            </p>
+                            <div class="src-showroom-actions">
+                                <a href="{{ route('di_sodium_phosphate') }}" class="btn-read-more">
+                                    <i class="bi bi-info-circle"></i> View Details
+                                </a>
+                                <a href="{{ route('contact_us') }}" class="btn-inquire">
+                                    <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Item #5 -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-showroom-card h-100">
+                        <div class="src-showroom-img-wrap">
+                            <span class="src-showroom-badge">SAPP</span>
+                            <a href="{{ route('sodium_acid_pyrophosphate') }}">
+                                <img src="{{ asset('assets/images/product/sodium_acid_pyrophosphate.jpeg') }}" alt="post image" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="src-showroom-body">
+                            <span class="src-showroom-cat-tag">Leavening Buffer</span>
+                            <h4 class="post-title src-showroom-title">
+                                <a href="{{ route('sodium_acid_pyrophosphate') }}">Sodium Acid Pyrophosphate</a>
+                            </h4>
+                            <p class="src-showroom-desc">
+                                1. Appearance White Powder 2. pH 4 - 5 3. Loss on Drying 0.5% Max. 4. Matter Insoluble in water 0.1% Max. 5. P2O5 61 % Min. 6. Assay 91 % Min. 7. Iron as fe 0.02 % Max.
+                            </p>
+                            <div class="src-showroom-actions">
+                                <a href="{{ route('sodium_acid_pyrophosphate') }}" class="btn-read-more">
+                                    <i class="bi bi-info-circle"></i> View Details
+                                </a>
+                                <a href="{{ route('contact_us') }}" class="btn-inquire">
+                                    <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Item #6 -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-showroom-card h-100">
+                        <div class="src-showroom-img-wrap">
+                            <span class="src-showroom-badge">TSPP</span>
+                            <a href="{{ route('tetra_sodium_pyro_phosphate') }}">
+                                <img src="{{ asset('assets/images/product/tetra_sodium_pyro_phoshpate.jpeg') }}" alt="post image" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="src-showroom-body">
+                            <span class="src-showroom-cat-tag">Dispersing Agent</span>
+                            <h4 class="post-title src-showroom-title">
+                                <a href="{{ route('tetra_sodium_pyro_phosphate') }}">Tetra Sodium Pyro Phosphate</a>
+                            </h4>
+                            <p class="src-showroom-desc">
+                                1. Description White powder 2. pH of 2% solution 10.0 - 10.6 3. Loss on drying 0.5% Max. 4. Clarity of 10% Solution Clear 5. Phosphate as P2O5 52.5 54 % 6. Assay 95.00 Min.
+                            </p>
+                            <div class="src-showroom-actions">
+                                <a href="{{ route('tetra_sodium_pyro_phosphate') }}" class="btn-read-more">
+                                    <i class="bi bi-info-circle"></i> View Details
+                                </a>
+                                <a href="{{ route('contact_us') }}" class="btn-inquire">
+                                    <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Item #7 -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-showroom-card h-100">
+                        <div class="src-showroom-img-wrap">
+                            <span class="src-showroom-badge">Anhydrous</span>
+                            <a href="{{ route('di_sodium_phosphate_anhydrous') }}">
+                                <img src="{{ asset('assets/images/product/di_ sodium_phosphate_anhydrous.png') }}" alt="post image" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="src-showroom-body">
+                            <span class="src-showroom-cat-tag">Inorganic Salts</span>
+                            <h4 class="post-title src-showroom-title">
+                                <a href="{{ route('di_sodium_phosphate_anhydrous') }}">Di Sodium Phosphate - Anhydrous</a>
+                            </h4>
+                            <p class="src-showroom-desc">
+                                Classification:Inorganic Chemicals Form:Powder Solubility:Soluble Other Names:1. Disodium hydrogen ortho phosphate. 2. Sodium hydrogen phosphate. 3. Sodium phosphate Dibasic. 4. Di Sodium phosphate Ph Level:9.1 - 9.5 CAS No:7558794 Chemical Name:Di Sodium Hydrogen Phosphate Grade:Industrial Grade Delivery Time:10 Days Supply Ability:50 Per Month
+                            </p>
+                            <div class="src-showroom-actions">
+                                <a href="{{ route('di_sodium_phosphate_anhydrous') }}" class="btn-read-more">
+                                    <i class="bi bi-info-circle"></i> View Details
+                                </a>
+                                <a href="{{ route('contact_us') }}" class="btn-inquire">
+                                    <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Item #8 -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-showroom-card h-100">
+                        <div class="src-showroom-img-wrap">
+                            <span class="src-showroom-badge">TSP Crystals</span>
+                            <a href="{{ route('tri_sodium_phosphate_crystals') }}">
+                                <img src="{{ asset('assets/images/product/tri_sodium_phosphate_crystal.png') }}" alt="post image" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="src-showroom-body">
+                            <span class="src-showroom-cat-tag">Degreasing Grade</span>
+                            <h4 class="post-title src-showroom-title">
+                                <a href="{{ route('tri_sodium_phosphate_crystals') }}">Tri Sodium Phosphate Crystals</a>
+                            </h4>
+                            <p class="src-showroom-desc">
+                                1.Matter insoluble in water, percent by mass.0.01 Max.2.Phosphate(as P2O5)percent by mass.18.00 Min.3.Free Sodium Hydroxide(as NaOH)percent by mass.2.5 Max.4.Soluble Iron Compounds(as Fe),percent by mass.0.001 Max.5.Nitrogen Compound(as N),percent by mass.0.001 Max.6.Sulphate(as SO4),percent by mass.0.01 Max.7.Arsenic(As2O3),Percent by mass.0.0005 Max.8.Heavy Metals(as Pb),percent by mass.0.001 Max.9.Soluble Silica(as SiO2),percent by mass.0.05 Max.10.Chloride(as Cl)percent by mass.0.05 Max.
+                            </p>
+                            <div class="src-showroom-actions">
+                                <a href="{{ route('tri_sodium_phosphate_crystals') }}" class="btn-read-more">
+                                    <i class="bi bi-info-circle"></i> View Details
+                                </a>
+                                <a href="{{ route('contact_us') }}" class="btn-inquire">
+                                    <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Item #9 -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-showroom-card h-100">
+                        <div class="src-showroom-img-wrap">
+                            <span class="src-showroom-badge">TSP Anhydrous</span>
+                            <a href="{{ route('trisodium_phosphate_anhydrous') }}">
+                                <img src="{{ asset('assets/images/product/tri_sodium_phosphate_anhydrous.png') }}" alt="post image" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="src-showroom-body">
+                            <span class="src-showroom-cat-tag">High Assay 41% P2O5</span>
+                            <h4 class="post-title src-showroom-title">
+                                <a href="{{ route('trisodium_phosphate_anhydrous') }}">Trisodium Phosphate Anhydrous</a>
+                            </h4>
+                            <p class="src-showroom-desc">
+                                1. Appearance White Powder 2. Matter insoluble in water, percent by mass. 0.50 Max. 3. Phosphate (as P2O5) percent by mass. 41.00 Min. 4. Carbonate(as Na2CO3) percent by mass. 2.00 Max. 5. Free Sodium Hydroxide (as NaOH) percent by mass. 3.2 Max. 6. Soluble Iron Compounds (as Fe), percent by mass. 0.02 Max.
+                            </p>
+                            <div class="src-showroom-actions">
+                                <a href="{{ route('trisodium_phosphate_anhydrous') }}" class="btn-read-more">
+                                    <i class="bi bi-info-circle"></i> View Details
+                                </a>
+                                <a href="{{ route('contact_us') }}" class="btn-inquire">
+                                    <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Item #10 -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-showroom-card h-100">
+                        <div class="src-showroom-img-wrap">
+                            <span class="src-showroom-badge">MSP Crystal</span>
+                            <a href="{{ route('mono_sodium_phosphate_crystal') }}">
+                                <img src="{{ asset('assets/images/product/mono_sodium_phosphate_crystal.png') }}" alt="post image" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="src-showroom-body">
+                            <span class="src-showroom-cat-tag">NaH2PO4</span>
+                            <h4 class="post-title src-showroom-title">
+                                <a href="{{ route('mono_sodium_phosphate_crystal') }}">Mono Sodium Phosphate Crystal </a>
+                            </h4>
+                            <p class="src-showroom-desc">
+                                Product Specification Product Name: Mono Sodium Phosphate,Crystal.Grade: Technical. Chemical Formula: NaH2PO4. Packaging: 50 Kgs HDPE Bags. Make: S.R.Chemicals. Specifications: Description White Fine crystals pH of 2% solution 4 - 5 Solubility of 10 % Sol. Clear P2O5 44-45% Assay 98% (Min.)
+                            </p>
+                            <div class="src-showroom-actions">
+                                <a href="{{ route('mono_sodium_phosphate_crystal') }}" class="btn-read-more">
+                                    <i class="bi bi-info-circle"></i> View Details
+                                </a>
+                                <a href="{{ route('contact_us') }}" class="btn-inquire">
+                                    <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @php
+                    $extraSodiumShowcase = \App\Models\Product::where('category', 'Sodium Phosphate')->where('is_category', false)->whereNull('blade_view')->where('status', 'published')->get();
+                @endphp
+                @foreach($extraSodiumShowcase as $esp)
+                <div class="swiper-slide h-auto">
+                    <div class="src-showroom-card h-100">
+                        <div class="src-showroom-img-wrap">
+                            <span class="src-showroom-badge">{{ $esp->chemical_formula ?: 'Pure' }}</span>
+                            <a href="{{ url('/' . $esp->slug) }}">
+                                <img src="{{ $esp->featured_image_url }}" alt="{{ $esp->image_alt ?: $esp->name }}" loading="lazy" onerror="this.onerror=null;this.src='{{ asset('assets/images/logo/logo.1.jpg') }}'">
+                            </a>
+                        </div>
+                        <div class="src-showroom-body">
+                            <span class="src-showroom-cat-tag">{{ $esp->grade ?: 'Industrial Grade' }}</span>
+                            <div class="post-title src-showroom-title fs-5 fw-bold mb-2">
+                                <a href="{{ url('/' . $esp->slug) }}">{{ $esp->name }}</a>
+                            </div>
+                            <p class="src-showroom-desc">
+                                {{ $esp->excerpt ?: 'High purity compound manufactured at S R Chemicals Panoli GIDC for industrial applications.' }}
+                            </p>
+                            <div class="src-showroom-actions">
+                                <a href="{{ url('/' . $esp->slug) }}" class="btn-read-more">
+                                    <i class="bi bi-info-circle"></i> View Details
+                                </a>
+                                <a href="{{ route('contact_us') }}" class="btn-inquire">
+                                    <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+
+            <!-- Slider Controls -->
+            <div class="d-flex justify-content-between align-items-center mt-3 src-slider-controls src-sodium-controls">
+                <div class="swiper-pagination src-sodium-pagination position-static w-auto"></div>
+                <div class="src-slider-arrows d-flex gap-2">
+                    <button class="src-slider-btn src-sodium-prev" type="button" aria-label="Previous Formulation"><i class="bi bi-chevron-left"></i></button>
+                    <button class="src-slider-btn src-sodium-next" type="button" aria-label="Next Formulation"><i class="bi bi-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </div>
+</section>
+
+<!-- ======================
+    Sodium Phosphate Applications & Bulk Sourcing Highlights
+========================= -->
+<section class="py-5 bg-light border-top border-bottom">
+    <div class="container-fluid px-lg-5">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 gap-3">
+            <div>
+                <span class="src-subheading">Core Manufacturing Strengths</span>
+                <div class="src-title fs-2 fw-bold text-navy-900">Why Source Sodium Phosphates from S R Chemicals?</div>
+                <p class="src-desc mb-0">Over 20 years of precision chemical synthesis in Panoli GIDC, Bharuch, ensuring consistent purity and reliable container shipments.</p>
+            </div>
+        </div>
+
+        <div class="swiper src-sodium-strengths-swiper pb-4">
+            <div class="swiper-wrapper align-items-stretch">
+                <div class="swiper-slide h-auto">
+                    <div class="p-4 rounded-4 border bg-white h-100 shadow-sm">
+                        <div class="d-flex align-items-center gap-2 mb-2 text-primary fw-bold fs-5">
+                            <i class="bi bi-shield-check"></i>
+                            <span>Guaranteed Assay &ge; 98%</span>
+                        </div>
+                        <p class="small text-muted mb-0">Every batch of Anhydrous and Crystalline sodium salts is tested for complete water solubility, accurate pH, and lowest insolubles.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                    <div class="p-4 rounded-4 border bg-white h-100 shadow-sm">
+                        <div class="d-flex align-items-center gap-2 mb-2 text-success fw-bold fs-5">
+                            <i class="bi bi-box-seam-fill"></i>
+                            <span>Multi-Layer Export Packaging</span>
+                        </div>
+                        <p class="small text-muted mb-0">Packed in 25kg / 50kg poly-lined HDPE woven bags, shrink-wrapped on fumigated wooden pallets to eliminate caking in humid transit.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                    <div class="p-4 rounded-4 border bg-white h-100 shadow-sm">
+                        <div class="d-flex align-items-center gap-2 mb-2 text-warning fw-bold fs-5">
+                            <i class="bi bi-truck"></i>
+                            <span>Immediate Port Dispatch</span>
+                        </div>
+                        <p class="small text-muted mb-0">Short transit from Panoli GIDC to Hazira and Nhava Sheva (JNPT) seaports ensures fast loading and reliable global sailing schedules.</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Product Item #2 -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="src-showroom-card">
-                    <div class="src-showroom-img-wrap">
-                        <span class="src-showroom-badge">Crystalline</span>
-                        <a href="{{ route('di_sodium_phosphate_crystal') }}">
-                            <img src="{{ asset('assets/images/product/di_sodium_ phosphate_crystal.png') }}" alt="post image" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="src-showroom-body">
-                        <span class="src-showroom-cat-tag">Crystal Grade</span>
-                        <h4 class="post-title src-showroom-title">
-                            <a href="{{ route('di_sodium_phosphate_crystal') }}">Di Sodium Phosphate Crystal</a>
-                        </h4>
-                        <p class="src-showroom-desc">
-                            1. Description White Fine crystals 2. Loss on drying, percent by mass 57-61 3. Matter insoluble in water 0.25% Max. 4. pH of 2 % Sol. 9.0 9.2 5. Iron as Fe 0.01% Max. 6. P2O5 49 % Min. 7. Assay 98% (Min.)
-                        </p>
-                        <div class="src-showroom-actions">
-                            <a href="{{ route('di_sodium_phosphate_crystal') }}" class="btn-read-more">
-                                <i class="bi bi-info-circle"></i> View Details
-                            </a>
-                            <a href="{{ route('contact_us') }}" class="btn-inquire">
-                                <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
+            <!-- Slider Controls -->
+            <div class="d-flex justify-content-between align-items-center mt-3 src-slider-controls src-sodium-strengths-controls">
+                <div class="swiper-pagination src-sodium-strengths-pagination position-static w-auto"></div>
+                <div class="src-slider-arrows d-flex gap-2">
+                    <button class="src-slider-btn src-sodium-strengths-prev" type="button" aria-label="Previous Strength"><i class="bi bi-chevron-left"></i></button>
+                    <button class="src-slider-btn src-sodium-strengths-next" type="button" aria-label="Next Strength"><i class="bi bi-chevron-right"></i></button>
                 </div>
             </div>
+        </div>
 
-            <!-- Product Item #3 -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="src-showroom-card">
-                    <div class="src-showroom-img-wrap">
-                        <span class="src-showroom-badge">Fine Powder</span>
-                        <a href="{{ route('mono_sodium_phosphate_crystal') }}">
-                            <img src="{{ asset('assets/images/product/mono_sodium_phosphate_crystal.png') }}" alt="post image" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="src-showroom-body">
-                        <span class="src-showroom-cat-tag">Pure Grade</span>
-                        <h4 class="post-title src-showroom-title">
-                            <a href="{{ route('mono_sodium_phosphate_crystal') }}">Mono Sodium Phosphate Anhydrous - SR</a>
-                        </h4>
-                        <p class="src-showroom-desc">
-                            1. Description White fine Powder 2. pH of 2% Sol. 4.3 to 4.7 3. Clarity of 10% Sol. Clear. 4. Loss on drying 0.5% max. 5. P2O5 58.0% Max. 6. Assay 98.5% Max.
-                        </p>
-                        <div class="src-showroom-actions">
-                            <a href="{{ route('mono_sodium_phosphate_crystal') }}" class="btn-read-more">
-                                <i class="bi bi-info-circle"></i> View Details
-                            </a>
-                            <a href="{{ route('contact_us') }}" class="btn-inquire">
-                                <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+        <!-- Inquiry Band -->
+        <div class="p-4 rounded-4 bg-white border shadow-sm mt-5 d-flex flex-wrap align-items-center justify-content-between gap-3">
+            <div>
+                <div class="fs-4 fw-bold text-navy-900">Need Bulk Sodium Phosphate Pricing &amp; TDS?</div>
+                <div class="text-muted small">Request direct factory pricing, Certificate of Analysis (COA), and sample lots from our synthesis team.</div>
             </div>
-
-            <!-- Product Item #4 -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="src-showroom-card">
-                    <div class="src-showroom-img-wrap">
-                        <span class="src-showroom-badge">DSP</span>
-                        <a href="{{ route('di_sodium_phosphate') }}">
-                            <img src="{{ asset('assets/images/product/di_ sodium_phosphate.png') }}" alt="post image" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="src-showroom-body">
-                        <span class="src-showroom-cat-tag">Industrial Grade</span>
-                        <h4 class="post-title src-showroom-title">
-                            <a href="{{ route('di_sodium_phosphate') }}">Di sodium Phosphate </a>
-                        </h4>
-                        <p class="src-showroom-desc">
-                            1.Description White Powder 2.Loss on drying, percent by mass 2.0 Max. 3.Matter insoluble in water 0.50 Max. 4.pH of 2 % Sol. 9.1 - 9.3 5.Iron as Fe percent by mass 0.01% Max. 6.P2O5 48.00% Min. 7.Assay 98.00 % Min.
-                        </p>
-                        <div class="src-showroom-actions">
-                            <a href="{{ route('di_sodium_phosphate') }}" class="btn-read-more">
-                                <i class="bi bi-info-circle"></i> View Details
-                            </a>
-                            <a href="{{ route('contact_us') }}" class="btn-inquire">
-                                <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product Item #5 -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="src-showroom-card">
-                    <div class="src-showroom-img-wrap">
-                        <span class="src-showroom-badge">SAPP</span>
-                        <a href="{{ route('sodium_acid_pyrophosphate') }}">
-                            <img src="{{ asset('assets/images/product/sodium_acid_pyrophosphate.jpeg') }}" alt="post image" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="src-showroom-body">
-                        <span class="src-showroom-cat-tag">Leavening Buffer</span>
-                        <h4 class="post-title src-showroom-title">
-                            <a href="{{ route('sodium_acid_pyrophosphate') }}">Sodium Acid Pyrophosphate</a>
-                        </h4>
-                        <p class="src-showroom-desc">
-                            1. Appearance White Powder 2. pH 4 - 5 3. Loss on Drying 0.5% Max. 4. Matter Insoluble in water 0.1% Max. 5. P2O5 61 % Min. 6. Assay 91 % Min. 7. Iron as fe 0.02 % Max.
-                        </p>
-                        <div class="src-showroom-actions">
-                            <a href="{{ route('sodium_acid_pyrophosphate') }}" class="btn-read-more">
-                                <i class="bi bi-info-circle"></i> View Details
-                            </a>
-                            <a href="{{ route('contact_us') }}" class="btn-inquire">
-                                <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product Item #6 -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="src-showroom-card">
-                    <div class="src-showroom-img-wrap">
-                        <span class="src-showroom-badge">TSPP</span>
-                        <a href="{{ route('tetra_sodium_pyro_phosphate') }}">
-                            <img src="{{ asset('assets/images/product/tetra_sodium_pyro_phoshpate.jpeg') }}" alt="post image" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="src-showroom-body">
-                        <span class="src-showroom-cat-tag">Dispersing Agent</span>
-                        <h4 class="post-title src-showroom-title">
-                            <a href="{{ route('tetra_sodium_pyro_phosphate') }}">Tetra Sodium Pyro Phosphate</a>
-                        </h4>
-                        <p class="src-showroom-desc">
-                            1. Description White powder 2. pH of 2% solution 10.0 - 10.6 3. Loss on drying 0.5% Max. 4. Clarity of 10% Solution Clear 5. Phosphate as P2O5 52.5 54 % 6. Assay 95.00 Min.
-                        </p>
-                        <div class="src-showroom-actions">
-                            <a href="{{ route('tetra_sodium_pyro_phosphate') }}" class="btn-read-more">
-                                <i class="bi bi-info-circle"></i> View Details
-                            </a>
-                            <a href="{{ route('contact_us') }}" class="btn-inquire">
-                                <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product Item #7 -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="src-showroom-card">
-                    <div class="src-showroom-img-wrap">
-                        <span class="src-showroom-badge">Anhydrous</span>
-                        <a href="{{ route('di_sodium_phosphate_anhydrous') }}">
-                            <img src="{{ asset('assets/images/product/di_ sodium_phosphate_anhydrous.png') }}" alt="post image" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="src-showroom-body">
-                        <span class="src-showroom-cat-tag">Inorganic Salts</span>
-                        <h4 class="post-title src-showroom-title">
-                            <a href="{{ route('di_sodium_phosphate_anhydrous') }}">Di Sodium Phosphate - Anhydrous</a>
-                        </h4>
-                        <p class="src-showroom-desc">
-                            Classification:Inorganic Chemicals Form:Powder Solubility:Soluble Other Names:1. Disodium hydrogen ortho phosphate. 2. Sodium hydrogen phosphate. 3. Sodium phosphate Dibasic. 4. Di Sodium phosphate Ph Level:9.1 - 9.5 CAS No:7558794 Chemical Name:Di Sodium Hydrogen Phosphate Grade:Industrial Grade Delivery Time:10 Days Supply Ability:50 Per Month
-                        </p>
-                        <div class="src-showroom-actions">
-                            <a href="{{ route('di_sodium_phosphate_anhydrous') }}" class="btn-read-more">
-                                <i class="bi bi-info-circle"></i> View Details
-                            </a>
-                            <a href="{{ route('contact_us') }}" class="btn-inquire">
-                                <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product Item #8 -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="src-showroom-card">
-                    <div class="src-showroom-img-wrap">
-                        <span class="src-showroom-badge">TSP Crystals</span>
-                        <a href="{{ route('tri_sodium_phosphate_crystals') }}">
-                            <img src="{{ asset('assets/images/product/tri_sodium_phosphate_crystal.png') }}" alt="post image" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="src-showroom-body">
-                        <span class="src-showroom-cat-tag">Degreasing Grade</span>
-                        <h4 class="post-title src-showroom-title">
-                            <a href="{{ route('tri_sodium_phosphate_crystals') }}">Tri Sodium Phosphate Crystals</a>
-                        </h4>
-                        <p class="src-showroom-desc">
-                            1.Matter insoluble in water, percent by mass.0.01 Max.2.Phosphate(as P2O5)percent by mass.18.00 Min.3.Free Sodium Hydroxide(as NaOH)percent by mass.2.5 Max.4.Soluble Iron Compounds(as Fe),percent by mass.0.001 Max.5.Nitrogen Compound(as N),percent by mass.0.001 Max.6.Sulphate(as SO4),percent by mass.0.01 Max.7.Arsenic(As2O3),Percent by mass.0.0005 Max.8.Heavy Metals(as Pb),percent by mass.0.001 Max.9.Soluble Silica(as SiO2),percent by mass.0.05 Max.10.Chloride(as Cl)percent by mass.0.05 Max.
-                        </p>
-                        <div class="src-showroom-actions">
-                            <a href="{{ route('tri_sodium_phosphate_crystals') }}" class="btn-read-more">
-                                <i class="bi bi-info-circle"></i> View Details
-                            </a>
-                            <a href="{{ route('contact_us') }}" class="btn-inquire">
-                                <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product Item #9 -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="src-showroom-card">
-                    <div class="src-showroom-img-wrap">
-                        <span class="src-showroom-badge">TSP Anhydrous</span>
-                        <a href="{{ route('trisodium_phosphate_anhydrous') }}">
-                            <img src="{{ asset('assets/images/product/tri_sodium_phosphate_anhydrous.png') }}" alt="post image" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="src-showroom-body">
-                        <span class="src-showroom-cat-tag">High Assay 41% P2O5</span>
-                        <h4 class="post-title src-showroom-title">
-                            <a href="{{ route('trisodium_phosphate_anhydrous') }}">Trisodium Phosphate Anhydrous</a>
-                        </h4>
-                        <p class="src-showroom-desc">
-                            1. Appearance White Powder 2. Matter insoluble in water, percent by mass. 0.50 Max. 3. Phosphate (as P2O5) percent by mass. 41.00 Min. 4. Carbonate(as Na2CO3) percent by mass. 2.00 Max. 5. Free Sodium Hydroxide (as NaOH) percent by mass. 3.2 Max. 6. Soluble Iron Compounds (as Fe), percent by mass. 0.02 Max.
-                        </p>
-                        <div class="src-showroom-actions">
-                            <a href="{{ route('trisodium_phosphate_anhydrous') }}" class="btn-read-more">
-                                <i class="bi bi-info-circle"></i> View Details
-                            </a>
-                            <a href="{{ route('contact_us') }}" class="btn-inquire">
-                                <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product Item #10 -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="src-showroom-card">
-                    <div class="src-showroom-img-wrap">
-                        <span class="src-showroom-badge">MSP Crystal</span>
-                        <a href="{{ route('mono_sodium_phosphate_crystal') }}">
-                            <img src="{{ asset('assets/images/product/mono_sodium_phosphate_crystal.png') }}" alt="post image" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="src-showroom-body">
-                        <span class="src-showroom-cat-tag">NaH2PO4</span>
-                        <h4 class="post-title src-showroom-title">
-                            <a href="{{ route('mono_sodium_phosphate_crystal') }}">Mono Sodium Phosphate Crystal </a>
-                        </h4>
-                        <p class="src-showroom-desc">
-                            Product Specification Product Name: Mono Sodium Phosphate,Crystal.Grade: Technical. Chemical Formula: NaH2PO4. Packaging: 50 Kgs HDPE Bags. Make: S.R.Chemicals. Specifications: Description White Fine crystals pH of 2% solution 4 - 5 Solubility of 10 % Sol. Clear P2O5 44-45% Assay 98% (Min.)
-                        </p>
-                        <div class="src-showroom-actions">
-                            <a href="{{ route('mono_sodium_phosphate_crystal') }}" class="btn-read-more">
-                                <i class="bi bi-info-circle"></i> View Details
-                            </a>
-                            <a href="{{ route('contact_us') }}" class="btn-inquire">
-                                <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div>
+                <a href="{{ route('contact_us') }}" class="src-btn-cta">
+                    <span>Request Bulk Quote</span>
+                    <i class="bi bi-arrow-right"></i>
+                </a>
             </div>
         </div>
     </div>

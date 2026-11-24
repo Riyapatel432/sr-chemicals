@@ -413,10 +413,123 @@
     .src-blog-hero { padding: 56px 0 42px; }
     .src-blog-section { padding: 42px 0 60px; }
 }
+@media (max-width: 767.98px) {
+    .src-blog-hero {
+        padding: 44px 0 32px;
+    }
+    .src-blog-hero .src-breadcrumb {
+        display: inline-flex !important;
+        flex-wrap: wrap !important;
+        white-space: normal !important;
+        border-radius: 12px !important;
+        padding: 6px 12px !important;
+        font-size: 12px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 14px !important;
+    }
+    .src-blog-hero h1 {
+        font-size: clamp(24px, 5.5vw, 32px);
+        margin-bottom: 10px;
+    }
+    .src-blog-hero p {
+        font-size: 0.95rem !important;
+    }
+    .src-blog-toolbar {
+        padding: 16px 14px;
+        margin-bottom: 24px;
+        border-radius: 14px;
+    }
+    .src-filter-pills {
+        gap: 6px;
+    }
+    .src-filter-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    .src-search-box input {
+        font-size: 13px;
+        padding: 9px 36px 9px 38px;
+    }
+    .src-blog-card > .src-card-img {
+        height: 190px;
+    }
+    .src-blog-card > .src-card-content {
+        padding: 16px 16px 14px;
+    }
+    .src-card-content .src-card-title {
+        font-size: 15.5px;
+        line-height: 1.42;
+    }
+    .src-card-content .src-card-excerpt {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+    .src-blog-card > .src-card-footer {
+        padding: 12px 16px;
+    }
+
+    /* Swipeable Horizontal Cards Track on Small Screens (No more endless vertical scroll) */
+    #srcBlogGrid {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 16px !important;
+        padding: 4px 6px 20px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        scrollbar-width: thin;
+        scrollbar-color: var(--src-blue-primary, #1a4fa0) #e2e8f0;
+    }
+    #srcBlogGrid::-webkit-scrollbar {
+        height: 6px;
+    }
+    #srcBlogGrid::-webkit-scrollbar-track {
+        background: #f1f5f9;
+        border-radius: 10px;
+    }
+    #srcBlogGrid::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 10px;
+    }
+    #srcBlogGrid::-webkit-scrollbar-thumb:hover {
+        background: var(--src-blue-primary, #1a4fa0);
+    }
+    .src-blog-col {
+        flex: 0 0 85% !important;
+        max-width: 85% !important;
+        width: 85% !important;
+        scroll-snap-align: start !important;
+        margin-bottom: 0 !important;
+    }
+    .src-blog-card {
+        height: 100% !important;
+    }
+
+    .src-blog-cta-band {
+        padding: 28px 18px;
+        border-radius: 16px;
+        text-align: center;
+    }
+    .src-blog-cta-band .src-cta-tag {
+        margin: 0 auto 12px;
+    }
+    .src-blog-cta-desc {
+        font-size: 14px;
+    }
+    .src-blog-cta-band .btn {
+        width: 100% !important;
+        justify-content: center;
+    }
+}
 @media (max-width: 575px) {
-    .src-blog-hero { padding: 46px 0 36px; }
-    .src-blog-card > .src-card-img { height: 190px; }
-    .src-blog-cta-band { padding: 32px 20px; }
+    .src-blog-card > .src-card-img { height: 180px; }
+    .src-blog-col {
+        flex: 0 0 88% !important;
+        max-width: 88% !important;
+        width: 88% !important;
+    }
 }
 </style>
 
@@ -497,6 +610,38 @@
 
         {{-- Blog Cards Grid (All 20 Cards Retained with Exact Original H3 Sequence for SEO) --}}
         <div class="row" id="srcBlogGrid">
+
+            @if(isset($posts))
+                @foreach($posts->whereNull('blade_view') as $newPost)
+                <div class="col-12 col-md-6 col-lg-4 src-blog-col" data-categories="all {{ strtolower($newPost->category) }}" data-keywords="{{ strtolower($newPost->title . ' ' . $newPost->category . ' ' . $newPost->excerpt) }}">
+                    <a href="{{ url('/blog/' . $newPost->slug) }}">
+                        <div class="src-blog-card">
+                            <div class="src-card-img">
+                                @if($newPost->category)
+                                    <span class="src-img-badge">{{ $newPost->category }}</span>
+                                @endif
+                                <img src="{{ $newPost->featured_image_url }}"
+                                     alt="{{ $newPost->image_alt ?: $newPost->title }}"
+                                     loading="lazy"
+                                     onerror="this.onerror=null;this.src='{{ asset('assets/images/blog/inorganic-chemicals-manufacturer.png') }}'">
+                            </div>
+                            <div class="src-card-content">
+                                <div class="src-card-meta-row">
+                                    <span class="src-badge">{{ $newPost->category ?: 'Insight' }}</span>
+                                    <span class="src-read-time"><i class="bi bi-clock-history"></i> {{ $newPost->read_time ?: '5 min read' }}</span>
+                                </div>
+                                <h3 class="src-card-title">{{ $newPost->title }}</h3>
+                                <p class="src-card-excerpt">{{ $newPost->excerpt }}</p>
+                            </div>
+                            <div class="src-card-footer">
+                                <span class="src-date"><i class="bi bi-calendar3"></i> {{ $newPost->published_date ? $newPost->published_date->format('F d, Y') : now()->format('F d, Y') }}</span>
+                                <span class="src-readmore">Read More <i class="bi bi-arrow-right"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                @endforeach
+            @endif
 
             {{-- Card 1: Sourcing Bulk SR Chems Phosphates from India to Thailand: A Procurement & Quality Guide --}}
             <div class="col-12 col-md-6 col-lg-4 src-blog-col" data-categories="export water potassium sodium technical" data-keywords="sourcing bulk sr chems phosphates from india to thailand: a procurement &amp; quality guide procurement guide a practical procurement guide for thai chemical importers purchasing sr chems dkp, msp, dsp, and shmp from panoli, india. covers coa verification, tropical packaging, &amp; customs documentation.">
@@ -1040,6 +1185,13 @@
 
         </div>{{-- /#srcBlogGrid --}}
 
+        <!-- Mobile Bottom Navigation Controls -->
+        <div class="d-flex d-md-none justify-content-center align-items-center gap-3 mt-3 mb-4">
+            <button class="src-slider-btn src-blog-prev" type="button" aria-label="Previous Article"><i class="bi bi-chevron-left"></i></button>
+            <span class="small text-muted fw-semibold"><i class="bi bi-arrow-left-right text-primary me-1"></i> Swipe to Browse Articles</span>
+            <button class="src-slider-btn src-blog-next" type="button" aria-label="Next Article"><i class="bi bi-chevron-right"></i></button>
+        </div>
+
         {{-- Technical Inquiry & Sourcing CTA Band (Preserving Heading SEO: using div/span instead of h1-h6) --}}
         <div class="src-blog-cta-band">
             <div class="row align-items-center g-4 position-relative" style="z-index: 2;">
@@ -1078,6 +1230,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let currentFilter = 'all';
     let searchQuery = '';
+    const blogGrid = document.getElementById('srcBlogGrid');
 
     function filterCards() {
         let visibleCount = 0;
@@ -1102,7 +1255,28 @@ document.addEventListener('DOMContentLoaded', function () {
         if (noResultsEl) {
             noResultsEl.style.display = (visibleCount === 0) ? 'block' : 'none';
         }
+        if (blogGrid) {
+            blogGrid.scrollTo({ left: 0, behavior: 'smooth' });
+        }
     }
+
+    // Mobile Horizontal Swipe & Prev/Next Scroll Buttons
+    document.querySelectorAll('.src-blog-prev').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (blogGrid) {
+                blogGrid.scrollBy({ left: -(blogGrid.clientWidth * 0.88), behavior: 'smooth' });
+            }
+        });
+    });
+    document.querySelectorAll('.src-blog-next').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (blogGrid) {
+                blogGrid.scrollBy({ left: (blogGrid.clientWidth * 0.88), behavior: 'smooth' });
+            }
+        });
+    });
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', function () {

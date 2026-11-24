@@ -108,104 +108,219 @@
 </section>
 
 <!-- ======================
-    Potassium Phosphate Derivatives Showcase Grid
+    Potassium Phosphate Derivatives Showcase Grid (Touch Swiper on Mobile & Tablet)
 ========================= -->
 <section class="src-showroom-section py-5">
     <div class="container-fluid px-lg-5">
-        <div class="text-center mb-5">
-            <span class="src-section-badge mb-2">Portfolio</span>
-            <div class="fs-2 fw-bold text-navy-900 mb-2">Available Potassium Phosphate Formulations</div>
-            <p class="text-muted mx-auto" style="max-width: 650px;">
-                High solubility buffer solutions and specialized inorganic salts shipped globally from Panoli GIDC.
-            </p>
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 gap-3">
+            <div class="text-center text-md-start">
+                <span class="src-section-badge mb-2">Portfolio</span>
+                <div class="fs-2 fw-bold text-navy-900 mb-2">Available Potassium Phosphate Formulations</div>
+                <p class="text-muted mb-0" style="max-width: 650px;">
+                    High solubility buffer solutions and specialized inorganic salts shipped globally from Panoli GIDC.
+                </p>
+            </div>
         </div>
 
-        <div class="row g-4 justify-content-center">
-            <!-- Product Item #1: Di Potassium Phosphate -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="src-showroom-card">
-                    <div class="src-showroom-img-wrap">
-                        <span class="src-showroom-badge">DKP</span>
-                        <a href="{{ route('di_potassium_phosphate') }}">
-                            <img src="{{ asset('assets/images/product/di_potassium_phosphate.png') }}" alt="post image" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="src-showroom-body">
-                        <span class="src-showroom-cat-tag">Pure Grade 99%</span>
-                        <h4 class="post-title src-showroom-title">
-                            <a href="{{ route('di_potassium_phosphate') }}">Di Potassium Phosphate</a>
-                        </h4>
-                        <p class="src-showroom-desc">
-                            1. Physical Appearance White Fine Powder 2. Assay 99.00 % 3. Loss on Drying 1.01% 4. pH of 2% solution 9.3 5. Insoluble matter in water 0.0014% 6. Solubility of 10% w/v soln. Clear 7. Sulphate 0.001% 8. Chloride 0.01%
-                        </p>
-                        <div class="src-showroom-actions">
-                            <a href="{{ route('di_potassium_phosphate') }}" class="btn-read-more">
-                                <i class="bi bi-info-circle"></i> View Details
-                            </a>
-                            <a href="{{ route('contact_us') }}" class="btn-inquire">
-                                <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
+        <div class="swiper src-potassium-swiper pb-4 mb-4">
+            <div class="swiper-wrapper align-items-stretch">
+                <!-- Product Item #1: Di Potassium Phosphate -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-showroom-card h-100">
+                        <div class="src-showroom-img-wrap">
+                            <span class="src-showroom-badge">DKP</span>
+                            <a href="{{ route('di_potassium_phosphate') }}">
+                                <img src="{{ asset('assets/images/product/di_potassium_phosphate.png') }}" alt="post image" loading="lazy">
                             </a>
                         </div>
+                        <div class="src-showroom-body">
+                            <span class="src-showroom-cat-tag">Pure Grade 99%</span>
+                            <h4 class="post-title src-showroom-title">
+                                <a href="{{ route('di_potassium_phosphate') }}">Di Potassium Phosphate</a>
+                            </h4>
+                            <p class="src-showroom-desc">
+                                1. Physical Appearance White Fine Powder 2. Assay 99.00 % 3. Loss on Drying 1.01% 4. pH of 2% solution 9.3 5. Insoluble matter in water 0.0014% 6. Solubility of 10% w/v soln. Clear 7. Sulphate 0.001% 8. Chloride 0.01%
+                            </p>
+                            <div class="src-showroom-actions">
+                                <a href="{{ route('di_potassium_phosphate') }}" class="btn-read-more">
+                                    <i class="bi bi-info-circle"></i> View Details
+                                </a>
+                                <a href="{{ route('contact_us') }}" class="btn-inquire">
+                                    <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Item #2: Mono Potassium Phosphate -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-showroom-card h-100">
+                        <div class="src-showroom-img-wrap">
+                            <span class="src-showroom-badge">MKP 0-52-34</span>
+                            <a href="{{ route('mono_potassium_phosphate') }}">
+                                <img src="{{ asset('assets/images/product/mono_ammonium_phosphate.png') }}" alt="post image" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="src-showroom-body">
+                            <span class="src-showroom-cat-tag">Fine Crystals</span>
+                            <h4 class="post-title src-showroom-title">
+                                <a href="{{ route('mono_potassium_phosphate') }}">Mono Potassium Phosphate</a>
+                            </h4>
+                            <p class="src-showroom-desc">
+                                1. Appearance White Fine crystals 2. pH of 5% soln. 4.0 4.6 3. Solubility of 10% In water Clear 4. Loss on drying (at 105oC) 0.5% 5. Sulphate: 0.001max 6. Chloride 0.001max 7. Iron as (Fe) : 0.002%max 8. Assay : 98.0%min
+                            </p>
+                            <div class="src-showroom-actions">
+                                <a href="{{ route('mono_potassium_phosphate') }}" class="btn-read-more">
+                                    <i class="bi bi-info-circle"></i> View Details
+                                </a>
+                                <a href="{{ route('contact_us') }}" class="btn-inquire">
+                                    <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Item #3: Tetra Potassium Pyro Phosphate -->
+                <div class="swiper-slide h-auto">
+                    <div class="src-showroom-card h-100">
+                        <div class="src-showroom-img-wrap">
+                            <span class="src-showroom-badge">TKPP</span>
+                            <a href="{{ route('tetra_potassium_pyro_phosphate') }}">
+                                <img src="{{ asset('assets/images/product/tetra_sodium_pyro_phoshpate.png') }}" alt="post image" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="src-showroom-body">
+                            <span class="src-showroom-cat-tag">Industrial Grade</span>
+                            <h4 class="post-title src-showroom-title">
+                                <a href="{{ route('tetra_potassium_pyro_phosphate') }}">Tetra Potassium Pyro Phosphate</a>
+                            </h4>
+                            <p class="src-showroom-desc">
+                                Delivery Time:3 Days Supply Ability:50 Per Month Application:Industrial Type:Tetra Potassium Pyro Phosphate Storage:Room Temperature Form:Powder
+                            </p>
+                            <div class="src-showroom-actions">
+                                <a href="{{ route('tetra_potassium_pyro_phosphate') }}" class="btn-read-more">
+                                    <i class="bi bi-info-circle"></i> View Details
+                                </a>
+                                <a href="{{ route('contact_us') }}" class="btn-inquire">
+                                    <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @php
+                    $extraPotassiumShowcase = \App\Models\Product::where('category', 'Potassium Phosphate')->where('is_category', false)->whereNull('blade_view')->where('status', 'published')->get();
+                @endphp
+                @foreach($extraPotassiumShowcase as $epp)
+                <div class="swiper-slide h-auto">
+                    <div class="src-showroom-card h-100">
+                        <div class="src-showroom-img-wrap">
+                            <span class="src-showroom-badge">{{ $epp->chemical_formula ?: 'Pure' }}</span>
+                            <a href="{{ url('/' . $epp->slug) }}">
+                                <img src="{{ $epp->featured_image_url }}" alt="{{ $epp->image_alt ?: $epp->name }}" loading="lazy" onerror="this.onerror=null;this.src='{{ asset('assets/images/logo/logo.1.jpg') }}'">
+                            </a>
+                        </div>
+                        <div class="src-showroom-body">
+                            <span class="src-showroom-cat-tag">{{ $epp->grade ?: 'Industrial Grade' }}</span>
+                            <div class="post-title src-showroom-title fs-5 fw-bold mb-2">
+                                <a href="{{ url('/' . $epp->slug) }}">{{ $epp->name }}</a>
+                            </div>
+                            <p class="src-showroom-desc">
+                                {{ $epp->excerpt ?: 'High purity compound manufactured at S R Chemicals Panoli GIDC for industrial applications.' }}
+                            </p>
+                            <div class="src-showroom-actions">
+                                <a href="{{ url('/' . $epp->slug) }}" class="btn-read-more">
+                                    <i class="bi bi-info-circle"></i> View Details
+                                </a>
+                                <a href="{{ route('contact_us') }}" class="btn-inquire">
+                                    <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+
+            <!-- Slider Controls -->
+            <div class="d-flex justify-content-between align-items-center mt-3 src-slider-controls src-potassium-controls">
+                <div class="swiper-pagination src-potassium-pagination position-static w-auto"></div>
+                <div class="src-slider-arrows d-flex gap-2">
+                    <button class="src-slider-btn src-potassium-prev" type="button" aria-label="Previous Formulation"><i class="bi bi-chevron-left"></i></button>
+                    <button class="src-slider-btn src-potassium-next" type="button" aria-label="Next Formulation"><i class="bi bi-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======================
+    Potassium Phosphate Applications & Technical Highlights (Touch Swiper on Mobile & Tablet)
+========================= -->
+<section class="py-5 bg-light border-top border-bottom">
+    <div class="container-fluid px-lg-5">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 gap-3">
+            <div>
+                <span class="src-subheading">Industrial Utility</span>
+                <div class="src-title fs-2 fw-bold text-navy-900">Where Potassium Phosphates Excel</div>
+                <p class="src-desc mb-0">Engineered for applications where sodium ions cannot be tolerated or where high potassium solubility is essential.</p>
+            </div>
+        </div>
+
+        <div class="swiper src-potassium-apps-swiper pb-4">
+            <div class="swiper-wrapper align-items-stretch">
+                <div class="swiper-slide h-auto">
+                    <div class="p-4 rounded-4 border bg-white h-100 shadow-sm">
+                        <div class="d-flex align-items-center gap-2 mb-2 text-primary fw-bold fs-5">
+                            <i class="bi bi-capsule"></i>
+                            <span>Pharma &amp; Biological Buffers</span>
+                        </div>
+                        <p class="small text-muted mb-0">DKP and MKP are primary components in phosphate-buffered saline (PBS), cell culture nutrients, and antibiotic fermentation substrates.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                    <div class="p-4 rounded-4 border bg-white h-100 shadow-sm">
+                        <div class="d-flex align-items-center gap-2 mb-2 text-success fw-bold fs-5">
+                            <i class="bi bi-tree-fill"></i>
+                            <span>High-Analysis Hydroponics (0-52-34)</span>
+                        </div>
+                        <p class="small text-muted mb-0">MKP provides 100% water-soluble phosphorus and potassium with lowest salt index, zero nitrogen, and zero heavy metal contaminants.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide h-auto">
+                    <div class="p-4 rounded-4 border bg-white h-100 shadow-sm">
+                        <div class="d-flex align-items-center gap-2 mb-2 text-warning fw-bold fs-5">
+                            <i class="bi bi-water"></i>
+                            <span>Industrial Boiler Water Treatment</span>
+                        </div>
+                        <p class="small text-muted mb-0">High-solubility buffering prevents calcium carbonate scaling in closed-loop cooling towers and high-pressure steam generators.</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Product Item #2: Mono Potassium Phosphate -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="src-showroom-card">
-                    <div class="src-showroom-img-wrap">
-                        <span class="src-showroom-badge">MKP 0-52-34</span>
-                        <a href="{{ route('mono_potassium_phosphate') }}">
-                            <img src="{{ asset('assets/images/product/mono_ammonium_phosphate.png') }}" alt="post image" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="src-showroom-body">
-                        <span class="src-showroom-cat-tag">Fine Crystals</span>
-                        <h4 class="post-title src-showroom-title">
-                            <a href="{{ route('mono_potassium_phosphate') }}">Mono Potassium Phosphate</a>
-                        </h4>
-                        <p class="src-showroom-desc">
-                            1. Appearance White Fine crystals 2. pH of 5% soln. 4.0 4.6 3. Solubility of 10% In water Clear 4. Loss on drying (at 105oC) 0.5% 5. Sulphate: 0.001max 6. Chloride 0.001max 7. Iron as (Fe) : 0.002%max 8. Assay : 98.0%min
-                        </p>
-                        <div class="src-showroom-actions">
-                            <a href="{{ route('mono_potassium_phosphate') }}" class="btn-read-more">
-                                <i class="bi bi-info-circle"></i> View Details
-                            </a>
-                            <a href="{{ route('contact_us') }}" class="btn-inquire">
-                                <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
+            <!-- Slider Controls -->
+            <div class="d-flex justify-content-between align-items-center mt-3 src-slider-controls src-potassium-apps-controls">
+                <div class="swiper-pagination src-potassium-apps-pagination position-static w-auto"></div>
+                <div class="src-slider-arrows d-flex gap-2">
+                    <button class="src-slider-btn src-potassium-apps-prev" type="button" aria-label="Previous Application"><i class="bi bi-chevron-left"></i></button>
+                    <button class="src-slider-btn src-potassium-apps-next" type="button" aria-label="Next Application"><i class="bi bi-chevron-right"></i></button>
                 </div>
             </div>
+        </div>
 
-            <!-- Product Item #3: Tetra Potassium Pyro Phosphate -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="src-showroom-card">
-                    <div class="src-showroom-img-wrap">
-                        <span class="src-showroom-badge">TKPP</span>
-                        <a href="{{ route('tetra_potassium_pyro_phosphate') }}">
-                            <img src="{{ asset('assets/images/product/tetra_sodium_pyro_phoshpate.png') }}" alt="post image" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="src-showroom-body">
-                        <span class="src-showroom-cat-tag">Industrial Grade</span>
-                        <h4 class="post-title src-showroom-title">
-                            <a href="{{ route('tetra_potassium_pyro_phosphate') }}">Tetra Potassium Pyro Phosphate</a>
-                        </h4>
-                        <p class="src-showroom-desc">
-                            Delivery Time:3 Days Supply Ability:50 Per Month Application:Industrial Type:Tetra Potassium Pyro Phosphate Storage:Room Temperature Form:Powder
-                        </p>
-                        <div class="src-showroom-actions">
-                            <a href="{{ route('tetra_potassium_pyro_phosphate') }}" class="btn-read-more">
-                                <i class="bi bi-info-circle"></i> View Details
-                            </a>
-                            <a href="{{ route('contact_us') }}" class="btn-inquire">
-                                <span>Send Inquiry</span> <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+        <!-- Inquiry Band -->
+        <div class="p-4 rounded-4 bg-white border shadow-sm mt-5 d-flex flex-wrap align-items-center justify-content-between gap-3">
+            <div>
+                <div class="fs-4 fw-bold text-navy-900">Need Custom Assay or Packing for Potassium Phosphates?</div>
+                <div class="text-muted small">We supply 25kg / 50kg poly-lined bags and palletized 1MT jumbo bags directly from Panoli GIDC.</div>
+            </div>
+            <div>
+                <a href="{{ route('contact_us') }}" class="src-btn-cta">
+                    <span>Request Bulk Quote</span>
+                    <i class="bi bi-arrow-right"></i>
+                </a>
             </div>
         </div>
     </div>

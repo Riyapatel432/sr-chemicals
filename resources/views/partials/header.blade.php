@@ -2,20 +2,26 @@
 <header class="src-header sticky-top">
     @include('partials.top-bar')
     <nav class="navbar navbar-expand-lg py-2">
-        <div class="container-fluid px-lg-5">
+        <div class="container-fluid px-3 px-sm-4 px-lg-5 d-flex align-items-center justify-content-between flex-nowrap">
             <!-- Brand Logo & SEO H3 Title -->
-            <a class="src-brand" href="{{ route('home') }}">
-                <img src="{{ asset('assets/images/logo/logo.1.jpg') }}" alt="S R Chemicals Logo" width="85" height="52" onerror="this.style.display='none'">
-                <h3 class="src-brand-title">
+            <a class="src-brand d-flex align-items-center gap-2 text-decoration-none flex-shrink-1 min-w-0" href="{{ route('home') }}">
+                <img src="{{ asset('assets/images/logo/logo.1.jpg') }}" alt="S R Chemicals Logo" class="src-brand-logo flex-shrink-0" onerror="this.style.display='none'">
+                <h3 class="src-brand-title mb-0">
                     S R Chemicals
-                    <span class="src-brand-sub">Panoli GIDC &bull; Bharuch</span>
+                    <span class="src-brand-sub d-none d-sm-block">Panoli GIDC &bull; Bharuch</span>
                 </h3>
             </a>
 
-            <!-- Mobile Offcanvas Toggler -->
-            <button class="navbar-toggler border-0 shadow-none px-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#srcMobileMenu" aria-controls="srcMobileMenu" aria-label="Toggle navigation">
-                <i class="bi bi-list fs-1 text-primary"></i>
-            </button>
+            <!-- Mobile Action Group (Direct Call & Offcanvas Toggler) -->
+            <div class="d-flex align-items-center gap-2 d-lg-none flex-shrink-0 ms-2">
+                <a href="tel:+919913645555" class="btn btn-sm btn-outline-primary rounded-circle src-header-call-btn" aria-label="Call S R Chemicals">
+                    <i class="bi bi-telephone-fill"></i>
+                    <span class="small fw-bold d-none d-sm-inline">Call</span>
+                </a>
+                <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#srcMobileMenu" aria-controls="srcMobileMenu" aria-label="Toggle navigation">
+                    <i class="bi bi-list fs-1 text-primary"></i>
+                </button>
+            </div>
 
             <!-- Desktop Navigation -->
             <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="mainNavigation">
@@ -65,94 +71,127 @@
             </div>
         </div>
     </nav>
-
-    <!-- Mobile Offcanvas Navigation Menu -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="srcMobileMenu" aria-labelledby="srcMobileMenuLabel">
-        <div class="offcanvas-header border-bottom">
-            <div class="d-flex align-items-center gap-2">
-                <img src="{{ asset('assets/images/logo/logo.1.jpg') }}" alt="S R Chemicals Logo" height="42" onerror="this.style.display='none'">
-                <div>
-                    <h5 class="offcanvas-title fw-bold text-primary mb-0" id="srcMobileMenuLabel">S R Chemicals</h5>
-                    <span class="small text-muted">Panoli GIDC, Bharuch</span>
-                </div>
-            </div>
-            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body p-0">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item px-4 py-3">
-                    <a href="{{ route('home') }}" class="text-dark fw-bold text-decoration-none d-block">Home</a>
-                </li>
-                <!-- About Accordion -->
-                <li class="list-group-item px-4 py-2">
-                    <a class="text-dark fw-bold text-decoration-none d-flex justify-content-between align-items-center py-2" data-bs-toggle="collapse" href="#mobileAboutSub" role="button">
-                        About Us <i class="bi bi-chevron-down small"></i>
-                    </a>
-                    <div class="collapse ps-3" id="mobileAboutSub">
-                        <ul class="list-unstyled py-2">
-                            <li class="py-1"><a href="{{ route('about') }}" class="text-muted text-decoration-none">About</a></li>
-                            <li class="py-1"><a href="{{ route('chemical_exporter_supplier_vietnam') }}" class="text-muted text-decoration-none">Vietnam Location</a></li>
-                            <li class="py-1"><a href="{{ route('chemical_exporter_supplier_thailand') }}" class="text-muted text-decoration-none">Thailand Location</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <!-- Products Accordion -->
-                <li class="list-group-item px-4 py-2">
-                    <a class="text-dark fw-bold text-decoration-none d-flex justify-content-between align-items-center py-2" data-bs-toggle="collapse" href="#mobileProductsSub" role="button">
-                        Our Products <i class="bi bi-chevron-down small"></i>
-                    </a>
-                    <div class="collapse ps-3" id="mobileProductsSub">
-                        <div class="py-2">
-                            <a href="{{ route('our_products') }}" class="fw-bold text-primary text-decoration-none d-block mb-2">View All Products</a>
-                            
-                            <div class="fw-bold text-secondary small text-uppercase mt-2 mb-1">Sodium Phosphate</div>
-                            <ul class="list-unstyled ps-2 small text-muted">
-                                <li><a href="{{ route('mono_sodium_phosphate_anhydrous_sr') }}" class="text-muted d-block py-1">Mono Sodium Phosphate Anhydrous</a></li>
-                                <li><a href="{{ route('mono_sodium_phosphate_crystal') }}" class="text-muted d-block py-1">Mono Sodium Phosphate Crystal</a></li>
-                                <li><a href="{{ route('di_sodium_phosphate_anhydrous_sr') }}" class="text-muted d-block py-1">Di Sodium Phosphate Anhydrous</a></li>
-                                <li><a href="{{ route('di_sodium_phosphate_crystal') }}" class="text-muted d-block py-1">Di Sodium Phosphate Crystal</a></li>
-                                <li><a href="{{ route('trisodium_phosphate_anhydrous') }}" class="text-muted d-block py-1">Tri Sodium Phosphate Anhydrous</a></li>
-                                <li><a href="{{ route('tri_sodium_phosphate_crystals') }}" class="text-muted d-block py-1">Tri Sodium Phosphate Crystals</a></li>
-                                <li><a href="{{ route('sodium_hexameta_phosphate') }}" class="text-muted d-block py-1">Sodium Hexameta Phosphate</a></li>
-                                <li><a href="{{ route('tetra_sodium_pyro_phosphate') }}" class="text-muted d-block py-1">Tetra Sodium Pyro Phosphate</a></li>
-                                <li><a href="{{ route('sodium_acid_pyrophosphate') }}" class="text-muted d-block py-1">Sodium Acid Pyrophosphate</a></li>
-                            </ul>
-
-                            <div class="fw-bold text-secondary small text-uppercase mt-3 mb-1">Potassium Phosphate</div>
-                            <ul class="list-unstyled ps-2 small text-muted">
-                                <li><a href="{{ route('mono_potassium_phosphate') }}" class="text-muted d-block py-1">Mono Potassium Phosphate</a></li>
-                                <li><a href="{{ route('di_potassium_phosphate') }}" class="text-muted d-block py-1">Di Potassium Phosphate</a></li>
-                                <li><a href="{{ route('tetra_potassium_pyro_phosphate') }}" class="text-muted d-block py-1">Tetra Potassium Pyro Phosphate</a></li>
-                            </ul>
-
-                            <div class="fw-bold text-secondary small text-uppercase mt-3 mb-1">Ammonium Phosphate</div>
-                            <ul class="list-unstyled ps-2 small text-muted">
-                                <li><a href="{{ route('monoammonium_phosphate') }}" class="text-muted d-block py-1">Monoammonium Phosphate</a></li>
-                                <li><a href="{{ route('di_ammonium_phosphate') }}" class="text-muted d-block py-1">Di Ammonium Phosphate</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li class="list-group-item px-4 py-3">
-                    <a href="{{ route('blog') }}" class="text-dark fw-bold text-decoration-none d-block">Blog</a>
-                </li>
-                <li class="list-group-item px-4 py-3">
-                    <a href="{{ route('contact_us') }}" class="text-dark fw-bold text-decoration-none d-block">Contact Us</a>
-                </li>
-            </ul>
-
-            <div class="p-4 bg-light mt-auto border-top">
-                <a href="{{ route('contact_us') }}" class="src-btn-cta w-100 justify-content-center mb-3">
-                    <span>Send Inquiry</span>
-                    <i class="bi bi-arrow-right"></i>
-                </a>
-                <div class="small text-muted">
-                    <p class="mb-1"><i class="bi bi-telephone-fill me-2 text-warning"></i> +91 9913645555</p>
-                    <p class="mb-0"><i class="bi bi-envelope-fill me-2 text-warning"></i> info@srchems.com</p>
-                </div>
-            </div>
-        </div>
-    </div>
 </header>
 <!-- /.Sticky Header -->
 
+<!-- Mobile Offcanvas Navigation Menu (Direct child of body, free of sticky header stacking context) -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="srcMobileMenu" aria-labelledby="srcMobileMenuLabel">
+    <div class="offcanvas-header border-bottom">
+        <div class="d-flex align-items-center gap-2">
+            <img src="{{ asset('assets/images/logo/logo.1.jpg') }}" alt="S R Chemicals Logo" class="src-offcanvas-logo" style="width: 40px; height: 40px; object-fit: contain; border-radius: 6px;" onerror="this.style.display='none'">
+            <div>
+                <h5 class="offcanvas-title fw-bold text-primary mb-0" id="srcMobileMenuLabel">S R Chemicals</h5>
+                <span class="small text-muted">Panoli GIDC, Bharuch</span>
+            </div>
+        </div>
+        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item px-4 py-3">
+                <a href="{{ route('home') }}" class="text-dark fw-bold text-decoration-none d-block">Home</a>
+            </li>
+            <!-- About Accordion -->
+            <li class="list-group-item px-4 py-2">
+                <a class="text-dark fw-bold text-decoration-none d-flex justify-content-between align-items-center py-2" data-bs-toggle="collapse" href="#mobileAboutSub" role="button">
+                    About Us <i class="bi bi-chevron-down small"></i>
+                </a>
+                <div class="collapse ps-3" id="mobileAboutSub">
+                    <ul class="list-unstyled py-2">
+                        <li class="py-1"><a href="{{ route('about') }}" class="text-muted text-decoration-none">About</a></li>
+                        <li class="py-1"><a href="{{ route('chemical_exporter_supplier_vietnam') }}" class="text-muted text-decoration-none">Vietnam Location</a></li>
+                        <li class="py-1"><a href="{{ route('chemical_exporter_supplier_thailand') }}" class="text-muted text-decoration-none">Thailand Location</a></li>
+                    </ul>
+                </div>
+            </li>
+            <!-- Products Accordion -->
+            <li class="list-group-item px-4 py-2">
+                <a class="text-dark fw-bold text-decoration-none d-flex justify-content-between align-items-center py-2" data-bs-toggle="collapse" href="#mobileProductsSub" role="button">
+                    Our Products <i class="bi bi-chevron-down small"></i>
+                </a>
+                <div class="collapse ps-3" id="mobileProductsSub">
+                    <div class="py-2">
+                        <a href="{{ route('our_products') }}" class="fw-bold text-primary text-decoration-none d-block mb-2">View All Products</a>
+                        
+                        <div class="fw-bold text-secondary small text-uppercase mt-2 mb-1">Sodium Phosphate</div>
+                        <ul class="list-unstyled ps-2 small text-muted">
+                            <li><a href="{{ route('mono_sodium_phosphate_anhydrous_sr') }}" class="text-muted d-block py-1">Mono Sodium Phosphate Anhydrous</a></li>
+                            <li><a href="{{ route('mono_sodium_phosphate_crystal') }}" class="text-muted d-block py-1">Mono Sodium Phosphate Crystal</a></li>
+                            <li><a href="{{ route('di_sodium_phosphate_anhydrous_sr') }}" class="text-muted d-block py-1">Di Sodium Phosphate Anhydrous</a></li>
+                            <li><a href="{{ route('di_sodium_phosphate_crystal') }}" class="text-muted d-block py-1">Di Sodium Phosphate Crystal</a></li>
+                            <li><a href="{{ route('trisodium_phosphate_anhydrous') }}" class="text-muted d-block py-1">Tri Sodium Phosphate Anhydrous</a></li>
+                            <li><a href="{{ route('tri_sodium_phosphate_crystals') }}" class="text-muted d-block py-1">Tri Sodium Phosphate Crystals</a></li>
+                            <li><a href="{{ route('sodium_hexameta_phosphate') }}" class="text-muted d-block py-1">Sodium Hexameta Phosphate</a></li>
+                            <li><a href="{{ route('tetra_sodium_pyro_phosphate') }}" class="text-muted d-block py-1">Tetra Sodium Pyro Phosphate</a></li>
+                            <li><a href="{{ route('sodium_acid_pyrophosphate') }}" class="text-muted d-block py-1">Sodium Acid Pyrophosphate</a></li>
+                            @php
+                                $headerExtraSodium = \App\Models\Product::where('category', 'Sodium Phosphate')->where('is_category', false)->whereNull('blade_view')->where('status', 'published')->get();
+                            @endphp
+                            @foreach($headerExtraSodium as $hp)
+                                <li><a href="{{ url('/' . $hp->slug) }}" class="text-primary fw-semibold d-block py-1">{{ $hp->name }}</a></li>
+                            @endforeach
+                        </ul>
+
+                        <div class="fw-bold text-secondary small text-uppercase mt-3 mb-1">Potassium Phosphate</div>
+                        <ul class="list-unstyled ps-2 small text-muted">
+                            <li><a href="{{ route('mono_potassium_phosphate') }}" class="text-muted d-block py-1">Mono Potassium Phosphate</a></li>
+                            <li><a href="{{ route('di_potassium_phosphate') }}" class="text-muted d-block py-1">Di Potassium Phosphate</a></li>
+                            <li><a href="{{ route('tetra_potassium_pyro_phosphate') }}" class="text-muted d-block py-1">Tetra Potassium Pyro Phosphate</a></li>
+                            @php
+                                $headerExtraPotassium = \App\Models\Product::where('category', 'Potassium Phosphate')->where('is_category', false)->whereNull('blade_view')->where('status', 'published')->get();
+                            @endphp
+                            @foreach($headerExtraPotassium as $hp)
+                                <li><a href="{{ url('/' . $hp->slug) }}" class="text-primary fw-semibold d-block py-1">{{ $hp->name }}</a></li>
+                            @endforeach
+                        </ul>
+
+                        <div class="fw-bold text-secondary small text-uppercase mt-3 mb-1">Ammonium Phosphate</div>
+                        <ul class="list-unstyled ps-2 small text-muted">
+                            <li><a href="{{ route('monoammonium_phosphate') }}" class="text-muted d-block py-1">Monoammonium Phosphate</a></li>
+                            <li><a href="{{ route('di_ammonium_phosphate') }}" class="text-muted d-block py-1">Di Ammonium Phosphate</a></li>
+                            @php
+                                $headerExtraAmmonium = \App\Models\Product::where('category', 'Ammonium Phosphate')->where('is_category', false)->whereNull('blade_view')->where('status', 'published')->get();
+                            @endphp
+                            @foreach($headerExtraAmmonium as $hp)
+                                <li><a href="{{ url('/' . $hp->slug) }}" class="text-primary fw-semibold d-block py-1">{{ $hp->name }}</a></li>
+                            @endforeach
+                        </ul>
+
+                        @php
+                            $headerOtherCategories = \App\Models\Product::whereNotNull('category')
+                                ->whereNotIn('category', ['Sodium Phosphate', 'Potassium Phosphate', 'Ammonium Phosphate'])
+                                ->where('status', 'published')
+                                ->get()
+                                ->groupBy('category');
+                        @endphp
+                        @foreach($headerOtherCategories as $otherCatName => $catProds)
+                            <div class="fw-bold text-secondary small text-uppercase mt-3 mb-1">{{ $otherCatName }}</div>
+                            <ul class="list-unstyled ps-2 small text-muted">
+                                @foreach($catProds as $hp)
+                                    <li><a href="{{ url('/' . $hp->slug) }}" class="text-primary fw-semibold d-block py-1">{{ $hp->name }}</a></li>
+                                @endforeach
+                            </ul>
+                        @endforeach
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item px-4 py-3">
+                <a href="{{ route('blog') }}" class="text-dark fw-bold text-decoration-none d-block">Blog</a>
+            </li>
+            <li class="list-group-item px-4 py-3">
+                <a href="{{ route('contact_us') }}" class="text-dark fw-bold text-decoration-none d-block">Contact Us</a>
+            </li>
+        </ul>
+
+        <div class="p-4 bg-light mt-auto border-top">
+            <a href="{{ route('contact_us') }}" class="src-btn-cta w-100 justify-content-center mb-3">
+                <span>Send Inquiry</span>
+                <i class="bi bi-arrow-right"></i>
+            </a>
+            <div class="small text-muted">
+                <p class="mb-1"><i class="bi bi-telephone-fill me-2 text-warning"></i> +91 9913645555</p>
+                <p class="mb-0"><i class="bi bi-envelope-fill me-2 text-warning"></i> info@srchems.com</p>
+            </div>
+        </div>
+    </div>
+</div>

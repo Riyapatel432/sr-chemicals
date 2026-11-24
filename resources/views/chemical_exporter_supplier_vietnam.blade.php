@@ -102,74 +102,99 @@
                 <hr class="my-5 opacity-25">
 
                 <!-- Strategic Industries Section -->
-                <h2 class="fs-2 fw-bold text-dark mb-3">Strategic Industries We Serve in Vietnam</h2>
-                <p class="text-muted mb-4" style="line-height: 1.85;">
-                    Vietnam’s rapid industrial growth and export-driven economy require stable, high-specification raw materials. Our export catalog is tailored to support key Vietnamese industries:
-                </p>
-
-                <!-- Industry 1 -->
-                <div class="src-export-industry-card">
-                    <h3>1. Industrial Processing, Formulations &amp; Speciality Chemicals</h3>
-                    <p class="text-muted mb-3" style="line-height: 1.75;">
-                        Vietnam's manufacturing and chemical blending sector demands strict chemical purity and active assay compliance.
-                    </p>
-                    <ul class="text-muted ps-3 mb-3" style="line-height: 1.9;">
-                        <li><strong>High-Purity Moisture &amp; Texture Control:</strong> Pure grade <a href="{{ route('di_potassium_phosphate') }}" class="text-primary fw-semibold">Dipotassium Phosphate (DKP)</a> and Sodium Tripolyphosphate (STPP) for specialized industrial formulations, viscosity control, and processing stability.</li>
-                        <li><strong>Precision Buffering Solutions:</strong> Pure grade <a href="{{ route('mono_sodium_phosphate_anhydrous_sr') }}" class="text-primary fw-semibold">Monosodium Phosphate (MSP)</a> and <a href="{{ route('di_sodium_phosphate_anhydrous_sr') }}" class="text-primary fw-semibold">Disodium Phosphate (DSP)</a> for accurate pH regulation, reaction buffering, and process control.</li>
-                    </ul>
-                    <div class="d-flex flex-wrap align-items-center gap-2 pt-2 border-top">
-                        <span class="small fw-bold text-dark">Featured Compounds:</span>
-                        <a href="{{ route('di_potassium_phosphate') }}" class="src-export-chip">DKP Pure</a>
-                        <a href="{{ route('mono_sodium_phosphate_anhydrous_sr') }}" class="src-export-chip">MSP Anhydrous</a>
-                        <a href="{{ route('di_sodium_phosphate_anhydrous_sr') }}" class="src-export-chip">DSP Anhydrous</a>
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 gap-3">
+                    <div>
+                        <h2 class="fs-2 fw-bold text-dark mb-1">Strategic Industries We Serve in Vietnam</h2>
+                        <p class="text-muted mb-0" style="line-height: 1.85;">
+                            Vietnam’s rapid industrial growth and export-driven economy require stable, high-specification raw materials. Our export catalog is tailored to support key Vietnamese industries:
+                        </p>
                     </div>
                 </div>
 
-                <!-- Industry 2 -->
-                <div class="src-export-industry-card">
-                    <h3>2. Textile Processing, Garment &amp; Dyeing Units</h3>
-                    <p class="text-muted mb-3" style="line-height: 1.75;">
-                        Vietnam is a global textile manufacturing powerhouse. Raw fabric processing relies on precise auxiliaries.
-                    </p>
-                    <ul class="text-muted ps-3 mb-3" style="line-height: 1.9;">
-                        <li><strong>Sequestration &amp; Level Dyeing:</strong> High-purity <a href="{{ route('sodium_hexameta_phosphate') }}" class="text-primary fw-semibold">Sodium Hexametaphosphate (SHMP)</a> to deactivate metal ions in process water, preventing color streaking and dullness.</li>
-                    </ul>
-                    <div class="d-flex flex-wrap align-items-center gap-2 pt-2 border-top">
-                        <span class="small fw-bold text-dark">Featured Compounds:</span>
-                        <a href="{{ route('sodium_hexameta_phosphate') }}" class="src-export-chip">SHMP 68% Pure</a>
-                    </div>
-                </div>
+                <div class="swiper src-export-industry-swiper pb-4 mb-4">
+                    <div class="swiper-wrapper align-items-stretch">
+                        <!-- Industry 1 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="src-export-industry-card h-100 d-flex flex-column mb-0">
+                                <h3>1. Industrial Processing, Formulations &amp; Speciality Chemicals</h3>
+                                <p class="text-muted mb-3" style="line-height: 1.75;">
+                                    Vietnam's manufacturing and chemical blending sector demands strict chemical purity and active assay compliance.
+                                </p>
+                                <ul class="text-muted ps-3 mb-3" style="line-height: 1.9;">
+                                    <li><strong>High-Purity Moisture &amp; Texture Control:</strong> Pure grade <a href="{{ route('di_potassium_phosphate') }}" class="text-primary fw-semibold">Dipotassium Phosphate (DKP)</a> and Sodium Tripolyphosphate (STPP) for specialized industrial formulations, viscosity control, and processing stability.</li>
+                                    <li><strong>Precision Buffering Solutions:</strong> Pure grade <a href="{{ route('mono_sodium_phosphate_anhydrous_sr') }}" class="text-primary fw-semibold">Monosodium Phosphate (MSP)</a> and <a href="{{ route('di_sodium_phosphate_anhydrous_sr') }}" class="text-primary fw-semibold">Disodium Phosphate (DSP)</a> for accurate pH regulation, reaction buffering, and process control.</li>
+                                </ul>
+                                <div class="d-flex flex-wrap align-items-center gap-2 pt-2 border-top mt-auto">
+                                    <span class="small fw-bold text-dark">Featured Compounds:</span>
+                                    <a href="{{ route('di_potassium_phosphate') }}" class="src-export-chip">DKP Pure</a>
+                                    <a href="{{ route('mono_sodium_phosphate_anhydrous_sr') }}" class="src-export-chip">MSP Anhydrous</a>
+                                    <a href="{{ route('di_sodium_phosphate_anhydrous_sr') }}" class="src-export-chip">DSP Anhydrous</a>
+                                </div>
+                            </div>
+                        </div>
 
-                <!-- Industry 3 -->
-                <div class="src-export-industry-card">
-                    <h3>3. Industrial Water Treatment &amp; Power Plants</h3>
-                    <p class="text-muted mb-3" style="line-height: 1.75;">
-                        Supporting wastewater management and boiler maintenance across Vietnam’s expanding industrial zones (IZs).
-                    </p>
-                    <ul class="text-muted ps-3 mb-3" style="line-height: 1.9;">
-                        <li><strong>Scale &amp; Corrosion Inhibition:</strong> Pure grade inorganic polyphosphates engineered to sequester hard calcium and magnesium ions in industrial boiler systems.</li>
-                    </ul>
-                    <div class="d-flex flex-wrap align-items-center gap-2 pt-2 border-top">
-                        <span class="small fw-bold text-dark">Featured Compounds:</span>
-                        <a href="{{ route('tetra_sodium_pyro_phosphate') }}" class="src-export-chip">TSPP</a>
-                        <a href="{{ route('sodium_acid_pyrophosphate') }}" class="src-export-chip">SAPP</a>
-                    </div>
-                </div>
+                        <!-- Industry 2 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="src-export-industry-card h-100 d-flex flex-column mb-0">
+                                <h3>2. Textile Processing, Garment &amp; Dyeing Units</h3>
+                                <p class="text-muted mb-3" style="line-height: 1.75;">
+                                    Vietnam is a global textile manufacturing powerhouse. Raw fabric processing relies on precise auxiliaries.
+                                </p>
+                                <ul class="text-muted ps-3 mb-3" style="line-height: 1.9;">
+                                    <li><strong>Sequestration &amp; Level Dyeing:</strong> High-purity <a href="{{ route('sodium_hexameta_phosphate') }}" class="text-primary fw-semibold">Sodium Hexametaphosphate (SHMP)</a> to deactivate metal ions in process water, preventing color streaking and dullness.</li>
+                                </ul>
+                                <div class="d-flex flex-wrap align-items-center gap-2 pt-2 border-top mt-auto">
+                                    <span class="small fw-bold text-dark">Featured Compounds:</span>
+                                    <a href="{{ route('sodium_hexameta_phosphate') }}" class="src-export-chip">SHMP 68% Pure</a>
+                                </div>
+                            </div>
+                        </div>
 
-                <!-- Industry 4 -->
-                <div class="src-export-industry-card">
-                    <h3>4. Metal Finishing &amp; Electronics Manufacturing</h3>
-                    <p class="text-muted mb-3" style="line-height: 1.75;">
-                        Serving Vietnam’s growing electronics assembly, steel fabrication, and hardware sectors.
-                    </p>
-                    <ul class="text-muted ps-3 mb-3" style="line-height: 1.9;">
-                        <li><strong>Degreasing &amp; Conversion Coating:</strong> <a href="{{ route('trisodium_phosphate_anhydrous') }}" class="text-primary fw-semibold">Trisodium Phosphate (TSP)</a> for heavy-duty metal degreasing and <a href="{{ route('di_sodium_phosphate_anhydrous_sr') }}" class="text-primary fw-semibold">Disodium Phosphate (DSP)</a> for iron phosphating rust-prevention baths.</li>
-                    </ul>
-                    <div class="d-flex flex-wrap align-items-center gap-2 pt-2 border-top">
-                        <span class="small fw-bold text-dark">Featured Compounds:</span>
-                        <a href="{{ route('trisodium_phosphate_anhydrous') }}" class="src-export-chip">TSP Anhydrous</a>
-                        <a href="{{ route('tri_sodium_phosphate_crystals') }}" class="src-export-chip">TSP Crystals</a>
-                        <a href="{{ route('di_sodium_phosphate_anhydrous_sr') }}" class="src-export-chip">DSP Pure</a>
+                        <!-- Industry 3 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="src-export-industry-card h-100 d-flex flex-column mb-0">
+                                <h3>3. Industrial Water Treatment &amp; Power Plants</h3>
+                                <p class="text-muted mb-3" style="line-height: 1.75;">
+                                    Supporting wastewater management and boiler maintenance across Vietnam’s expanding industrial zones (IZs).
+                                </p>
+                                <ul class="text-muted ps-3 mb-3" style="line-height: 1.9;">
+                                    <li><strong>Scale &amp; Corrosion Inhibition:</strong> Pure grade inorganic polyphosphates engineered to sequester hard calcium and magnesium ions in industrial boiler systems.</li>
+                                </ul>
+                                <div class="d-flex flex-wrap align-items-center gap-2 pt-2 border-top mt-auto">
+                                    <span class="small fw-bold text-dark">Featured Compounds:</span>
+                                    <a href="{{ route('tetra_sodium_pyro_phosphate') }}" class="src-export-chip">TSPP</a>
+                                    <a href="{{ route('sodium_acid_pyrophosphate') }}" class="src-export-chip">SAPP</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Industry 4 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="src-export-industry-card h-100 d-flex flex-column mb-0">
+                                <h3>4. Metal Finishing &amp; Electronics Manufacturing</h3>
+                                <p class="text-muted mb-3" style="line-height: 1.75;">
+                                    Serving Vietnam’s growing electronics assembly, steel fabrication, and hardware sectors.
+                                </p>
+                                <ul class="text-muted ps-3 mb-3" style="line-height: 1.9;">
+                                    <li><strong>Degreasing &amp; Conversion Coating:</strong> <a href="{{ route('trisodium_phosphate_anhydrous') }}" class="text-primary fw-semibold">Trisodium Phosphate (TSP)</a> for heavy-duty metal degreasing and <a href="{{ route('di_sodium_phosphate_anhydrous_sr') }}" class="text-primary fw-semibold">Disodium Phosphate (DSP)</a> for iron phosphating rust-prevention baths.</li>
+                                </ul>
+                                <div class="d-flex flex-wrap align-items-center gap-2 pt-2 border-top mt-auto">
+                                    <span class="small fw-bold text-dark">Featured Compounds:</span>
+                                    <a href="{{ route('trisodium_phosphate_anhydrous') }}" class="src-export-chip">TSP Anhydrous</a>
+                                    <a href="{{ route('tri_sodium_phosphate_crystals') }}" class="src-export-chip">TSP Crystals</a>
+                                    <a href="{{ route('di_sodium_phosphate_anhydrous_sr') }}" class="src-export-chip">DSP Pure</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider Controls -->
+                    <div class="d-flex justify-content-between align-items-center mt-3 src-slider-controls src-export-industry-controls">
+                        <div class="swiper-pagination src-export-ind-pagination position-static w-auto"></div>
+                        <div class="src-slider-arrows d-flex gap-2">
+                            <button class="src-slider-btn src-export-ind-prev" type="button" aria-label="Previous Industry"><i class="bi bi-chevron-left"></i></button>
+                            <button class="src-slider-btn src-export-ind-next" type="button" aria-label="Next Industry"><i class="bi bi-chevron-right"></i></button>
+                        </div>
                     </div>
                 </div>
 
@@ -239,42 +264,62 @@
                 <hr class="my-5 opacity-25">
 
                 <!-- Why Partner Section -->
-                <h2 class="fs-2 fw-bold text-dark mb-3">Why Vietnamese Importers Partner with S R Chemicals</h2>
-                <p class="text-muted mb-4" style="line-height: 1.85;">
-                    End-to-end manufacturing integrity, moisture-barrier packaging engineered for tropical transit, and dependable port logistics:
-                </p>
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 gap-3">
+                    <div>
+                        <h2 class="fs-2 fw-bold text-dark mb-1">Why Vietnamese Importers Partner with S R Chemicals</h2>
+                        <p class="text-muted mb-0" style="line-height: 1.85;">
+                            End-to-end manufacturing integrity, moisture-barrier packaging engineered for tropical transit, and dependable port logistics:
+                        </p>
+                    </div>
+                </div>
 
-                <div class="row g-4 mb-4">
-                    <div class="col-md-12">
-                        <div class="src-export-usp-card">
-                            <h4>📦 1. Tropical Monsoon Moisture-Proof Packaging</h4>
-                            <p class="text-muted mb-2">To withstand high humidity and transit conditions across Vietnam's tropical climate, our export packaging follows strict moisture-barrier standards:</p>
-                            <ul class="text-muted ps-3 mb-0" style="line-height: 1.8;">
-                                <li>Outer heavy-duty 25 kg / 50 kg HDPE woven sacks.</li>
-                                <li>Internal 80–100 micron sealed LDPE liners to prevent air contact and caking.</li>
-                                <li>Customized 1000 kg Jumbo / FIBC bag options for large-scale automation.</li>
-                            </ul>
+                <div class="swiper src-export-usp-swiper pb-4 mb-4">
+                    <div class="swiper-wrapper align-items-stretch">
+                        <!-- USP 1 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="src-export-usp-card h-100">
+                                <h4>📦 1. Tropical Monsoon Moisture-Proof Packaging</h4>
+                                <p class="text-muted mb-2">To withstand high humidity and transit conditions across Vietnam's tropical climate, our export packaging follows strict moisture-barrier standards:</p>
+                                <ul class="text-muted ps-3 mb-0" style="line-height: 1.8;">
+                                    <li>Outer heavy-duty 25 kg / 50 kg HDPE woven sacks.</li>
+                                    <li>Internal 80–100 micron sealed LDPE liners to prevent air contact and caking.</li>
+                                    <li>Customized 1000 kg Jumbo / FIBC bag options for large-scale automation.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- USP 2 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="src-export-usp-card h-100">
+                                <h4>🚢 2. Fast Shipping Lines from India to Major Vietnamese Ports</h4>
+                                <p class="text-muted mb-2">Direct sea freight connectivity ensures fast turnaround and dependable delivery timelines:</p>
+                                <ul class="text-muted ps-3 mb-0" style="line-height: 1.8;">
+                                    <li><strong>Strategic Port Access:</strong> Proximity to Nhava Sheva (JNPT) and Mundra ports ensures frequent container sailings and short transit times to Cai Mep / Ho Chi Minh Port, Hai Phong Port, and Da Nang Port.</li>
+                                    <li><strong>Complete Customs Clearance Documentation:</strong> Full export documentation provided with every order, including Certificate of Analysis (COA), Safety Data Sheet (SDS/MSDS), Certificate of Origin, and Packing Lists.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- USP 3 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="src-export-usp-card h-100">
+                                <h4>🔬 3. Quality Assurance &amp; Traceability</h4>
+                                <p class="text-muted mb-2">Stringent manufacturing protocols and analytical testing backing every exported batch:</p>
+                                <ul class="text-muted ps-3 mb-0" style="line-height: 1.8;">
+                                    <li>Every export batch is processed in accordance with ISO quality benchmarks.</li>
+                                    <li>Our testing laboratory guarantees strict control over active assays (P2O5), solubility rates, and trace heavy metal limits (Pb, As, F) to satisfy Vietnamese regulatory standards.</li>
+                                    <li>Batch-wise traceability and verified analytical certificates for all shipments.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-12">
-                        <div class="src-export-usp-card">
-                            <h4>🚢 2. Fast Shipping Lines from India to Major Vietnamese Ports</h4>
-                            <p class="text-muted mb-2">Direct sea freight connectivity ensures fast turnaround and dependable delivery timelines:</p>
-                            <ul class="text-muted ps-3 mb-0" style="line-height: 1.8;">
-                                <li><strong>Strategic Port Access:</strong> Proximity to Nhava Sheva (JNPT) and Mundra ports ensures frequent container sailings and short transit times to Cai Mep / Ho Chi Minh Port, Hai Phong Port, and Da Nang Port.</li>
-                                <li><strong>Complete Customs Clearance Documentation:</strong> Full export documentation provided with every order, including Certificate of Analysis (COA), Safety Data Sheet (SDS/MSDS), Certificate of Origin, and Packing Lists.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="src-export-usp-card">
-                            <h4>🔬 3. Quality Assurance &amp; Traceability</h4>
-                            <p class="text-muted mb-2">Stringent manufacturing protocols and analytical testing backing every exported batch:</p>
-                            <ul class="text-muted ps-3 mb-0" style="line-height: 1.8;">
-                                <li>Every export batch is processed in accordance with ISO quality benchmarks.</li>
-                                <li>Our testing laboratory guarantees strict control over active assays (P2O5), solubility rates, and trace heavy metal limits (Pb, As, F) to satisfy Vietnamese regulatory standards.</li>
-                                <li>Batch-wise traceability and verified analytical certificates for all shipments.</li>
-                            </ul>
+
+                    <!-- Slider Controls -->
+                    <div class="d-flex justify-content-between align-items-center mt-3 src-slider-controls src-export-usp-controls">
+                        <div class="swiper-pagination src-export-usp-pagination position-static w-auto"></div>
+                        <div class="src-slider-arrows d-flex gap-2">
+                            <button class="src-slider-btn src-export-usp-prev" type="button" aria-label="Previous Advantage"><i class="bi bi-chevron-left"></i></button>
+                            <button class="src-slider-btn src-export-usp-next" type="button" aria-label="Next Advantage"><i class="bi bi-chevron-right"></i></button>
                         </div>
                     </div>
                 </div>

@@ -733,10 +733,89 @@
     .blog-single { padding: 40px 0 60px; }
 }
 @media (max-width: 767px) {
-    .bl-hero-img img { height: 220px; }
+    .page-title-layout2 {
+        padding: 44px 0 30px !important;
+    }
+    .page-title-layout2 .pagetitle-heading {
+        font-size: clamp(20px, 5.5vw, 26px) !important;
+        margin-top: 14px !important;
+        margin-bottom: 16px !important;
+        line-height: 1.3 !important;
+    }
+    .page-title-layout2 .breadcrumb {
+        display: inline-flex !important;
+        flex-wrap: wrap !important;
+        white-space: normal !important;
+        border-radius: 12px !important;
+        padding: 6px 14px !important;
+        font-size: 12px !important;
+        line-height: 1.4 !important;
+        text-align: center;
+        justify-content: center;
+    }
+    .blog-single {
+        padding: 30px 0 50px;
+    }
+    .bl-hero-img img {
+        height: auto !important;
+        max-height: 240px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .bl-meta {
+        gap: 8px 12px !important;
+        font-size: 12px !important;
+    }
     .bl-h1 { font-size: 21px; }
     .bl-h2 { font-size: 18px; }
-    .bl-cta { padding: 30px 20px; }
+    .bl-cta { padding: 26px 18px; border-radius: 16px; }
+    .bl-cta .btn { width: 100% !important; justify-content: center; }
     .bl-box { padding: 18px 16px; }
+    .bl-excerpt { padding: 14px !important; }
+    .bl-excerpt p { font-size: 13.5px !important; }
+    .bl-table, table {
+        display: block !important;
+        width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Swipeable USP Cards & Related Products on Mobile */
+    .blog-single .row.mb-30 {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 12px !important;
+        padding-bottom: 12px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        scrollbar-width: thin;
+    }
+    .blog-single .row.mb-30 > [class*="col-"] {
+        flex: 0 0 82% !important;
+        max-width: 82% !important;
+        scroll-snap-align: start !important;
+        margin-bottom: 0 !important;
+    }
+    .bl-related-section .row.text-center {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 12px !important;
+        padding-bottom: 12px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        scrollbar-width: thin;
+    }
+    .bl-related-section .row.text-center > [class*="col-"] {
+        flex: 0 0 160px !important;
+        max-width: 160px !important;
+        scroll-snap-align: start !important;
+        margin-bottom: 0 !important;
+    }
 }
 </style>

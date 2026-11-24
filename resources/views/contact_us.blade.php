@@ -317,10 +317,126 @@ textarea.src-input-control {
     .src-contact-hero { padding: 56px 0 42px; }
     .src-contact-main-section { padding: 42px 0 60px; }
 }
+@media (max-width: 767.98px) {
+    .src-contact-hero {
+        padding: 44px 0 32px;
+    }
+    .src-contact-hero .src-breadcrumb {
+        display: inline-flex !important;
+        flex-wrap: wrap !important;
+        white-space: normal !important;
+        border-radius: 12px !important;
+        padding: 6px 12px !important;
+        font-size: 12px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 14px !important;
+    }
+    .src-contact-hero h1 {
+        font-size: clamp(24px, 5.5vw, 32px);
+        margin-bottom: 8px;
+    }
+    .src-contact-hero p {
+        font-size: 0.95rem !important;
+    }
+    .src-contact-strip-section {
+        padding: 20px 0 16px;
+    }
+    .src-contact-info-tile {
+        padding: 14px 10px !important;
+        border-radius: 12px !important;
+    }
+    .src-tile-icon {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 16px !important;
+        margin-bottom: 8px !important;
+        border-radius: 8px !important;
+    }
+    .src-tile-label {
+        font-size: 9.5px !important;
+        letter-spacing: 0.3px !important;
+        margin-bottom: 2px !important;
+    }
+    .src-tile-heading {
+        font-size: 13px !important;
+        margin-bottom: 4px !important;
+        line-height: 1.25 !important;
+    }
+    .src-tile-desc {
+        font-size: 11px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 8px !important;
+    }
+    .src-tile-link {
+        font-size: 11.5px !important;
+        gap: 3px !important;
+    }
+    .src-contact-main-section {
+        padding: 32px 0 48px;
+    }
+    .src-contact-form-card {
+        border-radius: 16px;
+    }
+    .src-form-banner-top {
+        height: 75px;
+    }
+    .src-form-banner-overlay {
+        padding: 0 16px;
+    }
+    .src-form-banner-overlay .fs-5 {
+        font-size: 0.92rem !important;
+    }
+    .src-form-body {
+        padding: 20px 16px 24px !important;
+    }
+    .contact-panel-title {
+        font-size: 19px;
+    }
+    .contact-panel-desc {
+        font-size: 13px;
+        margin-bottom: 18px;
+    }
+    .src-input-control {
+        padding: 10px 14px;
+        font-size: 13.5px;
+        border-radius: 8px;
+    }
+    textarea.src-input-control {
+        min-height: 100px;
+    }
+    .src-trust-side-card {
+        padding: 20px 16px !important;
+        border-radius: 16px;
+        margin-top: 10px;
+    }
+    .src-side-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .src-side-desc {
+        font-size: 13px;
+        margin-bottom: 16px;
+    }
+    .src-capability-item {
+        gap: 10px;
+        padding: 10px 0;
+    }
+    .src-cap-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+        border-radius: 6px;
+    }
+    .src-cap-title {
+        font-size: 13.5px;
+    }
+    .src-cap-text {
+        font-size: 12px;
+    }
+}
 @media (max-width: 575px) {
-    .src-contact-hero { padding: 46px 0 36px; }
-    .src-form-body { padding: 24px 20px; }
-    .src-trust-side-card { padding: 24px 20px; }
+    .src-form-body { padding: 18px 14px 20px !important; }
+    .src-trust-side-card { padding: 18px 14px !important; }
 }
 </style>
 
@@ -359,48 +475,48 @@ textarea.src-input-control {
 {{-- Quick Contact Info Strip --}}
 <section class="src-contact-strip-section">
     <div class="container-fluid px-lg-5">
-        <div class="row g-4">
+        <div class="row g-2 g-md-3 g-lg-4">
             {{-- Factory & Synthesis Facility --}}
-            <div class="col-12 col-sm-6 col-lg-3">
+            <div class="col-6 col-lg-3">
                 <div class="src-contact-info-tile">
                     <div class="src-tile-icon dark"><i class="bi bi-buildings"></i></div>
                     <span class="src-tile-label">Synthesis Plant</span>
                     <div class="src-tile-heading">Factory &amp; Works</div>
-                    <div class="src-tile-desc">Plot No. 1917 &amp; C-1/1918, G.I.D.C., Panoli, Dist. Bharuch - 394116, Gujarat, India.</div>
-                    <a href="https://maps.google.com/?q=S.R.+Chemicals+Panoli" target="_blank" rel="noopener" class="src-tile-link">Get Directions <i class="bi bi-arrow-right"></i></a>
+                    <div class="src-tile-desc">Plot No. 1917 &amp; C-1/1918, G.I.D.C., Panoli, Dist. Bharuch, Gujarat.</div>
+                    <a href="https://maps.google.com/?q=S.R.+Chemicals+Panoli" target="_blank" rel="noopener" class="src-tile-link">Directions <i class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
 
             {{-- Direct Technical & Sales Line --}}
-            <div class="col-12 col-sm-6 col-lg-3">
+            <div class="col-6 col-lg-3">
                 <div class="src-contact-info-tile">
                     <div class="src-tile-icon amber"><i class="bi bi-telephone-inbound-fill"></i></div>
                     <span class="src-tile-label">Direct Sales Line</span>
-                    <div class="src-tile-heading">Telephone &amp; WhatsApp</div>
-                    <div class="src-tile-desc">+91 9913645555<br><span class="small text-muted">Mon – Sat: 9:00 AM – 7:00 PM IST</span></div>
-                    <a href="tel:+919913645555" class="src-tile-link">Call Sales Direct <i class="bi bi-arrow-right"></i></a>
+                    <div class="src-tile-heading">Phone &amp; WhatsApp</div>
+                    <div class="src-tile-desc">+91 9913645555<br><span class="small text-muted">Mon–Sat: 9AM–7PM</span></div>
+                    <a href="tel:+919913645555" class="src-tile-link">Call Direct <i class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
 
             {{-- Official Email & COA Inquiries --}}
-            <div class="col-12 col-sm-6 col-lg-3">
+            <div class="col-6 col-lg-3">
                 <div class="src-contact-info-tile">
                     <div class="src-tile-icon blue"><i class="bi bi-envelope-check-fill"></i></div>
                     <span class="src-tile-label">Official Inquiries</span>
-                    <div class="src-tile-heading">Email &amp; Quotations</div>
-                    <div class="src-tile-desc">info@srchems.com<br><span class="small text-muted">Typical response within 24 business hours</span></div>
+                    <div class="src-tile-heading">Email &amp; Quotes</div>
+                    <div class="src-tile-desc">info@srchems.com<br><span class="small text-muted">Reply within 24 hours</span></div>
                     <a href="mailto:info@srchems.com" class="src-tile-link">Send Email <i class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
 
             {{-- Global Export Hubs --}}
-            <div class="col-12 col-sm-6 col-lg-3">
+            <div class="col-6 col-lg-3">
                 <div class="src-contact-info-tile">
                     <div class="src-tile-icon teal"><i class="bi bi-globe-americas"></i></div>
                     <span class="src-tile-label">Global Trade Desk</span>
                     <div class="src-tile-heading">Export Divisions</div>
-                    <div class="src-tile-desc">Dedicated logistics and regulatory support for Vietnam, Thailand, GCC, and Europe.</div>
-                    <a href="{{ route('chemical_exporter_supplier_vietnam') }}" class="src-tile-link">View Export Hubs <i class="bi bi-arrow-right"></i></a>
+                    <div class="src-tile-desc">Vietnam, Thailand, GCC &amp; Europe.</div>
+                    <a href="{{ route('chemical_exporter_supplier_vietnam') }}" class="src-tile-link">Export Hubs <i class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
         </div>

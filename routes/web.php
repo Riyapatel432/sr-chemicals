@@ -78,6 +78,42 @@ Route::controller(App\Http\Controllers\UserController::class)->group(function() 
     Route::get('/sitemap', 'sitemap')->name('sitemap');
 });
 
+// Dynamic blog post route for database-managed posts
+Route::get('/blog/{slug}', [App\Http\Controllers\BlogController::class, 'show'])->name('blog.show');
+Route::get('/product/{slug}', [App\Http\Controllers\ProductFrontendController::class, 'show'])->name('product.show');
+
+Route::redirect('/login', '/admin/login')->name('login');
+
+// Admin Authentication & Blog Management CMS
+Route::prefix('admin')->group(function () {
+    Route::get('/login', [App\Http\Controllers\Admin\AuthController::class, 'showLoginForm'])->name('admin.login');
+    Route::post('/login', [App\Http\Controllers\Admin\AuthController::class, 'login'])->middleware('throttle:5,1')->name('admin.login.submit');
+    Route::post('/logout', [App\Http\Controllers\Admin\AuthController::class, 'logout'])->name('admin.logout');
+
+    Route::middleware('auth')->group(function () {
+        Route::get('/', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('admin.dashboard');
+        Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index']);
+
+        Route::get('/blogs', [App\Http\Controllers\Admin\PostController::class, 'index'])->name('admin.posts.index');
+        Route::get('/blogs/create', [App\Http\Controllers\Admin\PostController::class, 'create'])->name('admin.posts.create');
+        Route::post('/blogs', [App\Http\Controllers\Admin\PostController::class, 'store'])->name('admin.posts.store');
+        Route::get('/blogs/{post}/edit', [App\Http\Controllers\Admin\PostController::class, 'edit'])->name('admin.posts.edit');
+        Route::put('/blogs/{post}', [App\Http\Controllers\Admin\PostController::class, 'update'])->name('admin.posts.update');
+        Route::delete('/blogs/{post}', [App\Http\Controllers\Admin\PostController::class, 'destroy'])->name('admin.posts.destroy');
+        Route::post('/blogs/{post}/toggle-status', [App\Http\Controllers\Admin\PostController::class, 'toggleStatus'])->name('admin.posts.toggle-status');
+        Route::post('/blogs/upload-image', [App\Http\Controllers\Admin\PostController::class, 'uploadImage'])->name('admin.posts.upload-image');
+
+        // Product Catalog Management
+        Route::get('/products', [App\Http\Controllers\Admin\ProductController::class, 'index'])->name('admin.products.index');
+        Route::get('/products/create', [App\Http\Controllers\Admin\ProductController::class, 'create'])->name('admin.products.create');
+        Route::post('/products', [App\Http\Controllers\Admin\ProductController::class, 'store'])->name('admin.products.store');
+        Route::get('/products/{product}/edit', [App\Http\Controllers\Admin\ProductController::class, 'edit'])->name('admin.products.edit');
+        Route::put('/products/{product}', [App\Http\Controllers\Admin\ProductController::class, 'update'])->name('admin.products.update');
+        Route::delete('/products/{product}', [App\Http\Controllers\Admin\ProductController::class, 'destroy'])->name('admin.products.destroy');
+        Route::post('/products/{product}/toggle-status', [App\Http\Controllers\Admin\ProductController::class, 'toggleStatus'])->name('admin.products.toggle-status');
+    });
+});
+
 Route::post('sendmail', [MailController::class, 'sendEmail'])->name('sendmail');
 
 Route::get('/clear-cache', function() {
@@ -91,6 +127,9 @@ Route::get('/clear-cache', function() {
 Route::get('/{any}', function ($any) {
     if (str_contains($any, '_')) {
         return redirect(str_replace('_', '-', $any), 301);
+    }
+    if ($product = \App\Models\Product::where('slug', $any)->first()) {
+        return app(\App\Http\Controllers\ProductFrontendController::class)->show($any);
     }
     abort(404);
 })->where('any', '.*');

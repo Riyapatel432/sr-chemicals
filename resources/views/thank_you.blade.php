@@ -1,72 +1,97 @@
 @extends('layouts.app')
 
 @section('seo')
+    <title>Thank You | S R Chemicals</title>
     <meta name="description" content="Thank you for contacting S R Chemicals. We have received your inquiry and will get back to you shortly.">
     <meta name="robots" content="noindex, nofollow">
-    <title>Thank You | S R Chemicals</title>
 @endsection
 
 @section('content')
 
 <!-- ========================
-    page title
+    Page Hero Section
 =========================== -->
-<section class="page-title-layout2 page-title-light text-center pb-0 bg-overlay bg-parallax">
-    <div class="bg-img"><img src="{{ asset('assets/images/') }}" alt="background"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-3">
-                <h1 class="pagetitle-heading mt-50">Thank You</h1>
+<section class="src-page-hero position-relative">
+    <div class="src-page-hero-bg" aria-hidden="true">
+        <img src="{{ asset('assets/images/backgrounds/1.jpg') }}" alt="background" loading="eager">
+    </div>
+    <div class="container-fluid px-lg-5 position-relative" style="z-index: 2;">
+        <div class="src-breadcrumb">
+            <a href="{{ route('home') }}"><i class="bi bi-house-door-fill me-1"></i> Home</a>
+            <i class="bi bi-chevron-right small text-white-50"></i>
+            <span class="active">Thank You</span>
+        </div>
+        <div class="row align-items-center justify-content-between g-4">
+            <div class="col-lg-8">
+                <span class="badge bg-success text-white text-uppercase px-3 py-1 fw-bold small mb-2">
+                    <i class="bi bi-check-circle-fill me-1"></i> Inquiry Received
+                </span>
+                <h1 class="src-page-title">Thank You</h1>
+                <p class="text-white-50 mt-2 mb-0 fs-5" style="max-width: 680px;">
+                    Your chemical procurement or technical inquiry has been routed to our Panoli sales &amp; engineering desk.
+                </p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <div class="d-inline-flex flex-column align-items-lg-end p-3 rounded-4" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px);">
+                    <span class="small text-warning fw-bold text-uppercase"><i class="bi bi-clock-history"></i> Fast Response</span>
+                    <span class="fw-bold text-white fs-5">Within 24 Business Hours</span>
+                    <span class="small text-white-50">Batch COA &bull; FOB/CIF Shipping Quotes</span>
+                </div>
             </div>
         </div>
     </div>
-    <div class="breadcrumb-area">
-        <div class="container">
-            <nav>
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item">
-                        <a href="{{ route('home') }}"><i class="icon-home"></i> <span>Home</span></a>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page">Thank You</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
 </section>
-<!-- /.page-title -->
+<!-- /.page-hero -->
 
 <!-- ========================
-    Thank You Section
+    Thank You Card Section
 =========================== -->
-<section class="pt-100 pb-100">
-    <div class="container">
-        <div class="row justify-content-center text-center">
-            <div class="col-sm-12 col-md-8 col-lg-6">
-                <div style="background:#f7fbff; border-radius:16px; padding:60px 40px; box-shadow:0 4px 30px rgba(26,115,232,0.08);">
-                    <!-- Checkmark icon -->
-                    <div style="width:80px; height:80px; background:#1a73e8; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 30px;">
-                        <i class="fas fa-check" style="font-size:36px; color:#fff;"></i>
-                    </div>
-                    <h2 style="font-size:30px; font-weight:700; color:#1a2340; margin-bottom:16px;">
-                        Thank You for Reaching Out!
-                    </h2>
-                    <p style="font-size:16px; color:#555; line-height:1.8; margin-bottom:30px;">
-                        We have received your inquiry and our team will get back to you within <strong>1–2 business days</strong>.
-                        If you need immediate assistance, please call us at
-                        <a href="tel:+919913645555" style="color:#1a73e8; font-weight:600;">+91 9913645555</a>.
-                    </p>
-                    <div class="d-flex flex-wrap justify-content-center" style="gap:16px;">
-                        <a href="{{ route('home') }}" class="btn btn-secondary btn-xhight">
-                            <span>Back to Home</span> <i class="icon-arrow-right"></i>
-                        </a>
-                        <a href="{{ route('our_products') }}" class="btn btn-outline-secondary btn-xhight" style="border:2px solid #1a73e8; color:#1a73e8; background:transparent;">
-                            <span>View Our Products</span> <i class="icon-arrow-right"></i>
-                        </a>
-                        <a href="{{ route('blog') }}" class="btn btn-outline-secondary btn-xhight" style="border:2px solid #e67e22; color:#e67e22; background:transparent;">
-                            <span>Read Our Blog</span> <i class="icon-arrow-right"></i>
-                        </a>
-                    </div>
+<section class="py-5 py-lg-6 bg-light">
+    <div class="container-fluid px-lg-5">
+        <div class="src-thankyou-card">
+            <!-- Animated Checkmark Icon -->
+            <div class="src-thankyou-icon">
+                <i class="bi bi-check-lg"></i>
+            </div>
+
+            <h2 class="src-thankyou-title">Thank You for Reaching Out!</h2>
+
+            <p class="src-thankyou-text">
+                We have successfully received your inquiry. Our commercial sales engineers and chemical formulation specialists will review your requirements and provide formal pricing, technical data sheets (TDS), or batch Certificate of Analysis (COA) within <strong>1–2 business days</strong>.
+            </p>
+
+            <!-- Direct Contact Helpline Strip -->
+            <div class="src-thankyou-contact-strip">
+                <div>
+                    <i class="bi bi-telephone-fill text-primary me-2"></i>
+                    <span>Direct Helpline: </span>
+                    <a href="tel:+919913645555">+91 9913645555</a>
                 </div>
+                <div>
+                    <i class="bi bi-envelope-fill text-primary me-2"></i>
+                    <span>Email: </span>
+                    <a href="mailto:info@srchems.com">info@srchems.com</a>
+                </div>
+                <div>
+                    <i class="bi bi-whatsapp text-success me-2"></i>
+                    <a href="https://wa.me/919913645555" target="_blank" rel="noopener noreferrer">WhatsApp Sales Desk</a>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="{{ route('home') }}" class="src-btn-primary">
+                    <i class="bi bi-house-door me-2"></i>
+                    <span>Back to Home</span>
+                </a>
+                <a href="{{ route('our_products') }}" class="src-btn-outline">
+                    <i class="bi bi-grid me-2"></i>
+                    <span>View Our Products</span>
+                </a>
+                <a href="{{ route('blog') }}" class="src-btn-cta">
+                    <i class="bi bi-journal-text me-2"></i>
+                    <span>Read Our Blog</span>
+                </a>
             </div>
         </div>
     </div>

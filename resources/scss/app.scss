@@ -121,6 +121,8 @@ img {
 
 // --- 5. Top Bar & Header Component ---
 .src-topbar {
+    position: relative;
+    z-index: 1040;
     background-color: var(--src-navy-950);
     color: var(--src-gray-300);
     font-size: 0.8125rem;
@@ -167,7 +169,7 @@ img {
 .src-header {
     position: sticky;
     top: 0;
-    z-index: 1020;
+    z-index: 1050 !important;
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -324,6 +326,17 @@ img {
         list-style: none;
         padding: 0;
         margin: 0;
+        max-height: 280px;
+        overflow-y: auto;
+        scrollbar-width: thin;
+
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
 
         li { margin-bottom: 6px; }
 
@@ -900,11 +913,27 @@ img {
         align-items: center;
         justify-content: center;
         margin-bottom: 16px;
+        overflow: hidden;
+        position: relative;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            text-decoration: none;
+        }
 
         img {
             max-height: 100%;
             max-width: 100%;
+            width: auto;
+            height: auto;
             object-fit: contain;
+            display: block;
             transition: transform var(--src-transition-smooth);
         }
     }
@@ -1960,6 +1989,22 @@ img {
         border-radius: var(--src-radius-pill);
         border: 1px solid rgba(26, 79, 160, 0.18);
     }
+
+    @media (max-width: 767.98px) {
+        padding: 20px 16px !important;
+        text-align: center;
+
+        .src-prod-pill {
+            position: static !important;
+            display: inline-block !important;
+            margin-bottom: 14px !important;
+        }
+
+        img {
+            max-height: 240px !important;
+            margin: 0 auto !important;
+        }
+    }
 }
 
 .src-quick-details-card {
@@ -2257,11 +2302,68 @@ img {
             }
         }
     }
+
+    @media (max-width: 767.98px) {
+        flex-wrap: wrap !important;
+        overflow-x: visible !important;
+        gap: 8px !important;
+        padding: 12px 10px !important;
+        background: #f1f5f9 !important;
+        border-bottom: 1px solid var(--src-gray-200) !important;
+
+        .nav-item {
+            flex: 1 1 calc(50% - 6px) !important;
+            min-width: 130px !important;
+            margin-bottom: 0 !important;
+        }
+
+        .nav-link {
+            width: 100% !important;
+            padding: 8px 10px !important;
+            font-size: 0.8rem !important;
+            white-space: normal !important;
+            text-align: center !important;
+            justify-content: center !important;
+            border-radius: var(--src-radius-pill) !important;
+            border: 1px solid var(--src-gray-300) !important;
+            background: #ffffff !important;
+            color: var(--src-gray-700) !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+
+            i {
+                font-size: 0.85rem !important;
+                color: var(--src-teal-accent) !important;
+            }
+
+            &.active {
+                background: var(--src-blue-primary) !important;
+                color: #ffffff !important;
+                border-color: var(--src-blue-primary) !important;
+                box-shadow: 0 2px 8px rgba(26, 79, 160, 0.25) !important;
+                font-weight: 600 !important;
+
+                i {
+                    color: #ffffff !important;
+                }
+            }
+        }
+    }
 }
 
 .src-spec-tab-content {
     padding: 36px 32px;
     background: #ffffff;
+
+    @media (max-width: 767.98px) {
+        padding: 20px 14px !important;
+
+        .table-responsive::after {
+            display: none !important;
+        }
+    }
 
     .src-spec-block-tab {
         h6.heading-title, .heading-title {
@@ -2302,6 +2404,13 @@ img {
                 border-right: 1px solid var(--src-gray-200);
                 vertical-align: top;
 
+                @media (max-width: 767.98px) {
+                    padding: 10px 12px !important;
+                    font-size: 0.82rem !important;
+                    white-space: normal !important;
+                    word-break: break-word !important;
+                }
+
                 &:last-child {
                     border-right: none;
                 }
@@ -2338,7 +2447,580 @@ img {
     }
 }
 
-// --- 24. Related Products Tabbed Showcase ---
+// --- 25. Modern Sliders & Carousels (Swiper.js) + Comprehensive Mobile & Tablet Responsiveness System ---
+
+// 25.1 Swiper Sliders Styling
+.src-hero-swiper {
+    width: 100%;
+    position: relative;
+
+    .swiper-slide {
+        opacity: 0 !important;
+        transition: opacity 0.6s ease-in-out;
+        pointer-events: none;
+
+        &.swiper-slide-active {
+            opacity: 1 !important;
+            pointer-events: auto;
+        }
+    }
+}
+
+.src-hero-controls {
+    .src-hero-arrow {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        color: #ffffff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.15rem;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        cursor: pointer;
+        transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover {
+            background: #ffffff;
+            color: var(--src-navy-900);
+            transform: scale(1.08);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+        }
+
+        &:active {
+            transform: scale(0.96);
+        }
+    }
+
+    .src-hero-pagination {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.45);
+            opacity: 1;
+            border-radius: var(--src-radius-pill);
+            margin: 0 !important;
+            transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.85);
+            }
+        }
+
+        .swiper-pagination-bullet-active {
+            background: var(--src-amber-cta) !important;
+            width: 28px;
+            box-shadow: 0 0 10px rgba(232, 121, 42, 0.6);
+        }
+    }
+}
+
+// Sliders Controls (Global & Container)
+.src-slider-btn {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
+    max-width: 38px !important;
+    max-height: 38px !important;
+    aspect-ratio: 1 / 1 !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    background: #ffffff !important;
+    border: 1.5px solid var(--src-gray-300) !important;
+    color: var(--src-navy-800) !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem !important;
+    cursor: pointer !important;
+    box-shadow: 0 2px 6px rgba(12, 30, 61, 0.08) !important;
+    transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+    outline: none !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    user-select: none;
+
+    i {
+        font-size: 1rem;
+        line-height: 1;
+        display: block;
+    }
+
+    &:hover {
+        background: var(--src-blue-primary) !important;
+        border-color: var(--src-blue-primary) !important;
+        color: #ffffff !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(26, 79, 160, 0.2) !important;
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+
+    &.swiper-button-disabled {
+        opacity: 0.35 !important;
+        cursor: not-allowed !important;
+        pointer-events: none !important;
+    }
+}
+
+// Swiper Lock State - Hide controls when scrolling is not required
+.swiper-button-lock,
+.swiper-pagination-lock,
+.src-slider-btn.swiper-button-lock,
+.src-slider-btn[hidden],
+.src-slider-arrows.is-locked,
+.src-slider-controls.is-locked {
+    display: none !important;
+}
+
+.swiper-lock ~ .src-slider-controls,
+.swiper-lock ~ * .src-slider-controls {
+    display: none !important;
+}
+
+.src-slider-arrows:has(.swiper-button-lock) {
+    display: none !important;
+}
+
+.src-slider-controls:has(.swiper-button-lock) {
+    display: none !important;
+}
+
+// Unified Global Slider Controls Row
+.src-slider-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.25rem;
+    width: 100%;
+}
+
+.src-slider-arrows {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+// Unified Global Swiper Pagination Dots
+.swiper-pagination,
+.src-deals-pagination,
+.src-popular-pagination,
+.src-client-pagination,
+.src-category-pagination,
+.src-facility-pagination,
+.src-quality-pagination,
+.src-industry-pagination,
+.src-testimonial-pagination,
+.src-showroom-pagination,
+.src-featured-products-pagination,
+.src-app-guide-pagination,
+.src-subproduct-pagination,
+.src-sodium-pagination,
+.src-sodium-strengths-pagination,
+.src-potassium-pagination,
+.src-potassium-apps-pagination,
+.src-ammonium-pagination,
+.src-ammonium-apps-pagination,
+.src-export-ind-pagination,
+.src-export-usp-pagination {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background: var(--src-gray-300);
+        opacity: 1;
+        border-radius: var(--src-radius-pill);
+        margin: 0 !important;
+        transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+
+        &:hover {
+            background: var(--src-gray-500);
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        background: var(--src-blue-primary) !important;
+        width: 26px;
+    }
+}
+
+.src-client-pagination .swiper-pagination-bullet-active {
+    background: var(--src-teal-accent) !important;
+}
+
+// 25.2 Global Fluid Typography & Anti-Overflow Protection
+html, body {
+    overflow-x: clip;
+    width: 100%;
+    max-width: 100vw;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+}
+
+// Responsive Tables with Smooth Scrolling
+.table-responsive {
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--src-radius-md);
+    border: 1px solid var(--src-gray-200);
+    box-shadow: var(--src-shadow-sm);
+    background: #ffffff;
+
+    table {
+        margin-bottom: 0;
+        min-width: 600px;
+
+        th {
+            background: var(--src-gray-100);
+            color: var(--src-navy-800);
+            font-family: var(--src-font-heading);
+            font-weight: 700;
+            padding: 14px 16px;
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 12px 16px;
+            vertical-align: middle;
+            color: var(--src-gray-700);
+        }
+    }
+}
+
+// Responsive Navigation Elements & Breadcrumb
+.src-breadcrumb {
+    max-width: 100%;
+
+    @media (max-width: 767.98px) {
+        display: inline-flex !important;
+        flex-wrap: wrap !important;
+        white-space: normal !important;
+        border-radius: 12px !important;
+        padding: 6px 12px !important;
+        gap: 4px 6px !important;
+        font-size: 0.75rem !important;
+        line-height: 1.45 !important;
+        margin-bottom: 14px !important;
+
+        a, span {
+            display: inline-flex;
+            align-items: center;
+            word-break: break-word;
+        }
+
+        .bi-chevron-right {
+            font-size: 0.62rem !important;
+            opacity: 0.65;
+            margin: 0 1px;
+        }
+    }
+}
+
+// 25.3 Breakpoints: Small Mobile (320px–375px)
+@media (max-width: 375px) {
+    .container, .container-fluid {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+
+    .src-header {
+        .src-brand {
+            gap: 8px;
+            img {
+                height: 38px !important;
+                width: auto;
+            }
+            .src-brand-title {
+                font-size: 1.05rem !important;
+                .src-brand-sub {
+                    font-size: 0.6rem !important;
+                    letter-spacing: 0.04em !important;
+                }
+            }
+        }
+    }
+
+    .src-hero {
+        padding: 44px 0 60px !important;
+
+        .src-hero-tag {
+            font-size: 0.72rem !important;
+            padding: 4px 10px !important;
+        }
+
+        .src-hero-pills-nav {
+            display: flex;
+            width: 100%;
+            max-width: 100%;
+            padding: 3px;
+            gap: 4px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: var(--src-radius-pill);
+            margin-bottom: 20px;
+
+            .src-hero-pill-btn {
+                flex: 1 1 0;
+                width: 33.333%;
+                text-align: center;
+                font-size: 0.78rem !important;
+                font-weight: 600;
+                padding: 7px 4px !important;
+                border-radius: var(--src-radius-pill);
+                white-space: nowrap;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 36px;
+            }
+        }
+
+        .src-hero-h1 {
+            font-size: 1.85rem !important;
+            line-height: 1.15 !important;
+        }
+
+        .src-hero-desc {
+            font-size: 0.9375rem !important;
+            line-height: 1.6 !important;
+            margin-bottom: 24px !important;
+        }
+
+        .d-flex.flex-wrap.gap-3 {
+            flex-direction: column;
+            gap: 10px !important;
+
+            .src-btn-cta,
+            .src-btn-outline-light {
+                width: 100% !important;
+                justify-content: center !important;
+                padding: 12px 18px !important;
+            }
+        }
+    }
+
+    .src-trust-strip {
+        margin-top: 28px !important;
+        padding: 16px !important;
+    }
+
+    .src-product-card {
+        padding: 14px !important;
+
+        .src-product-img-wrap {
+            height: 150px !important;
+            a { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+            img { max-height: 130px !important; width: auto !important; }
+        }
+
+        h5, .service-title, .src-product-title {
+            font-size: 1rem !important;
+        }
+    }
+
+    .src-category-card {
+        padding: 18px !important;
+        .src-cat-img-box {
+            height: 170px !important;
+        }
+        .src-cat-title {
+            font-size: 1.18rem !important;
+        }
+    }
+
+    .src-inquiry-card {
+        padding: 20px 14px !important;
+    }
+
+    .src-section-header {
+        margin-bottom: 28px !important;
+        .src-title {
+            font-size: 1.45rem !important;
+        }
+    }
+
+    .src-mission-section .src-mission-banner {
+        padding: 36px 16px !important;
+        .src-mission-pill {
+            font-size: 0.8rem !important;
+            padding: 8px 12px !important;
+        }
+    }
+
+    ul.src-rel-specs-list {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+// 25.4 Breakpoints: Standard Mobile (376px–480px)
+@media (min-width: 376px) and (max-width: 480px) {
+    .src-header {
+        .src-brand {
+            gap: 10px;
+            img {
+                height: 44px !important;
+            }
+            .src-brand-title {
+                font-size: 1.15rem !important;
+            }
+        }
+    }
+
+    .src-hero {
+        padding: 50px 0 70px !important;
+
+        .src-hero-pills-nav {
+            display: flex;
+            width: 100%;
+            max-width: 100%;
+            padding: 4px;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: var(--src-radius-pill);
+            margin-bottom: 22px;
+
+            .src-hero-pill-btn {
+                flex: 1 1 0;
+                width: 33.333%;
+                text-align: center;
+                font-size: 0.82rem !important;
+                font-weight: 600;
+                padding: 8px 6px !important;
+                border-radius: var(--src-radius-pill);
+                white-space: nowrap;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 38px;
+            }
+        }
+
+        .src-hero-h1 {
+            font-size: 2.15rem !important;
+            line-height: 1.18 !important;
+        }
+
+        .d-flex.flex-wrap.gap-3 {
+            .src-btn-cta,
+            .src-btn-outline-light {
+                flex: 1 1 auto;
+                justify-content: center;
+            }
+        }
+    }
+
+    .src-product-card {
+        .src-product-img-wrap {
+            height: 165px !important;
+        }
+    }
+
+    ul.src-rel-specs-list {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+// 25.5 Breakpoints: Large Mobile (481px–767px)
+@media (min-width: 481px) and (max-width: 767px) {
+    .src-hero {
+        padding: 60px 0 80px !important;
+
+        .src-hero-h1 {
+            font-size: 2.5rem !important;
+        }
+    }
+}
+
+// 25.6 Breakpoints: Tablets (768px–1024px)
+@media (min-width: 768px) and (max-width: 1024px) {
+    .src-topbar {
+        .src-topbar-item {
+            margin-right: 12px;
+            font-size: 0.78rem;
+        }
+    }
+
+    .src-hero {
+        padding: 68px 0 88px !important;
+
+        .src-hero-h1 {
+            font-size: 2.85rem !important;
+        }
+
+        .src-hero-desc {
+            font-size: 1.05rem !important;
+        }
+    }
+
+    .src-category-card {
+        .src-cat-img-box {
+            height: 190px !important;
+        }
+    }
+
+    .src-product-card {
+        .src-product-img-wrap {
+            height: 170px !important;
+        }
+    }
+
+    .src-map-component-section {
+        .row.g-4 {
+            flex-direction: column;
+        }
+    }
+}
+
+// 25.7 Mobile Bottom Bar Body Padding Compensation (<992px)
+@media (max-width: 991.98px) {
+    body {
+        padding-bottom: 64px !important;
+    }
+
+    .src-footer {
+        padding-bottom: 40px !important;
+    }
+}
+
+// 25.8 Touch Device Accessibility & Tap Target Enhancements
+@media (hover: none) and (pointer: coarse) {
+    .btn:not(.btn-sm):not(.src-header-call-btn):not(.src-card-view-btn):not(.rounded-circle):not(.btn-close):not(.src-slider-btn):not(.swiper-button-prev):not(.swiper-button-next),
+    .nav-link,
+    .src-btn-cta,
+    .src-btn-primary,
+    .src-btn-outline,
+    .src-btn-outline-light,
+    .dropdown-item {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .form-control,
+    .form-select {
+        min-height: 48px;
+        font-size: 16px !important; // Prevents iOS Safari automatic zoom on input focus
+    }
+}
+
 .src-related-tabs-wrapper {
     background: #ffffff;
     border: 1px solid var(--src-gray-200);
@@ -2403,6 +3085,66 @@ img {
             .rel-tab-badge {
                 background: var(--src-amber-cta);
                 color: #ffffff;
+            }
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        flex-wrap: wrap !important;
+        overflow-x: visible !important;
+        gap: 8px !important;
+        padding: 12px 10px !important;
+        background: #f1f5f9 !important;
+        border-bottom: 1px solid var(--src-gray-200) !important;
+
+        .nav-item {
+            flex: 1 1 100% !important;
+            width: 100% !important;
+            margin-bottom: 0 !important;
+        }
+
+        .nav-link {
+            width: 100% !important;
+            padding: 9px 14px !important;
+            font-size: 0.82rem !important;
+            white-space: normal !important;
+            border-radius: var(--src-radius-pill) !important;
+            border: 1px solid var(--src-gray-300) !important;
+            background: #ffffff !important;
+            color: var(--src-gray-700) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: flex-start !important;
+            gap: 10px !important;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+
+            span:not(.rel-tab-badge) {
+                max-width: none !important;
+                overflow: visible !important;
+                text-overflow: unset !important;
+                white-space: normal !important;
+                flex: 1;
+                text-align: left;
+            }
+
+            .rel-tab-badge {
+                font-size: 0.72rem !important;
+                padding: 3px 8px !important;
+                border-radius: 4px;
+                flex-shrink: 0;
+            }
+
+            &.active {
+                background: var(--src-blue-primary) !important;
+                color: #ffffff !important;
+                border-color: var(--src-blue-primary) !important;
+                box-shadow: 0 2px 8px rgba(26, 79, 160, 0.25) !important;
+                font-weight: 600 !important;
+
+                .rel-tab-badge {
+                    background: var(--src-amber-cta) !important;
+                    color: #ffffff !important;
+                }
             }
         }
     }
@@ -2495,9 +3237,943 @@ img {
             }
         }
     }
+
+    @media (max-width: 767.98px) {
+        padding: 20px 14px !important;
+
+        .src-rel-showcase-card {
+            .d-flex.flex-wrap.justify-content-between {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 12px !important;
+                margin-bottom: 16px !important;
+
+                .src-btn-cta {
+                    width: 100% !important;
+                    justify-content: center !important;
+                    text-align: center;
+                }
+            }
+
+            h5.heading-title, .heading-title {
+                font-size: 1.15rem !important;
+                margin-bottom: 0 !important;
+            }
+
+            .src-rel-img-box {
+                padding: 16px !important;
+                border-radius: var(--src-radius-md) !important;
+                margin-bottom: 16px !important;
+
+                img {
+                    max-height: 180px !important;
+                }
+
+                .badge {
+                    font-size: 0.75rem !important;
+                    padding: 4px 10px !important;
+                    margin-bottom: 8px !important;
+                }
+            }
+
+            ul.src-rel-specs-list {
+                grid-template-columns: 1fr !important;
+                gap: 8px !important;
+
+                li {
+                    padding: 8px 12px !important;
+                    font-size: 0.8125rem !important;
+                    flex-direction: row !important;
+                    justify-content: space-between !important;
+                    align-items: center !important;
+                    gap: 10px !important;
+
+                    b {
+                        font-size: 0.72rem !important;
+                        flex-shrink: 0;
+                    }
+
+                    span {
+                        text-align: right;
+                        word-break: break-word;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .src-rel-showcase-card {
+            ul.src-rel-specs-list {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+    }
 }
 
+// --- 26. Robust Mobile Offcanvas Navigation Drawer & Backdrops ---
+#srcMobileMenu.offcanvas.offcanvas-start {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 310px !important;
+    max-width: 85vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    background-color: #ffffff !important;
+    z-index: 1060 !important;
+    box-shadow: 6px 0 32px rgba(7, 16, 30, 0.28) !important;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: transform 0.28s cubic-bezier(0.25, 0.8, 0.25, 1), visibility 0.28s ease !important;
 
+    &.showing,
+    &.show:not(.hiding) {
+        visibility: visible !important;
+        transform: translateX(0) !important;
+    }
+
+    .offcanvas-header {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 16px 20px !important;
+        background-color: #ffffff !important;
+        border-bottom: 1px solid var(--src-gray-200) !important;
+        flex-shrink: 0;
+
+        .src-offcanvas-logo {
+            width: 40px !important;
+            height: 40px !important;
+            object-fit: contain;
+            border-radius: 6px;
+        }
+
+        .offcanvas-title {
+            font-size: 1.1rem;
+            color: var(--src-navy-900) !important;
+        }
+
+        .btn-close {
+            padding: 8px !important;
+            margin: 0 !important;
+            font-size: 0.9rem !important;
+            opacity: 0.7;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    .offcanvas-body {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-grow: 1 !important;
+        padding: 0 !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
+        background-color: #ffffff !important;
+
+        .list-group-item {
+            background-color: #ffffff !important;
+            border-color: var(--src-gray-100) !important;
+
+            a {
+                color: var(--src-navy-900);
+                font-family: var(--src-font-heading);
+                font-size: 0.95rem;
+                transition: color var(--src-transition-fast);
+
+                &:hover {
+                    color: var(--src-blue-primary);
+                }
+            }
+        }
+    }
+}
+
+.offcanvas-backdrop {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    z-index: 1050 !important;
+    background-color: rgba(7, 16, 30, 0.65) !important;
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
+}
+
+// --- 27. Modern Inner Pages Component Suite (Facilities, Quality, Industries, Sliders) ---
+
+// 27.1 Infrastructure & Facility Gallery Cards
+.src-facility-card {
+    background: #ffffff;
+    border: 1px solid var(--src-gray-200);
+    border-radius: var(--src-radius-lg);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 16px rgba(12, 30, 61, 0.04);
+    transition: all var(--src-transition-smooth);
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 32px rgba(12, 30, 61, 0.12);
+        border-color: var(--src-blue-primary);
+
+        .src-facility-img-wrap img {
+            transform: scale(1.06);
+        }
+    }
+
+    .src-facility-img-wrap {
+        position: relative;
+        height: 220px;
+        overflow: hidden;
+        background: #0c1e3d;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--src-transition-smooth);
+        }
+
+        .src-facility-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(12, 30, 61, 0.88);
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: var(--src-radius-pill);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    }
+
+    .src-facility-body {
+        padding: 22px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+
+        .src-facility-title {
+            font-family: var(--src-font-heading);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--src-navy-900);
+            margin-bottom: 8px;
+        }
+
+        .src-facility-desc {
+            font-size: 0.88rem;
+            color: var(--src-gray-600);
+            line-height: 1.6;
+            margin-bottom: 14px;
+            flex-grow: 1;
+        }
+
+        .src-facility-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+
+            span {
+                font-size: 0.72rem;
+                font-weight: 600;
+                color: var(--src-blue-primary);
+                background: #eef4fc;
+                padding: 4px 10px;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+// 27.2 Client Testimonials / Trust Slider Cards
+.src-testimonial-card {
+    background: #ffffff;
+    border: 1px solid var(--src-gray-200);
+    border-radius: var(--src-radius-lg);
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 18px rgba(12, 30, 61, 0.04);
+    position: relative;
+    transition: all var(--src-transition-smooth);
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 14px 30px rgba(12, 30, 61, 0.1);
+        border-color: var(--src-amber-cta);
+    }
+
+    .src-testi-rating {
+        color: #f59e0b;
+        font-size: 0.95rem;
+        margin-bottom: 14px;
+        display: flex;
+        gap: 3px;
+    }
+
+    .src-testi-quote {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: var(--src-navy-800);
+        margin-bottom: 22px;
+        flex-grow: 1;
+        font-style: normal;
+    }
+
+    .src-testi-author {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        border-top: 1px solid var(--src-gray-100);
+        padding-top: 18px;
+
+        .src-testi-avatar {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--src-blue-primary) 0%, var(--src-navy-900) 100%);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .src-testi-name {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--src-navy-900);
+            line-height: 1.2;
+        }
+
+        .src-testi-role {
+            font-size: 0.78rem;
+            color: var(--src-gray-500);
+            margin-top: 2px;
+        }
+    }
+}
+
+// 27.3 Quality Assurance Step Cards
+.src-quality-step-card {
+    background: #ffffff;
+    border: 1px solid var(--src-gray-200);
+    border-radius: var(--src-radius-lg);
+    padding: 26px 22px;
+    height: 100%;
+    position: relative;
+    transition: all var(--src-transition-smooth);
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 28px rgba(12, 30, 61, 0.08);
+        border-color: var(--src-teal-accent);
+    }
+
+    .src-q-step-badge {
+        position: absolute;
+        top: 16px;
+        right: 18px;
+        font-size: 0.75rem;
+        font-weight: 800;
+        color: var(--src-gray-400);
+        font-family: var(--src-font-heading);
+    }
+
+    .src-q-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: #e6f7f5;
+        color: var(--src-teal-accent);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.35rem;
+        margin-bottom: 16px;
+    }
+
+    .src-q-title {
+        font-family: var(--src-font-heading);
+        font-size: 1.08rem;
+        font-weight: 700;
+        color: var(--src-navy-900);
+        margin-bottom: 8px;
+    }
+
+    .src-q-desc {
+        font-size: 0.86rem;
+        color: var(--src-gray-600);
+        line-height: 1.6;
+        margin: 0;
+    }
+}
+
+// 27.4 Industries & Applications Grid Cards
+.src-industry-card {
+    background: #ffffff;
+    border: 1px solid var(--src-gray-200);
+    border-radius: var(--src-radius-lg);
+    padding: 26px 22px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all var(--src-transition-smooth);
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 14px 30px rgba(12, 30, 61, 0.09);
+        border-color: var(--src-blue-primary);
+
+        .src-ind-icon {
+            background: var(--src-blue-primary);
+            color: #ffffff;
+            transform: scale(1.08);
+        }
+    }
+
+    .src-ind-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        background: #eef4fc;
+        color: var(--src-blue-primary);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.45rem;
+        margin-bottom: 16px;
+        transition: all var(--src-transition-fast);
+    }
+
+    .src-ind-title {
+        font-family: var(--src-font-heading);
+        font-size: 1.12rem;
+        font-weight: 700;
+        color: var(--src-navy-900);
+        margin-bottom: 8px;
+    }
+
+    .src-ind-desc {
+        font-size: 0.86rem;
+        color: var(--src-gray-600);
+        line-height: 1.6;
+        margin-bottom: 14px;
+        flex-grow: 1;
+    }
+
+    .src-ind-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+
+        span {
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 4px;
+            background: var(--src-gray-100);
+            color: var(--src-navy-800);
+            border: 1px solid var(--src-gray-200);
+        }
+    }
+}
+
+// 27.5 Modern Sitemap Cards
+.src-sitemap-card {
+    background: #ffffff;
+    border: 1px solid var(--src-gray-200);
+    border-radius: var(--src-radius-lg);
+    padding: 26px 22px;
+    height: 100%;
+    box-shadow: 0 4px 16px rgba(12, 30, 61, 0.04);
+    transition: all var(--src-transition-fast);
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 24px rgba(12, 30, 61, 0.08);
+        border-color: var(--src-blue-primary);
+    }
+
+    .src-sitemap-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding-bottom: 14px;
+        margin-bottom: 14px;
+        border-bottom: 2px solid var(--src-gray-100);
+
+        i {
+            font-size: 1.35rem;
+            color: var(--src-blue-primary);
+        }
+
+        h4 {
+            font-family: var(--src-font-heading);
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: var(--src-navy-900);
+            margin: 0;
+        }
+    }
+
+    .src-sitemap-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        li a {
+            color: var(--src-gray-700);
+            text-decoration: none;
+            font-size: 0.88rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: color var(--src-transition-fast), transform var(--src-transition-fast);
+
+            i {
+                font-size: 0.72rem;
+                color: var(--src-gray-400);
+            }
+
+            &:hover {
+                color: var(--src-blue-primary);
+                transform: translateX(4px);
+                i { color: var(--src-blue-primary); }
+            }
+        }
+    }
+}
+
+// 27.6 Modern Thank You Card
+.src-thankyou-card {
+    background: #ffffff;
+    border: 1px solid var(--src-gray-200);
+    border-radius: 20px;
+    padding: 48px 36px;
+    box-shadow: 0 12px 36px rgba(12, 30, 61, 0.08);
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto;
+
+    .src-thankyou-icon {
+        width: 84px;
+        height: 84px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--src-teal-accent) 0%, #008778 100%);
+        color: #ffffff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.6rem;
+        margin-bottom: 24px;
+        box-shadow: 0 8px 24px rgba(0, 168, 150, 0.35);
+    }
+
+    .src-thankyou-title {
+        font-family: var(--src-font-heading);
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--src-navy-900);
+        margin-bottom: 14px;
+    }
+
+    .src-thankyou-text {
+        color: var(--src-gray-600);
+        font-size: 1.05rem;
+        line-height: 1.7;
+        margin-bottom: 28px;
+    }
+
+    .src-thankyou-contact-strip {
+        background: var(--src-gray-50);
+        border: 1px solid var(--src-gray-200);
+        border-radius: var(--src-radius-md);
+        padding: 16px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        gap: 16px;
+        margin-bottom: 28px;
+        font-size: 0.92rem;
+
+        a {
+            color: var(--src-navy-900);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+
+            &:hover {
+                color: var(--src-blue-primary);
+            }
+        }
+    }
+}
+
+// 27.7 Table Responsive Horizontal Scroll Hint
+.table-responsive {
+    position: relative;
+
+    &.is-overflowing::after {
+        content: "Scroll horizontally →";
+        position: absolute;
+        top: 6px;
+        right: 10px;
+        background: rgba(12, 30, 61, 0.85);
+        color: #ffffff;
+        font-size: 0.68rem;
+        font-weight: 600;
+        padding: 2px 8px;
+        border-radius: var(--src-radius-pill);
+        pointer-events: none;
+        opacity: 0.9;
+        transition: opacity 0.3s ease;
+        z-index: 5;
+    }
+
+    &.has-scrolled::after {
+        opacity: 0;
+    }
+}
+
+// 27.8 Swiper Controls for Inner Pages
+.src-facility-pagination,
+.src-testimonial-pagination,
+.src-featured-products-pagination,
+.src-subproduct-pagination,
+.src-category-pagination,
+.src-industry-pagination,
+.src-quality-pagination,
+.src-export-ind-pagination,
+.src-export-usp-pagination,
+.src-showroom-pagination,
+.src-app-guide-pagination,
+.src-sodium-pagination,
+.src-sodium-strengths-pagination,
+.src-potassium-pagination,
+.src-potassium-apps-pagination,
+.src-ammonium-pagination,
+.src-ammonium-apps-pagination {
+    position: static !important;
+    width: auto !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    gap: 6px;
+    z-index: 2 !important;
+
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background: var(--src-gray-300);
+        opacity: 1;
+        border-radius: var(--src-radius-pill);
+        margin: 0 !important;
+        transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+
+        &:hover {
+            background: var(--src-gray-500);
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        background: var(--src-blue-primary) !important;
+        width: 26px;
+    }
+}
+
+// 27.9 Breakpoint Refinements for Mobile (320px–480px) and Tablet (481px–1024px)
+@media (max-width: 480px) {
+    .src-page-hero {
+        padding: 44px 0 34px !important;
+
+        .src-breadcrumb {
+            font-size: 0.72rem !important;
+            padding: 6px 12px !important;
+            margin-bottom: 14px !important;
+            flex-wrap: wrap !important;
+            white-space: normal !important;
+            border-radius: 12px !important;
+            line-height: 1.45 !important;
+        }
+
+        .src-page-title {
+            font-size: 1.65rem !important;
+            line-height: 1.25 !important;
+        }
+    }
+
+    .src-facility-card .src-facility-img-wrap {
+        height: 180px !important;
+    }
+
+    .src-thankyou-card {
+        padding: 30px 18px !important;
+        .src-thankyou-icon {
+            width: 64px !important;
+            height: 64px !important;
+            font-size: 2rem !important;
+        }
+        .src-thankyou-title {
+            font-size: 1.5rem !important;
+        }
+        .src-thankyou-contact-strip {
+            flex-direction: column !important;
+            gap: 10px !important;
+        }
+    }
+
+    .src-product-overview {
+        padding: 36px 0 !important;
+    }
+
+    .src-quick-details-card {
+        padding: 20px 16px !important;
+    }
+
+    .src-rel-tab-content {
+        padding: 24px 16px !important;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .src-page-hero {
+        padding: 56px 0 42px !important;
+    }
+
+    .src-facility-card .src-facility-img-wrap {
+        height: 200px !important;
+    }
+}
+
+// 27.10 Ultra-Mobile (320px–375px) Specific Refinements
+@media (max-width: 375px) {
+    .src-spec-tab-content .src-spec-block-tab table th,
+    .src-spec-tab-content .src-spec-block-tab table td {
+        padding: 10px 10px !important;
+        font-size: 0.8rem !important;
+    }
+
+    .src-quick-details-card .pricing-list li {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 2px !important;
+        padding: 8px 0 !important;
+    }
+
+    .src-facility-card .src-facility-body {
+        padding: 16px !important;
+    }
+
+    .src-testimonial-card {
+        padding: 20px 16px !important;
+    }
+
+    .src-quality-step-card {
+        padding: 20px 16px !important;
+    }
+
+    .src-industry-card {
+        padding: 20px 16px !important;
+    }
+
+    .src-sitemap-card {
+        padding: 20px 16px !important;
+    }
+}
+
+// 27.11 Large Desktop (1441px+) Wide Screen Consistency
+@media (min-width: 1441px) {
+    .container-fluid.px-lg-5 {
+        padding-left: clamp(48px, 6vw, 120px) !important;
+        padding-right: clamp(48px, 6vw, 120px) !important;
+    }
+
+    .src-page-hero {
+        padding: 84px 0 64px;
+
+        .src-page-title {
+            font-size: 3.25rem;
+        }
+    }
+
+    .src-section-header {
+        margin-bottom: 54px;
+        .src-title {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+// ========================================================
+// 28. Mobile & Ultra-Mobile Refinements (Header, Badges, Category Cards)
+// ========================================================
+
+// 28.1 Header Call Button - Perfect Circle on Mobile, Pill on Desktop
+.src-header-call-btn {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
+    max-width: 38px !important;
+    max-height: 38px !important;
+    aspect-ratio: 1 / 1 !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+
+    i {
+        font-size: 0.95rem;
+        line-height: 1;
+        display: block;
+    }
+
+    @media (min-width: 576px) {
+        width: auto !important;
+        height: auto !important;
+        min-width: 0 !important;
+        min-height: 36px !important;
+        max-height: none !important;
+        aspect-ratio: auto !important;
+        padding: 6px 14px !important;
+        border-radius: var(--src-radius-pill) !important;
+        gap: 6px;
+    }
+}
+
+// 28.2 Universal Badge & Hero Tag Wrapping (No Horizontal Overflow on 320px)
+.badge,
+.src-hero-tag,
+.src-section-badge,
+.src-prod-pill,
+.src-badge-pill,
+.src-export-badge,
+.src-product-badge,
+.src-showroom-badge,
+.src-facility-badge,
+.src-q-step-badge,
+.rel-tab-badge,
+.src-img-badge,
+.src-badge {
+    white-space: normal !important;
+    text-wrap: balance !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+    line-height: 1.35 !important;
+    box-sizing: border-box !important;
+}
+
+.src-page-hero,
+.src-contact-hero,
+.src-blog-hero {
+    .badge,
+    .src-hero-tag {
+        white-space: normal !important;
+        text-wrap: balance !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        display: inline-block !important;
+        max-width: 100% !important;
+        line-height: 1.4 !important;
+        font-size: clamp(0.68rem, 2.5vw, 0.78rem) !important;
+        padding: 5px 12px !important;
+        text-align: left;
+        box-sizing: border-box !important;
+    }
+}
+
+// 28.3 Category Card Header & Responsive View All Button
+.src-cat-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    .src-card-view-btn {
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+        font-size: 0.78rem !important;
+        padding: 5px 14px !important;
+        min-height: 32px !important;
+        height: 32px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        line-height: 1 !important;
+    }
+
+    @media (max-width: 575.98px) {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+
+        .src-card-view-btn {
+            width: 100% !important;
+            justify-content: center !important;
+            height: 36px !important;
+            min-height: 36px !important;
+            font-size: 0.82rem !important;
+        }
+
+        .badge {
+            align-self: flex-start !important;
+            width: fit-content !important;
+        }
+    }
+}
+
+// 28.4 Showroom Actions Responsive Flex for Small Phones
+@media (max-width: 375px) {
+    .src-showroom-card .src-showroom-actions {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 8px !important;
+
+        .btn-read-more,
+        .btn-inquire {
+            width: 100% !important;
+            justify-content: center !important;
+            margin-left: 0 !important;
+            min-height: 38px !important;
+        }
+    }
+}
 
 
 
